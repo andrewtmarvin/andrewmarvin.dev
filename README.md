@@ -1,4 +1,4 @@
-<h1>This is my portfolio website.</h1>
+<h1>Welcome to my portfolio website.</h1>
 <p>Seems about time!</p>
 <h2>Gameplan</h2>
 <p>The goal is to have it completed by the end of July. I will then polish my best projects to display.</p>

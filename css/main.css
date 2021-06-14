@@ -1,0 +1,36 @@
+:root {
+  --color-primary: #7ed56f;
+  --color-white: #55c57a;
+  --alpha-low: 0.2;
+  --alpha-high: 0.8;
+  --default-font-size: 1.6rem;
+  --shadow-style-light: 0 1.5rem 4rem rgba($color-black, .15);
+}
+
+*,
+*::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+/*# sourceMappingURL=main.css.map */
