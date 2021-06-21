@@ -1,0 +1,23 @@
+.navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100vw;
+
+    & > * {
+        margin: 0 .5rem;
+    }
+    
+    &__logo {
+        font-size: 4rem;
+        margin-right: auto;
+    }
+    ul {
+        display: flex;
+    
+        & li {
+            margin: 0 .5rem;
+            list-style: none;
+        }
+    }
+}

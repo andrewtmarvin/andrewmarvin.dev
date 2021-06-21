@@ -9,9 +9,5 @@
 	--default-font-size: 1.6rem;
 
 	// OTHER
-	--shadow-style-light: 0 1.5rem 4rem rgba($color-black, .15);
+	--shadow-style-light: 0 1.5rem 4rem rgba(0, 0, 0, var(--alpha-low));
 }
-
-
-
-

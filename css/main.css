@@ -4,7 +4,7 @@
   --alpha-low: 0.2;
   --alpha-high: 0.8;
   --default-font-size: 1.6rem;
-  --shadow-style-light: 0 1.5rem 4rem rgba($color-black, .15);
+  --shadow-style-light: 0 1.5rem 4rem rgba(0, 0, 0, var(--alpha-low));
 }
 
 *,
@@ -32,5 +32,70 @@ body {
 ::selection {
   background-color: var(--color-primary);
   color: var(--color-white);
+}
+
+.header {
+  position: fixed;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+}
+
+.navigation > * {
+  margin: 0 .5rem;
+}
+
+.navigation__logo {
+  font-size: 4rem;
+  margin-right: auto;
+}
+
+.navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation ul li {
+  margin: 0 .5rem;
+  list-style: none;
+}
+
+.hero {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about {
+  height: 80vh;
+}
+
+.work {
+  height: 150vh;
+}
+
+.contact {
+  height: 100vh;
 }
 /*# sourceMappingURL=main.css.map */
