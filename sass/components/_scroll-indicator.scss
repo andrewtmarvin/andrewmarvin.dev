@@ -1,0 +1,14 @@
+.scroll-indicator {
+	position: absolute;
+	bottom: 1rem;
+	width: 100%;
+	text-align: center;
+	color: var(--color-primary);
+	font-size: var(--font-size-small);
+	&:before {
+		content: "(arrowdown)";
+	}
+	&:after {
+		content: "(arrowdown)";
+	}
+}

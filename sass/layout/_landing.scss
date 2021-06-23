@@ -1,19 +1,22 @@
 .hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__text {
+		max-width: 50rem;
+	}
 }
 
 .about {
-    height: 80vh;
+	height: 80vh;
 }
 
 .work {
-    height: 150vh;
+	height: 150vh;
 }
 
 .contact {
-    height: 100vh;
+	height: 100vh;
 }

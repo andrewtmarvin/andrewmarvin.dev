@@ -1,13 +1,34 @@
 :root {
 	// COLORS
-	--color-primary: #7ed56f;
-	--color-white: #55c57a;
+	$primaryColor: #885157;
+	$secondaryColor: #22333b;
+	$tertiaryColor: #c9c0b4;
+
+	--color-primary-light: #{lighten($primaryColor, 10%)};
+	--color-primary: #{$primaryColor};
+	--color-primary-dark: #{darken($primaryColor, 10%)};
+
+	--color-secondary-light: #{lighten($secondaryColor, 10%)};
+	--color-secondary: #{$secondaryColor};
+	--color-secondary-dark: #{darken($secondaryColor, 10%)};
+
+	--color-tertiary-light: #{lighten($tertiaryColor, 10%)};
+	--color-tertiary: #{$tertiaryColor};
+	--color-tertiary-dark: #{darken($tertiaryColor, 10%)};
+
+	--color-white: #fff;
+
+	--color-black: #000;
+
 	--alpha-low: 0.2;
 	--alpha-high: 0.8;
 
 	// FONT
-	--default-font-size: 1.6rem;
+	--font-size-small: 1.4rem;
+	--font-size-default: 1.6rem;
+	--font-size-big: 2rem;
 
 	// OTHER
 	--shadow-style-light: 0 1.5rem 4rem rgba(0, 0, 0, var(--alpha-low));
+	--transition-ease-in-out: all .25s ease-in-out;
 }

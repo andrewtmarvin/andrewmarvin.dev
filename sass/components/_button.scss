@@ -1,0 +1,17 @@
+.btn,
+a.btn {
+	padding: 1rem 2rem;
+	color: var(--color-primary);
+	border: 1px var(--color-primary) solid;
+	border-radius: 2px;
+	background-color: none;
+	transition: var(--transition-ease-in-out);
+
+	&:hover {
+		background-color: var(--color-primary-dark);
+		color: var(--color-white);
+		font-weight: 900;
+	}
+	&__resume {
+	}
+}

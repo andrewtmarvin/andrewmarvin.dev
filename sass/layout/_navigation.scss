@@ -1,23 +1,24 @@
 .navigation {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 100vw;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	width: calc(100vw - 80px);
 
-    & > * {
-        margin: 0 .5rem;
-    }
-    
-    &__logo {
-        font-size: 4rem;
-        margin-right: auto;
-    }
-    ul {
-        display: flex;
-    
-        & li {
-            margin: 0 .5rem;
-            list-style: none;
-        }
-    }
+	& > * {
+		margin: 0 .5rem;
+	}
+
+	&__logo {
+		font-size: 4rem;
+		margin-right: auto;
+	}
+	ul {
+		display: flex;
+
+		& li {
+			margin: 0 .5rem;
+			list-style: none;
+			padding-right: 2rem;
+		}
+	}
 }
