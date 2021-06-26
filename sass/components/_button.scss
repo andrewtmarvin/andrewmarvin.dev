@@ -3,8 +3,7 @@ a.btn {
 	padding: 1rem 2rem;
 	color: var(--color-primary);
 	border: 1px var(--color-primary) solid;
-	border-radius: 2px;
-	background-color: none;
+	border-radius: var(--rounded-corners-tight);
 	transition: var(--transition-ease-in-out);
 
 	&:hover {
