@@ -67,6 +67,10 @@ a:hover {
   color: var(--color-primary);
 }
 
+li {
+  list-style: none;
+}
+
 ::-moz-selection {
   background-color: var(--color-tertiary);
   color: var(--color-white);
@@ -200,7 +204,6 @@ a.btn:hover {
 
 .navigation ul li {
   margin: 0 .5rem;
-  list-style: none;
   padding-right: 2rem;
 }
 

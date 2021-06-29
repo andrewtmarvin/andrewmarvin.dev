@@ -1,31 +1,28 @@
-// Interesection Observer
+// INTERSECTION OBSERVER SECTION
+
+// Fade in lines observer
+let timeOutIDs = [];
 let observer = new IntersectionObserver(function(textBlocks) {
     textBlocks.forEach(function (textBlock) {
-        const {isIntersecting, intersectionRatio} = textBlock;
-        if (isIntersecting === true || intersectionRatio > 0) {
+        const {isIntersecting} = textBlock;
+        if (isIntersecting === true) {
             for (let i = 0; i < textBlock.target.children.length; i++) {
                 let element = textBlock.target.children[i];
-                setTimeout(() => element.classList.add('fade-in-text-visible'), (i + 1) * (i + 1) * 500)
+                timeOutIDs.push(setTimeout(() => element.classList.add('fade-in-text-visible'), (i * 1250)));
             }
-            observer.unobserve(textBlock.target);
+        } else {
+            for (let i = 0; i < textBlock.target.children.length; i++) {
+                let element = textBlock.target.children[i];
+                timeOutIDs.forEach(ID => clearInterval(ID));
+                element.classList.remove('fade-in-text-visible');
+            }
         }
     });
 },
 {
-    root: null, // set to viewport
-    rootMargin: '0px',
-    threshold: 0.5
+    rootMargin: '-20% 0% -20% 0%',
+    threshold: 1
 });
-
 
 const fadeInTextElements = document.querySelectorAll('.fade-in-text');
 fadeInTextElements.forEach(element => observer.observe(element));
-
-
-// document.querySelectorAll('.fade-in-text').forEach(textBlock => {
-//     for (let i = 0; i < textBlock.children.length; i++) {
-//         let element = textBlock.children[i];
-//         setTimeout(function() { element.classList.add('fade-in-text-visible')}, (i + 1) * (i + 1) * 500)
-//     }
-// })
-
