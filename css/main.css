@@ -160,6 +160,66 @@ a.btn:hover {
   content: "(arrowdown)";
 }
 
+.terminal-box {
+  background-color: black;
+  color: white;
+}
+
+.terminal-box__command {
+  font-family: 'Fira Code', monospace;
+}
+
+.terminal-box ul {
+  margin: 0px 0px 0px 20px;
+  list-style: none;
+  line-height: 2em;
+  font-family: Arial;
+}
+
+.terminal-box ul li {
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  position: relative;
+}
+
+.terminal-box ul li:before {
+  position: absolute;
+  left: -15px;
+  top: 0px;
+  content: '';
+  display: block;
+  border-left: 1px solid #ddd;
+  height: 1em;
+  border-bottom: 1px solid #ddd;
+  width: 10px;
+}
+
+.terminal-box ul li:after {
+  position: absolute;
+  left: -15px;
+  bottom: -7px;
+  content: '';
+  display: block;
+  border-left: 1px solid #ddd;
+  height: 100%;
+}
+
+.terminal-box ul li.root {
+  margin: 0px 0px 0px -20px;
+}
+
+.terminal-box ul li.root:before {
+  display: none;
+}
+
+.terminal-box ul li.root:after {
+  display: none;
+}
+
+.terminal-box ul li:last-child:after {
+  display: none;
+}
+
 .header {
   position: fixed;
   width: 100vw;
