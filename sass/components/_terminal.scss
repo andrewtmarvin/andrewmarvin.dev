@@ -22,7 +22,6 @@
                 border-bottom: 1px solid #ddd;
                 width: 10px;
             }
-    
             &:after{
                 position: absolute;
                 left: -15px;
@@ -32,21 +31,15 @@
                 border-left: 1px solid #ddd;
                 height: 100%;
             }
-            
           &.root{
               margin: 0px 0px 0px -20px;
               &:before{
                 display: none;
               }
-    
               &:after{
                 display: none;
               }
-    
-    
            }
-    
-    
            &:last-child{
               &:after{ display: none }
             }

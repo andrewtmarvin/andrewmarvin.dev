@@ -1,10 +1,21 @@
-.fade-in-text p {
+.fade-in-text-lines p {
     opacity: 0;
     transform: translateY(10px);
     transition: .5s opacity linear, .75s transform ease-out;
 }
 
-p.fade-in-text-visible {
+p.fade-in-text-lines-visible {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .5s opacity linear, .75s transform ease-out;
+}
+
+.fade-in-element-visible {
     opacity: 1;
     transform: translateY(0px);
 }

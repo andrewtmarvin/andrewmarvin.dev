@@ -20,7 +20,7 @@
   --rounded-corners-tight: 2px;
 }
 
-.fade-in-text p {
+.fade-in-text-lines p {
   opacity: 0;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
@@ -28,7 +28,21 @@
   transition: .5s opacity linear, .75s transform ease-out;
 }
 
-p.fade-in-text-visible {
+p.fade-in-text-lines-visible {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.fade-in-element {
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: .5s opacity linear, .75s transform ease-out;
+  transition: .5s opacity linear, .75s transform ease-out;
+}
+
+.fade-in-element-visible {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
