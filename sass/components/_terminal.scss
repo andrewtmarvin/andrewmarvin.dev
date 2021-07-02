@@ -8,6 +8,12 @@
         position: relative;
         display: inline-block;
     }
+    &__hostname {
+        color: #26cc13;
+    }
+    &__directory {
+        color: cornflowerblue;
+    }
     & ul{
         margin: 0px 0px 0px 3rem; 
         list-style: none;
@@ -35,7 +41,7 @@
                 border-left: 1px solid #ddd;
                 height: 100%;
             }
-          &.root{
+          &.terminal-box__tree-root{
               margin: 0px 0px 0px -20px;
               &:before{
                 display: none;
@@ -48,5 +54,8 @@
               &:after{ display: none }
             }
         }
+    }
+    ::selection {
+        background-color: #26cc13;
     }
 }

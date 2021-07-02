@@ -228,6 +228,14 @@ a.btn:hover {
   display: inline-block;
 }
 
+.terminal-box__hostname {
+  color: #26cc13;
+}
+
+.terminal-box__directory {
+  color: cornflowerblue;
+}
+
 .terminal-box ul {
   margin: 0px 0px 0px 3rem;
   list-style: none;
@@ -261,20 +269,28 @@ a.btn:hover {
   height: 100%;
 }
 
-.terminal-box ul li.root {
+.terminal-box ul li.terminal-box__tree-root {
   margin: 0px 0px 0px -20px;
 }
 
-.terminal-box ul li.root:before {
+.terminal-box ul li.terminal-box__tree-root:before {
   display: none;
 }
 
-.terminal-box ul li.root:after {
+.terminal-box ul li.terminal-box__tree-root:after {
   display: none;
 }
 
 .terminal-box ul li:last-child:after {
   display: none;
+}
+
+.terminal-box ::-moz-selection {
+  background-color: #26cc13;
+}
+
+.terminal-box ::selection {
+  background-color: #26cc13;
 }
 
 .header {
