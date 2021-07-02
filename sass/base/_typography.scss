@@ -13,18 +13,24 @@ h5,
 h6 {
 	color: var(--color-primary);
 	font-size: var(--font-size-big);
-	font-family: 'Fira Code', monospace;
 	line-height: 1.5;
+}
+
+.header-huge {
+	font-size: var(--font-size-huge);
+	line-height: 1.2;
 }
 
 .header-big {
     font-size: var(--font-size-big);
-    font-family: 'Fira Code', monospace;
 	line-height: 1.5;
 }
 
 .header-medium {
     font-size: var(--font-size-default);
-    font-family: 'Fira Code', monospace;
 	line-height: 1.5;
+}
+
+.coding-font {
+	font-family: 'Fira Code', monospace;
 }

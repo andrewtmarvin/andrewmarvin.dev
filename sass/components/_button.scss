@@ -5,7 +5,9 @@ a.btn {
 	border: 1px var(--color-primary) solid;
 	border-radius: var(--rounded-corners-tight);
 	transition: var(--transition-ease-in-out);
-
+	width: max-content;
+	height: min-content;
+	user-select: none;
 	&:hover {
 		background-color: var(--color-primary-dark);
 		color: var(--color-white);

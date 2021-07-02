@@ -1,3 +1,21 @@
 .hidden {
     visibility: hidden;
 }
+.spacer-line {
+    &:after{
+        content: "";
+        background-color: var(--color-primary);
+        width: 8rem;
+        height: 3px;
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+    }
+}
+.big-spacer {
+    margin-bottom: 2rem;
+}
+
+.small-spacer {
+    margin-bottom: 1rem;
+}
