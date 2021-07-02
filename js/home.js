@@ -8,7 +8,7 @@ let fadeInTextLinesObserver = new IntersectionObserver(
 			if (isIntersecting === true) {
 				for (let i = 0; i < textBlock.target.children.length; i++) {
 					let element = textBlock.target.children[i];
-					setTimeout(() => element.classList.add('fade-in-text-lines-visible'), i * 1250);
+					setTimeout(() => element.classList.add('fade-in-text-lines-visible'), i * 1500);
 				}
 				fadeInTextLinesObserver.unobserve(textBlock.target);
 			}
