@@ -48,6 +48,44 @@ p.fade-in-text-lines-visible {
           transform: translateY(0px);
 }
 
+.blinking-cursor:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -11px;
+  display: inline-block;
+  background-color: #606060;
+  vertical-align: top;
+  width: 10px;
+  height: 22px;
+  -webkit-animation: blink 1s step-end infinite;
+          animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -140,6 +178,10 @@ h6 {
   line-height: 1.5;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .btn,
 a.btn {
   padding: 1rem 2rem;
@@ -177,17 +219,18 @@ a.btn:hover {
 .terminal-box {
   background-color: black;
   color: white;
+  padding: 4px;
 }
 
 .terminal-box__command {
   font-family: 'Fira Code', monospace;
+  position: relative;
+  display: inline-block;
 }
 
 .terminal-box ul {
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 3rem;
   list-style: none;
-  line-height: 2em;
-  font-family: Arial;
 }
 
 .terminal-box ul li {
@@ -199,11 +242,11 @@ a.btn:hover {
 .terminal-box ul li:before {
   position: absolute;
   left: -15px;
-  top: 0px;
+  top: -4px;
   content: '';
   display: block;
   border-left: 1px solid #ddd;
-  height: 1em;
+  height: 2rem;
   border-bottom: 1px solid #ddd;
   width: 10px;
 }

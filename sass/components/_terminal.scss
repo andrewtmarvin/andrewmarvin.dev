@@ -1,12 +1,16 @@
 .terminal-box {
     background-color: black;
     color: white;
+    padding: 4px;
     &__command {
         font-family: 'Fira Code', monospace;
+        // Needed for blinking cursor effect
+        position: relative;
+        display: inline-block;
     }
     & ul{
-        margin: 0px 0px 0px 20px; 
-        list-style: none; line-height: 2em; font-family: Arial;
+        margin: 0px 0px 0px 3rem; 
+        list-style: none;
         li{
             font-family: 'Fira Code', monospace;
             font-size: 16px;
@@ -14,11 +18,11 @@
             &:before{
                 position: absolute;
                 left: -15px;
-                top: 0px;
+                top: -4px;
                 content: '';
                 display: block;
                 border-left: 1px solid #ddd;
-                height: 1em;
+                height: 2rem;
                 border-bottom: 1px solid #ddd;
                 width: 10px;
             }
