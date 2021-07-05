@@ -516,7 +516,7 @@ a.btn:hover {
 }
 
 .about .fade-in-text-lines p {
-  padding: .5rem;
+  padding: 1rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
 }
