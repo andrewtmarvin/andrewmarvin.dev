@@ -33,4 +33,9 @@
 	--shadow-style-light: 0 1.5rem 4rem rgba(0, 0, 0, var(--alpha-low));
 	--transition-ease-in-out: all .25s ease-in-out;
 	--rounded-corners-tight: 2px;
+
+	--layer-base: 0;
+	--layer-one: 100;
+	--layer-two: 200;
+	--layer-three: 300;
 }
