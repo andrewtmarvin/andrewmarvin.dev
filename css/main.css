@@ -223,6 +223,7 @@ a.btn {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-weight: bold;
 }
 
 .btn:hover,
@@ -340,6 +341,7 @@ a.btn:hover {
       -ms-flex-align: center;
           align-items: center;
   z-index: var(--layer-three);
+  background-color: var(--color-white);
 }
 
 .navigation {

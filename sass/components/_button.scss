@@ -8,6 +8,7 @@ a.btn {
 	width: max-content;
 	height: min-content;
 	user-select: none;
+	font-weight: bold;
 	&:hover {
 		background-color: var(--color-primary-dark);
 		color: var(--color-white);
