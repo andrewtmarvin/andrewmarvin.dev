@@ -8,3 +8,27 @@
 	z-index: var(--layer-three);
 	background-color: var(--color-white);
 }
+
+.navigation {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	width: calc(100vw - 80px);
+
+	& > * {
+		margin: 0 .5rem;
+	}
+
+	&__logo {
+		font-size: 4rem;
+		margin-right: auto;
+	}
+	ul {
+		display: flex;
+
+		& li {
+			margin: 0 .5rem;
+			padding-right: 2rem;
+		}
+	}
+}

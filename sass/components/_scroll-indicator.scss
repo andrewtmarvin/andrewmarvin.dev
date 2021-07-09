@@ -1,14 +1,20 @@
 .scroll-indicator {
 	position: absolute;
-	bottom: 1rem;
-	width: 100%;
-	text-align: center;
-	color: var(--color-primary);
-	font-size: var(--font-size-small);
-	&:before {
-		content: "(arrowdown)";
+	bottom: 10vh;
+	width: 2rem;
+	fill: var(--color-primary);
+	animation: bounce 2s ease-in-out infinite;
+}
+
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
 	}
-	&:after {
-		content: "(arrowdown)";
+	50% {
+		transform: translateY(-3px);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }

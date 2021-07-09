@@ -235,19 +235,41 @@ a.btn:hover {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 1rem;
-  width: 100%;
-  text-align: center;
-  color: var(--color-primary);
-  font-size: var(--font-size-small);
+  bottom: 10vh;
+  width: 2rem;
+  fill: var(--color-primary);
+  -webkit-animation: bounce 2s ease-in-out infinite;
+          animation: bounce 2s ease-in-out infinite;
 }
 
-.scroll-indicator:before {
-  content: "(arrowdown)";
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
-.scroll-indicator:after {
-  content: "(arrowdown)";
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .terminal-box {
