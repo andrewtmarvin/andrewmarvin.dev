@@ -1,31 +1,28 @@
 .header {
 	position: fixed;
 	width: 100vw;
+	top: 0;
 	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: var(--layer-three);
-	background-color: var(--color-white);
 }
 
 .navigation {
+	width: 80vw;
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
-	width: calc(100vw - 80px);
-
 	& > * {
 		margin: 0 .5rem;
 	}
-
 	&__logo {
-		font-size: 4rem;
-		margin-right: auto;
+		width: 4rem;
 	}
 	ul {
 		display: flex;
-
+		margin-left: auto;
 		& li {
 			margin: 0 .5rem;
 			padding-right: 2rem;

@@ -17,132 +17,129 @@
 <body>
     <header class="header">
         <nav class="navigation">
-            <a href="#" class="navigation__logo">am</a>
+            <a href="#"><img class="navigation__logo" src="./images/logo.svg" alt="site logo"></a>
             <ul>
-                <li><a href="#">[ home ]</a></li>
+                <li><a class="active-section" href="#">[ home ]</a></li>
                 <li><a href="#about">about</a></li>
                 <li><a href="#work">work</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
-            <a href="./resume.pdf" target="_blank" class="btn btn__resume">resume</a>
         </nav>
     </header>
-    <main class="content-wrapper">
-        <section class="section hero">
-            <div class="hero__content">
-                <div class="hero__content--left">
-                    <h1 class="header-huge big-spacer spacer-line">Andrew Marvin</h1>
-                    <h2 class="header-big big-spacer">Full-stack developer</h2>
-                    <div class="hero__blurb">
-                        <p class="big-spacer">
-                            I'm a web developer curently based in Colorado. If you've got an intersting idea and need
-                            technical solutions, I'd love to talk.
-                        </p>
-                        <a href="mailto:andrewtmarvin@gmail.com" target="_blank" class="btn btn__contact">contact</a>
-                        <a href="./resume.pdf" target="_blank" class="btn btn__resume">resume</a>
-                    </div>
-                </div>
-                <div class="hero__content--right">
-                    <div class="hero__image">
-                        <img class="hero__image" src="./images/hero.jpg" alt="Andrew Marvin">
-                    </div>
+    <main class="page-wrapper">
+        <section class="section section__hero">
+            <div class="hero-content">
+                <h1 class="header-huge big-spacer spacer-line">Andrew Marvin</h1>
+                <h2 class="header-big big-spacer"><span class="dramatic-effect">Full-Stack</span> developer</h2>
+                <div class="hero-content__blurb">
+                    <p class="big-spacer">
+                        I'm a web developer curently based in Colorado. If you've got an intersting idea and need
+                        technical solutions, I'd love to talk.
+                    </p>
+                    <a href="mailto:andrewtmarvin@gmail.com" target="_blank" class="btn btn__contact">contact</a>
+                    <a href="./resume.pdf" target="_blank" class="btn btn__resume">resume</a>
                 </div>
             </div>
-            <!-- <img class="scroll-indicator" src="./images/down-chevron.svg" alt="scroll down please"> -->
             <a href="#about"><img src="./images/down.svg" alt="please scroll down" class="scroll-indicator"></a>
         </section>
-        <section class="section about fade-in-element" id="about">
-            <h2 class="about__title header-big">about</h2>
-            <div class="about__image">
-                <img src="./images/andrew_beach.jpg" alt="andrew beach">
-            </div>
-            <div class="fade-in-text-lines">
-                <p>As a <a class="link" target="_blank" href="./resume.pdf">teacher</a>, I'm a quick learner</p>
-                <p>As a <a class="link" target="_blank" href="./resume.pdf">startup founder</a>, I understand business
-                    needs.</p>
-                <p>As a <a class="link" target="_blank" href="./resume.pdf">freelancer</a>, I'm always under budget and
-                    ahead of schedule.</p>
-            </div>
-            <div class="about__blurb">
-                <p style="color:red">Mission: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et minus vel,
-                    deleniti explicabo mollitia pariatur expedita tempora. Iusto molestias error vitae, laudantium
-                    consectetur adipisci vel fugiat laboriosam, magnam distinctio aliquid.</p>
-                <p style="color:blue">Background: I've been coding since 2017. During college, I sought out internships
-                    and freelance clients in between traveling to hackathons and algorithm competitions. Since then,
-                    I've been focussing on solidifying my skills through tutoring and expanding my domain through side
-                    projects.</p>
-                <p style="color:green">Currently: When I'm not coding or teaching, you'll usually find me mountain
-                    biking in the beautiful Colorado wilderness.</p>
-            </div>
-            <div class="about__terminal terminal-box fade-in-element">
-                <p class="terminal-box__command blinking-cursor"><span
-                        class="terminal-box__hostname">webmaster@andrewmarvin.dev</span>:<span
-                        class="terminal-box__directory">~</span>$&nbsp;<span class="typing-letters"></span></p>
-                <ul class="hidden">
-                    <li class="terminal-box__tree-root hidden">
-                        <span class="terminal-box__directory">andrewmarvin/techskills</span>
-                    </li>
-                    <li class="hidden">
-                        <span class="terminal-box__directory">webstack</span>
-                        <ul class="hidden">
-                            <li class="hidden"><span class="terminal-box__directory">HTML</span>
-                                <ul>
-                                    <li class="hidden">semantic markup</li>
-                                </ul>
-                            </li>
-                            <li class="hidden"><span class="terminal-box__directory">CSS</span>
-                                <ul>
-                                    <li class="hidden">SCSS</li>
-                                </ul>
-                            </li>
-                            <li class="hidden"><span class="terminal-box__directory">JavaScript</span>
-                                <ul>
-                                    <li class="hidden">node.js</li>
-                                    <li class="hidden">express.js</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="hidden"><span class="terminal-box__directory">other languages</span>
-                        <ul>
-                            <li class="hidden"><span class="terminal-box__directory">PHP</span>
-                                <ul>
-                                    <li class="hidden">Wordpress</li>
-                                </ul>
-                            </li>
-                            <li class="hidden"><span class="terminal-box__directory">Python</span>
-                                <ul>
-                                    <li class="hidden">Django web framework</li>
-                                    <li class="hidden">scripting and automation</li>
-                                </ul>
-                            </li>
-                            <li class="hidden"><span class="terminal-box__directory">Java</span>
-                                <ul>
-                                    <li class="hidden">JavaFX</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="hidden"><span class="terminal-box__directory">relational database</span>
-                        <ul class="hidden">
-                            <li class="hidden">database design</li>
-                            <li class="hidden">MySQL</li>
-                        </ul>
-                    </li>
-                </ul>
-                <p class="terminal-box__command hidden blinking-cursor"><span
-                        class="terminal-box__hostname">webmaster@andrewmarvin.dev</span>:<span
-                        class="terminal-box__directory">~</span>$&nbsp;</p>
+        <section class="section" id="about">
+            <div class="about-content fade-in-element">
+                <h2 class="about__title header-big">about</h2>
+                <div class="about__image">
+                    <img src="./images/andrew_beach.jpg" alt="andrew beach">
+                </div>
+                <div class="fade-in-text-lines">
+                    <p>As a <a class="link" target="_blank" href="./resume.pdf">teacher</a>, I'm a quick learner</p>
+                    <p>As a <a class="link" target="_blank" href="./resume.pdf">startup founder</a>, I understand business
+                        needs.</p>
+                    <p>As a <a class="link" target="_blank" href="./resume.pdf">freelancer</a>, I'm always under budget and
+                        ahead of schedule.</p>
+                </div>
+                <div class="about__blurb">
+                    <p style="color:red">Mission: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et minus vel,
+                        deleniti explicabo mollitia pariatur expedita tempora. Iusto molestias error vitae, laudantium
+                        consectetur adipisci vel fugiat laboriosam, magnam distinctio aliquid.</p>
+                    <p style="color:blue">Background: I've been coding since 2017. During college, I sought out internships
+                        and freelance clients in between traveling to hackathons and algorithm competitions. Since then,
+                        I've been focussing on solidifying my skills through tutoring and expanding my domain through side
+                        projects.</p>
+                    <p style="color:green">Currently: When I'm not coding or teaching, you'll usually find me mountain
+                        biking in the beautiful Colorado wilderness.</p>
+                </div>
+                <div class="about__terminal terminal-box fade-in-element">
+                    <p class="terminal-box__command blinking-cursor"><span
+                            class="terminal-box__hostname">webmaster@andrewmarvin.dev</span>:<span
+                            class="terminal-box__directory">~</span>$&nbsp;<span class="typing-letters"></span></p>
+                    <ul class="hidden">
+                        <li class="terminal-box__tree-root hidden">
+                            <span class="terminal-box__directory">andrewmarvin/techskills</span>
+                        </li>
+                        <li class="hidden">
+                            <span class="terminal-box__directory">webstack</span>
+                            <ul class="hidden">
+                                <li class="hidden"><span class="terminal-box__directory">HTML</span>
+                                    <ul>
+                                        <li class="hidden">semantic markup</li>
+                                    </ul>
+                                </li>
+                                <li class="hidden"><span class="terminal-box__directory">CSS</span>
+                                    <ul>
+                                        <li class="hidden">SCSS</li>
+                                    </ul>
+                                </li>
+                                <li class="hidden"><span class="terminal-box__directory">JavaScript</span>
+                                    <ul>
+                                        <li class="hidden">node.js</li>
+                                        <li class="hidden">express.js</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden"><span class="terminal-box__directory">other languages</span>
+                            <ul>
+                                <li class="hidden"><span class="terminal-box__directory">PHP</span>
+                                    <ul>
+                                        <li class="hidden">Wordpress</li>
+                                    </ul>
+                                </li>
+                                <li class="hidden"><span class="terminal-box__directory">Python</span>
+                                    <ul>
+                                        <li class="hidden">Django web framework</li>
+                                        <li class="hidden">scripting and automation</li>
+                                    </ul>
+                                </li>
+                                <li class="hidden"><span class="terminal-box__directory">Java</span>
+                                    <ul>
+                                        <li class="hidden">JavaFX</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden"><span class="terminal-box__directory">relational database</span>
+                            <ul class="hidden">
+                                <li class="hidden">database design</li>
+                                <li class="hidden">MySQL</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="terminal-box__command hidden blinking-cursor"><span
+                            class="terminal-box__hostname">webmaster@andrewmarvin.dev</span>:<span
+                            class="terminal-box__directory">~</span>$&nbsp;</p>
+                </div>
             </div>
         </section>
-        <section class="section work" id="work">
-            <p>showcase</p>
-            <p>past clients</p>
+        <section class="section" id="work">
+            <div class="work-content">
+                <p>showcase</p>
+                <p>past clients</p>
+            </div>
         </section>
-        <section class="section contact" id="contact">
-            <form action="#">
-                contact
-            </form>
+        <section class="section" id="contact">
+            <div class="contact-content">
+                <form action="#">
+                    contact
+                </form>
+            </div>
         </section>
     </main>
     <footer class="footer">

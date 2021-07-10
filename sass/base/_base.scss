@@ -40,12 +40,15 @@ li {
 .link {
 	position: relative;
 	display: inline-block;
+	&::before {
+		content: "";
+		background-color: var(--color-primary);
+		width: 100%;
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+	}
 }
-.link:before {
-	content: "";
-	background-color: var(--color-primary);
-	width: 100%;
-	height: 2px;
-	position: absolute;
-	bottom: 0;
+a.active-section {
+	color: var(--color-secondary);
 }
