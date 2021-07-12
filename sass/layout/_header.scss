@@ -14,6 +14,7 @@
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
+	font-weight: 600;
 	& > * {
 		margin: 0 .5rem;
 	}
@@ -27,5 +28,8 @@
 			margin: 0 .5rem;
 			padding-right: 2rem;
 		}
+	}
+	.active-section {
+		color: var(--color-secondary);
 	}
 }

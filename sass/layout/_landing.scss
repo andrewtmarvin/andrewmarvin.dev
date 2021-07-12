@@ -1,5 +1,5 @@
 .section {
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	z-index: var(--layer-base);
@@ -20,7 +20,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-color: rgba(var(--base-primary), var(--alpha-high));
+		background-color: rgba(var(--base-primary-dark), var(--alpha-high));
 	}
 }
 .hero-content {
@@ -31,13 +31,19 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 1rem;
+	&__logo {
+		width: 15rem;
+	}
 	h1 {
 		position: relative;
+		margin-top: 5rem;
 		&:before {
-			content: "Hi, I'm";
+			content: "Hi there,";
 			position: absolute;
 			top: -50%;
-			left: 0;
+			left: 50%;
+			transform: translateX(-50%);
 			font-size: var(--font-size-default);
 		}
 	}
@@ -54,6 +60,10 @@
 			}
 		}
 	}
+}
+
+.page-wrapper > section:not(.section__hero) {
+		display: none;
 }
 
 .about-content {

@@ -63,6 +63,7 @@ let typingLetters = (element, text) => {
 			setTimeout(() => {
 				element.innerText += chars[i];
 				if (i === chars.length - 1) {
+					element.innerText += `\u00a0`; // Add space so gap between cursor
 					resolve();
 				}
 			}, 50 * i);

@@ -1,14 +1,26 @@
 :root {
 	// COLORS
-	--base-primary: 0, 19, 128;
-	--base-secondary: 226, 41, 8;
-	--base-tertiary: 3, 221, 166;
+	--base-primary-light: 232, 240, 255;
+	--base-primary: 37, 37, 104;
+	--base-primary-dark: 7, 16, 57;
+	--base-secondary-light: 255, 92, 85;
+	--base-secondary: 237, 34, 34;
+	--base-tertiary-light: 0, 248, 255;
+	--base-tertiary: 4, 211, 209;
+
+	--base-yellow: 218, 207, 37;
 	--base-black: 0, 0, 0;
 	--base-white: 255, 255, 255;
 
+	--color-primary-light: rgb(var(--base-primary-light));
 	--color-primary: rgb(var(--base-primary));
+	--color-primary-dark: rgb(var(--base-primary-dark));
+	--color-secondary-light: rgb(var(--base-secondary-light));
 	--color-secondary: rgb(var(--base-secondary));
+	--color-tertiary-light: rgb(var(--base-tertiary-light));
 	--color-tertiary: rgb(var(--base-tertiary));
+
+	--color-yellow: rgb(var(--color-yellow));
 	--color-black: rgb(var(--base-black));
 	--color-white: rgb(var(--base-white));
 
@@ -22,6 +34,10 @@
 	--font-size-default: 1.6rem;
 	--font-size-big: 2.4rem;
 	--font-size-huge: 4rem;
+
+	--font-content: 'Open Sans', sans-serif;
+	--font-display: 'Poppins', sans-serif;
+	--font-code: 'Fira Code', monospace;;
 	
 	//Z-INDEX
 	--layer-base: 0;

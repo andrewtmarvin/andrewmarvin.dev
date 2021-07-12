@@ -26,13 +26,13 @@ p.fade-in-text-lines-visible {
     &:after {
         content: "";
         position: absolute;
-        top: 2px;
-        right: -11px;
+        top: clamp(2px, .1em, 5px);
+        right: -.4em;
         display: inline-block;
-        background-color: #606060;
+        background-color: var(--color-white);
         vertical-align: top;
         width: 10px;
-        height: 22px;
+        height: clamp(2.2rem, 1em, 3.6rem);
         animation: blink 1s step-end infinite;
     }
 }

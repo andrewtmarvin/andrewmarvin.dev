@@ -3,7 +3,7 @@
     color: white;
     padding: 4px;
     &__command {
-        font-family: 'Fira Code', monospace;
+        font-family: var(--font-code);
         // Needed for blinking cursor effect
         position: relative;
         display: inline-block;
@@ -18,7 +18,7 @@
         margin: 0px 0px 0px 3rem; 
         list-style: none;
         li{
-            font-family: 'Fira Code', monospace;
+            font-family: var(--font-code);
             font-size: 16px;
             position: relative;
             &:before{

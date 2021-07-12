@@ -1,12 +1,22 @@
 :root {
-  --base-primary: 0, 19, 128;
-  --base-secondary: 226, 41, 8;
-  --base-tertiary: 3, 221, 166;
+  --base-primary-light: 232, 240, 255;
+  --base-primary: 37, 37, 104;
+  --base-primary-dark: 7, 16, 57;
+  --base-secondary-light: 255, 92, 85;
+  --base-secondary: 237, 34, 34;
+  --base-tertiary-light: 0, 248, 255;
+  --base-tertiary: 4, 211, 209;
+  --base-yellow: 218, 207, 37;
   --base-black: 0, 0, 0;
   --base-white: 255, 255, 255;
+  --color-primary-light: rgb(var(--base-primary-light));
   --color-primary: rgb(var(--base-primary));
+  --color-primary-dark: rgb(var(--base-primary-dark));
+  --color-secondary-light: rgb(var(--base-secondary-light));
   --color-secondary: rgb(var(--base-secondary));
+  --color-tertiary-light: rgb(var(--base-tertiary-light));
   --color-tertiary: rgb(var(--base-tertiary));
+  --color-yellow: rgb(var(--color-yellow));
   --color-black: rgb(var(--base-black));
   --color-white: rgb(var(--base-white));
   --alpha-low: 0.2;
@@ -16,6 +26,9 @@
   --font-size-default: 1.6rem;
   --font-size-big: 2.4rem;
   --font-size-huge: 4rem;
+  --font-content: 'Open Sans', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --font-code: 'Fira Code', monospace;
   --layer-base: 0;
   --layer-one: 100;
   --layer-two: 200;
@@ -56,13 +69,13 @@ p.fade-in-text-lines-visible {
 .blinking-cursor:after {
   content: "";
   position: absolute;
-  top: 2px;
-  right: -11px;
+  top: clamp(2px, 0.1em, 5px);
+  right: -.4em;
   display: inline-block;
-  background-color: #606060;
+  background-color: var(--color-white);
   vertical-align: top;
   width: 10px;
-  height: 22px;
+  height: clamp(2.2rem, 1em, 3.6rem);
   -webkit-animation: blink 1s step-end infinite;
           animation: blink 1s step-end infinite;
 }
@@ -152,18 +165,18 @@ li {
   bottom: 0;
 }
 
-a.active-section {
-  color: var(--color-secondary);
-}
-
 body {
   color: var(--color-black);
   font-size: var(--font-size-default);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-content);
   line-height: 1.75;
 }
 
-h1,
+h1 {
+  color: var(--color-white);
+  font-family: var(--font-code);
+}
+
 h2,
 h3,
 h4,
@@ -171,6 +184,7 @@ h5,
 h6 {
   color: var(--color-primary);
   line-height: 1.5;
+  font-family: var(--font-display);
 }
 
 .header-huge {
@@ -184,15 +198,15 @@ h6 {
 }
 
 .coding-font {
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-code);
 }
 
 .dramatic-effect {
-  text-shadow: 0px 0px 2px black;
+  text-transform: uppercase;
 }
 
 .emphasis {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .hidden {
@@ -235,14 +249,14 @@ a.btn {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .btn:hover,
 a.btn:hover {
   background-color: var(--color-primary-dark);
   color: var(--color-white);
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .scroll-indicator {
@@ -291,7 +305,7 @@ a.btn:hover {
 }
 
 .terminal-box__command {
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-code);
   position: relative;
   display: inline-block;
 }
@@ -310,7 +324,7 @@ a.btn:hover {
 }
 
 .terminal-box ul li {
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-code);
   font-size: 16px;
   position: relative;
 }
@@ -388,6 +402,7 @@ a.btn:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 600;
 }
 
 .navigation > * {
@@ -410,8 +425,12 @@ a.btn:hover {
   padding-right: 2rem;
 }
 
+.navigation .active-section {
+  color: var(--color-secondary);
+}
+
 .section {
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -439,7 +458,7 @@ a.btn:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(var(--base-primary), var(--alpha-high));
+  background-color: rgba(var(--base-primary-dark), var(--alpha-high));
 }
 
 .hero-content {
@@ -459,17 +478,25 @@ a.btn:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1rem;
+}
+
+.hero-content__logo {
+  width: 15rem;
 }
 
 .hero-content h1 {
   position: relative;
+  margin-top: 5rem;
 }
 
 .hero-content h1:before {
-  content: "Hi, I'm";
+  content: "Hi there,";
   position: absolute;
   top: -50%;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: var(--font-size-default);
 }
 
@@ -494,6 +521,10 @@ a.btn:hover {
 
 .hero-content__blurb .btn:not(:last-of-type) {
   margin-right: 5%;
+}
+
+.page-wrapper > section:not(.section__hero) {
+  display: none;
 }
 
 .about-content {
