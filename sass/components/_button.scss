@@ -1,14 +1,15 @@
 .btn,
 a.btn {
 	padding: 1rem 2rem;
-	color: var(--color-primary);
-	border: 1px var(--color-primary) solid;
+	color: var(--color-secondary);
+	border: 1px var(--color-secondary) solid;
 	border-radius: var(--rounded-corners-tight);
 	transition: var(--transition-ease-in-out);
 	width: max-content;
 	height: min-content;
 	user-select: none;
 	font-weight: 600;
+	text-transform: uppercase;
 	&:hover {
 		background-color: var(--color-primary-dark);
 		color: var(--color-white);
@@ -18,5 +19,9 @@ a.btn {
 	}
 	&__contact {
 		
+	}
+	&__CTA {
+		background-color: var(--color-secondary);
+		color: var(--color-white);
 	}
 }

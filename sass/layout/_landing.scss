@@ -32,38 +32,41 @@
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
+	color: var(--color-primary-light);
 	&__logo {
 		width: 15rem;
 	}
 	h1 {
 		position: relative;
-		margin-top: 5rem;
+		margin-top: 8rem;
+		margin-bottom: 4rem;
 		&:before {
 			content: "Hi there,";
 			position: absolute;
-			top: -50%;
+			top: -5rem;
 			left: 50%;
 			transform: translateX(-50%);
-			font-size: var(--font-size-default);
+			font-size: var(--font-size-big);
 		}
 	}
 	&__blurb {
+		width: 50rem;
 		display: flex;
 		flex-flow: row wrap;
-		justify-content: flex-start;
-		width: 40rem;
+		justify-content: center;
+		text-align: center;
 		& .btn {
 			text-align: center;
-			width: 15rem;
+			width: 17rem;
 			&:not(:last-of-type){
-				margin-right: 5%
+				margin-right: 10%
 			}
 		}
 	}
 }
 
 .page-wrapper > section:not(.section__hero) {
-		display: none;
+		// display: none;
 }
 
 .about-content {
@@ -95,7 +98,7 @@
 		justify-self: center;
 		& p {
 			padding: 1rem;
-			color: white;
+			color: var(--color-white);
 			background-color: rgba(0,0,0,.2);
 
 		}

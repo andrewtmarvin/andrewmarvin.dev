@@ -4,16 +4,17 @@
 .spacer-line {
     &:after{
         content: "";
-        background-color: var(--color-primary);
-        width: 8rem;
+        background-color: var(--color-secondary);
+        width: 12rem;
         height: 3px;
         position: absolute;
-        bottom: -1rem;
-        left: 0;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 .big-spacer {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .small-spacer {
