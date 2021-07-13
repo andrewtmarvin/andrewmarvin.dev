@@ -451,6 +451,8 @@ a.btn__CTA {
       -ms-flex-pack: center;
           justify-content: center;
   z-index: var(--layer-base);
+  overflow: hidden;
+  position: relative;
 }
 
 .section__hero::before {
@@ -464,6 +466,10 @@ a.btn__CTA {
   background-size: cover;
   -webkit-filter: brightness(0.2);
           filter: brightness(0.2);
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-transform: rotate(3deg) scale(2.5);
+          transform: rotate(3deg) scale(2.5);
+  background-position: center;
 }
 
 .section__hero::after {
@@ -508,7 +514,7 @@ a.btn__CTA {
 }
 
 .hero-content h1:before {
-  content: "Hi there,";
+  content: "Nice to meet you,";
   position: absolute;
   width: -webkit-max-content;
   width: -moz-max-content;

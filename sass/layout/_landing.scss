@@ -3,6 +3,8 @@
 	display: flex;
 	justify-content: center;
 	z-index: var(--layer-base);
+	overflow: hidden;
+	position: relative;
 	&__hero::before {
 		content: "";
 		position: absolute;
@@ -13,6 +15,9 @@
 		background-image: url(../images/hero.jpg);
 		background-size: cover;
 		filter: brightness(.2);
+		image-rendering: -webkit-optimize-contrast;
+		transform: rotate(3deg) scale(2.5);
+		background-position: center;
 	}
 	&__hero::after {
 		content: "";
@@ -42,7 +47,7 @@
 		margin-top: 8rem;
 		margin-bottom: 4rem;
 		&:before {
-			content: "Hi there,";
+			content: "Nice to meet you,";
 			position: absolute;
 			width: max-content;
 			top: -5rem;
