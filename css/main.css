@@ -274,11 +274,18 @@ a.btn__CTA {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 10vh;
+  z-index: var(--layer-three);
+  bottom: 5vh;
+  left: 50%;
   width: 2rem;
   fill: var(--color-primary);
   -webkit-animation: bounce 2s ease-in-out infinite;
           animation: bounce 2s ease-in-out infinite;
+}
+
+.scroll-indicator img {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 @-webkit-keyframes bounce {
@@ -416,6 +423,7 @@ a.btn__CTA {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 600;
+  color: var(--color-tertiary);
 }
 
 .navigation > * {
@@ -436,10 +444,37 @@ a.btn__CTA {
 .navigation ul li {
   margin: 0 .5rem;
   padding-right: 2rem;
+  white-space: nowrap;
 }
 
 .navigation .active-section {
   color: var(--color-secondary);
+}
+
+.side-elements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--layer-three);
+  color: var(--color-tertiary);
+  pointer-events: none;
+}
+
+.side-elements > * {
+  position: absolute;
+  top: 80vh;
+}
+
+.side-elements__email {
+  left: 10vw;
+  -webkit-transform: rotate(-90deg) translateY(-50%);
+          transform: rotate(-90deg) translateY(-50%);
+}
+
+.side-elements__social-links {
+  right: 10vw;
 }
 
 .section {
@@ -550,7 +585,7 @@ a.btn__CTA {
   margin-right: 10%;
 }
 
-.page-wrapper > section:not(.section__hero) {
+.page-wrapper > section:not(.section__hero):not(.section__about) {
   display: none;
 }
 

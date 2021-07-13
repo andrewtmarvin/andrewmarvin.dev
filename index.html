@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header class="header">
         <nav class="navigation">
@@ -25,6 +24,19 @@
             </ul>
         </nav>
     </header>
+    <aside class="side-elements">
+        <div class="side-elements__email">
+            andrewtmarvin@gmail.com
+        </div>
+        <div class="side-elements__social-links">
+            <ul>
+                <li>Github</li>
+                <li>Linkedin</li>
+                <li>Codepen</li>
+                <li>Resume</li>
+            </ul>
+        </div>
+    </aside>
     <main class="page-wrapper">
         <section class="section section__hero">
             <div class="hero-content">
@@ -32,16 +44,16 @@
                 <h1 class="header-huge big-spacer spacer-line"><span class="typing-letters blinking-cursor">I'm Andrew Marvin</span></h1>
                 <div class="hero-content__blurb">
                     <p class="big-spacer">
-                        I'm a full-stack web developer curently based in Colorado. If you've got an intersting idea and need
+                        I'm a full-stack web developer based in Colorado. If you've got an intersting idea and need
                         technical solutions, I'd love to talk.
                     </p>
-                    <a href="#work" class="btn btn__CTA">view projects</a>
-                    <a href="./resume.pdf" target="_blank" class="btn btn__resume">download cv</a>
+                    <a href="#work" class="btn btn__CTA">(magnifying glass) projects</a>
+                    <a href="./resume.pdf" target="_blank" class="btn btn__resume">(icon) Resume</a>
                 </div>
             </div>
-            <a href="#about"><img src="./images/down.svg" alt="please scroll down" class="scroll-indicator"></a>
+            <a href="#about" class="scroll-indicator"><img src="./images/down.svg" alt="please scroll down"></a>
         </section>
-        <section class="section" id="about">
+        <section class="section section__about" id="about">
             <div class="about-content fade-in-element">
                 <h2 class="about__title header-big">about</h2>
                 <div class="about__image">
@@ -127,13 +139,13 @@
                 </div>
             </div>
         </section>
-        <section class="section" id="work">
+        <section class="section section__work" id="work">
             <div class="work-content">
                 <p>showcase</p>
                 <p>past clients</p>
             </div>
         </section>
-        <section class="section" id="contact">
+        <section class="section section__contact" id="contact">
             <div class="contact-content">
                 <form action="#">
                     contact
