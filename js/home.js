@@ -43,7 +43,24 @@ let fadeInElementObserver = new IntersectionObserver(
 const fadeInElements = document.querySelectorAll('.fade-in-element');
 fadeInElements.forEach((element) => fadeInElementObserver.observe(element));
 
-// TERMINAL COMPONENT
+// Animate typing
+let typingLetters = (element, text) => {
+	return new Promise((resolve, reject) => {
+		let chars = [ ...text ];
+		element.innerText = '';
+		for (let i = 0; i < chars.length; i++) {
+			setTimeout(() => {
+				element.innerText += chars[i];
+				if (i === chars.length - 1) {
+					resolve();
+				}
+			}, 50 * i);
+		}
+	});
+};
+
+// Animates header being typed
+typingLetters(document.querySelector('.header-huge .typing-letters'), "I'm\u00A0Andrew\u00A0Marvin");
 
 // Animates terminal command being executed
 let executeTerminalCommand = (terminal) => {
@@ -54,29 +71,15 @@ let executeTerminalCommand = (terminal) => {
 	}
 };
 
-// Animate typing
-let typingLetters = (element, text) => {
-	return new Promise((resolve, reject) => {
-		let chars = [ ...text ];
-		element.innerText = '';
-		for (let i = 0; i < chars.length; i++) {
-			setTimeout(() => {
-				element.innerText += chars[i];
-				if (i === chars.length - 1) {
-					element.innerText += `\u00a0`; // Add space so gap between cursor
-					resolve();
-				}
-			}, 50 * i);
-		}
-	});
-};
-
 let terminalObserver = new IntersectionObserver(
 	async function (terminal) {
 		terminal = terminal[0];
 		const { isIntersecting } = terminal;
 		if (isIntersecting === true) {
-			await typingLetters(terminal.target.querySelector('.typing-letters'), 'tree\u00A0andrewmarvin/techskills/');
+			await typingLetters(
+				terminal.target.querySelector('.typing-letters'),
+				'tree\u00A0andrewmarvin/techskills/\u00A0'
+			);
 			setTimeout(executeTerminalCommand, 500, terminal);
 			terminalObserver.unobserve(terminal.target);
 		}

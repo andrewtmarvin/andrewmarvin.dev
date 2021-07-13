@@ -243,7 +243,6 @@ a.btn {
   padding: 1rem 2rem;
   color: var(--color-secondary);
   border: 1px var(--color-secondary) solid;
-  border-radius: var(--rounded-corners-tight);
   -webkit-transition: var(--transition-ease-in-out);
   transition: var(--transition-ease-in-out);
   width: -webkit-max-content;
@@ -463,6 +462,8 @@ a.btn__CTA {
   bottom: 0;
   background-image: url(../images/hero.jpg);
   background-size: cover;
+  -webkit-filter: brightness(0.2);
+          filter: brightness(0.2);
 }
 
 .section__hero::after {
@@ -472,7 +473,7 @@ a.btn__CTA {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(var(--base-primary-dark), var(--alpha-high));
+  background-color: rgba(var(--base-primary), var(--alpha-high));
 }
 
 .hero-content {
@@ -579,7 +580,6 @@ a.btn__CTA {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: var(--rounded-corners-tight);
 }
 
 .about-content .fade-in-text-lines {
