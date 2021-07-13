@@ -540,6 +540,10 @@ a.btn__CTA {
   margin-right: 10%;
 }
 
+.page-wrapper > section:not(.section__hero) {
+  display: none;
+}
+
 .about-content {
   height: 100vh;
   display: -ms-grid;
