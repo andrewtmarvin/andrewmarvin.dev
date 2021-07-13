@@ -222,7 +222,7 @@ h6 {
   content: "";
   background-color: var(--color-secondary);
   width: 12rem;
-  height: 3px;
+  height: 2px;
   position: absolute;
   bottom: -2rem;
   left: 50%;
@@ -510,6 +510,9 @@ a.btn__CTA {
 .hero-content h1:before {
   content: "Hi there,";
   position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   top: -5rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
