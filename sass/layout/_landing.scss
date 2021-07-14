@@ -4,20 +4,48 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: var(--layer-three);
 	color: var(--color-tertiary);
 	pointer-events: none;
+	z-index: var(--layer-three);
 	& > * {
 		position: absolute;
-		top: 80vh;
+		top: 75vh;
+		pointer-events: all;
+		&::after {
+			content: "";
+			background-color: var(--color-tertiary);
+			width: 2px;
+			height: 200px;
+			position: absolute;
+		}
 
 	}
 	&__email {
 		left: 10vw;
-		transform: rotate(-90deg) translateY(-50%);
+		transform: rotate(-90deg) translateX(-100%);
+		transform-origin: left top;
+		&::after {
+			top: 50%;
+			left: -10px;
+			transform: rotate(90deg);
+			transform-origin: left top;
+
+		}
 	}
 	&__social-links {
 		right: 10vw;
+		width: 20px;
+		ul {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: 1rem;
+			li a {
+				display: block;
+			}
+		}
+		&::after {
+			left: 50%;
+		}
 	}
 }
 .section {
