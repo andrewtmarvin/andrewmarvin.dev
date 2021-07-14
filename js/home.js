@@ -54,7 +54,7 @@ let typingLetters = (element, text) => {
 				if (i === chars.length - 1) {
 					resolve();
 				}
-			}, 50 * i);
+			}, 75 * i);
 		}
 	});
 };
@@ -76,10 +76,7 @@ let terminalObserver = new IntersectionObserver(
 		terminal = terminal[0];
 		const { isIntersecting } = terminal;
 		if (isIntersecting === true) {
-			await typingLetters(
-				terminal.target.querySelector('.typing-letters'),
-				'tree\u00A0andrewmarvin/techskills/\u00A0'
-			);
+			await typingLetters(terminal.target.querySelector('.typing-letters'), 'tree\u00A0techskills/\u00A0');
 			setTimeout(executeTerminalCommand, 500, terminal);
 			terminalObserver.unobserve(terminal.target);
 		}
@@ -105,7 +102,7 @@ emailElement.addEventListener('click', () => {
 // Show copy email tooltip on mouseover
 emailElement.addEventListener('mousemove', (e) => {
 	emailElement.parentElement.style.setProperty('--mouse-x', e.clientX + 25 + 'px');
-	emailElement.parentElement.style.setProperty('--mouse-y', e.clientY + 25 + 'px');
+	emailElement.parentElement.style.setProperty('--mouse-y', e.clientY - 50 + 'px');
 });
 emailElement.addEventListener('mouseenter', () => {
 	sideElements.classList.add('email-tooltip');

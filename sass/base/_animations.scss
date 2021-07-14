@@ -21,6 +21,22 @@ p.fade-in-text-lines-visible {
     transform: translateY(0px);
 }
 
+// Fade out effect
+@keyframes fade-up-and-out{
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
 // Blinking cursor effect
 .blinking-cursor {
     &:after {
@@ -29,7 +45,7 @@ p.fade-in-text-lines-visible {
         top: .3rem;
         right: -.4em;
         display: inline-block;
-        background-color: var(--color-white);
+        background-color: var(--color-purple-light);
         vertical-align: top;
         width: clamp(1rem, .5em, 2rem);
         height: clamp(2.2rem, 1em, 4.6rem);

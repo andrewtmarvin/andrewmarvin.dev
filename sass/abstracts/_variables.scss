@@ -1,6 +1,6 @@
 :root {
 	// COLORS
-	--base-primary-light: 232, 240, 255;
+	--base-primary-light: 38, 65, 145;
 	--base-primary: 37, 37, 104;
 	--base-primary-dark: 7, 16, 57;
 	--base-secondary-light: 255, 92, 85;
@@ -8,9 +8,11 @@
 	--base-tertiary-light: 0, 248, 255;
 	--base-tertiary: 4, 211, 209;
 
+	--base-purple-light: 163, 163, 201;
+	--base-purple: 122, 122, 184;
 	--base-yellow: 218, 207, 37;
 	--base-black: 0, 0, 0;
-	--base-white: 255, 255, 255;
+	--base-white: 232, 240, 255;
 
 	--color-primary-light: rgb(var(--base-primary-light));
 	--color-primary: rgb(var(--base-primary));
@@ -20,6 +22,8 @@
 	--color-tertiary-light: rgb(var(--base-tertiary-light));
 	--color-tertiary: rgb(var(--base-tertiary));
 
+	--color-purple-light: rgb(var(--base-purple-light));
+	--color-purple: rgb(var(--base-purple));
 	--color-yellow: rgb(var(--color-yellow));
 	--color-black: rgb(var(--base-black));
 	--color-white: rgb(var(--base-white));
@@ -39,11 +43,14 @@
 	--font-display: 'Poppins', sans-serif;
 	--font-code: 'Fira Code', monospace;;
 	
-	//Z-INDEX
+	// Z-INDEX
 	--layer-base: 0;
 	--layer-one: 100;
 	--layer-two: 200;
 	--layer-three: 300;
+
+	// SPACING
+	--content-box-padding: 4rem;
 
 	// OTHER
 	--shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));

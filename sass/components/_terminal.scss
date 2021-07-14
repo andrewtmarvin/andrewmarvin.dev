@@ -1,6 +1,5 @@
 .terminal-box {
-    background-color: black;
-    color: white;
+    color: var(--color-purple-light);
     padding: 4px;
     &__command {
         font-family: var(--font-code);
@@ -12,7 +11,7 @@
         color: #26cc13;
     }
     &__directory {
-        color: cornflowerblue;
+        color: var(--color-white);
     }
     & ul{
         margin: 0px 0px 0px 3rem; 
