@@ -460,12 +460,18 @@ a.btn__CTA {
   color: var(--color-tertiary);
   pointer-events: none;
   z-index: var(--layer-three);
+  --mouse-x: 0px;
+  --mouse-y: 0px;
 }
 
 .side-elements > * {
   position: absolute;
-  top: 75vh;
+  top: 70vh;
   pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .side-elements > *::after {
@@ -482,11 +488,19 @@ a.btn__CTA {
           transform: rotate(-90deg) translateX(-100%);
   -webkit-transform-origin: left top;
           transform-origin: left top;
+  cursor: pointer;
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+}
+
+.side-elements__email:active {
+  -webkit-transform: rotate(-90deg) translateX(-102%);
+          transform: rotate(-90deg) translateX(-102%);
 }
 
 .side-elements__email::after {
   top: 50%;
-  left: -10px;
+  left: -20px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   -webkit-transform-origin: left top;
@@ -515,6 +529,26 @@ a.btn__CTA {
 
 .side-elements__social-links::after {
   left: 50%;
+  top: calc(100% + 10px);
+}
+
+.email-tooltip::before {
+  content: "copy";
+  position: absolute;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+  border: 1px solid var(--color-tertiary);
+  padding: 1rem;
+}
+
+.email-tooltip--copied::before {
+  content: "copied!";
+  position: absolute;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+  border: 1px solid var(--color-primary-light);
+  color: var(--color-primary-light);
+  padding: 1rem;
 }
 
 .section {

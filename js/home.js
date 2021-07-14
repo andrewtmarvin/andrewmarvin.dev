@@ -92,3 +92,35 @@ let terminalObserver = new IntersectionObserver(
 
 const terminal = document.querySelector('.terminal-box');
 terminalObserver.observe(terminal);
+
+// Copy email on click
+let isEmailCopied = false;
+const emailElement = document.querySelector('.side-elements__email');
+emailElement.addEventListener('click', () => {
+	navigator.clipboard.writeText(emailElement.innerText);
+	isEmailCopied = true;
+	sideElements.classList.remove('email-tooltip');
+	sideElements.classList.add('email-tooltip--copied');
+});
+
+// Show copy email tooltip on mouseover
+emailElement.addEventListener('mousemove', (e) => {
+	emailElement.parentElement.style.setProperty('--mouse-x', e.clientX + 25 + 'px');
+	emailElement.parentElement.style.setProperty('--mouse-y', e.clientY + 25 + 'px');
+});
+const sideElements = document.querySelector('.side-elements');
+emailElement.addEventListener('mouseenter', () => {
+	if (isEmailCopied) {
+		sideElements.classList.add('email-tooltip--copied');
+	} else {
+		sideElements.classList.add('email-tooltip');
+	}
+});
+
+emailElement.addEventListener('mouseleave', () => {
+	if (isEmailCopied) {
+		sideElements.classList.remove('email-tooltip--copied');
+	} else {
+		sideElements.classList.remove('email-tooltip');
+	}
+});
