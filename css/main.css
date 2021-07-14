@@ -659,7 +659,7 @@ a.btn__CTA {
   margin-right: 10%;
 }
 
-.page-wrapper > section:not(.section__hero):not(.section__about) {
+.page-wrapper > section:not(.section__hero) {
   display: none;
 }
 
