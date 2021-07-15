@@ -176,7 +176,7 @@
 }
 
 .page-wrapper > section:not(.section__hero):not(.section__about) {
-		display: none;
+		// display: none;
 }
 
 .about-content {
@@ -219,8 +219,12 @@
 
 .work-content {
 	height: 150vh;
+	background-color: lightblue;
+	width: 80%;
 }
 
 .contact-content {
 	height: 100vh;
+	width: 80%;
+	background-color: cadetblue;
 }

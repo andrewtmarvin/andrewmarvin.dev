@@ -116,6 +116,8 @@ p.fade-in-text-lines-visible {
 .blinking-cursor:after {
   content: "";
   position: absolute;
+  top: .3rem;
+  right: -.4em;
   display: inline-block;
   background-color: var(--color-white);
   vertical-align: top;
@@ -349,6 +351,8 @@ a.btn__projects:hover {
   fill: var(--color-primary);
   -webkit-animation: bounce 2s ease-in-out infinite;
           animation: bounce 2s ease-in-out infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .scroll-indicator img {
@@ -362,8 +366,8 @@ a.btn__projects:hover {
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -377,8 +381,8 @@ a.btn__projects:hover {
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -466,7 +470,7 @@ a.btn__projects:hover {
   position: fixed;
   width: 100vw;
   top: 0;
-  height: 100px;
+  height: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -525,10 +529,23 @@ a.btn__projects:hover {
   display: inline-block;
   color: var(--color-white);
   margin-left: 1rem;
+  position: relative;
 }
 
 .navigation__logo p span {
   color: var(--color-tertiary);
+}
+
+.navigation__logo p::after {
+  content: "";
+  background-color: var(--color-tertiary);
+  height: 1em;
+  width: .35em;
+  position: absolute;
+  right: -.5em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .navigation__logo--visible {
@@ -548,6 +565,10 @@ a.btn__projects:hover {
   margin: 0 .5rem;
   padding-right: 2rem;
   white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .navigation .active-section {
@@ -804,10 +825,6 @@ a.btn__projects:hover {
   margin-right: 10%;
 }
 
-.page-wrapper > section:not(.section__hero):not(.section__about) {
-  display: none;
-}
-
 .about-content {
   width: 800px;
   margin: 10vh 0;
@@ -856,9 +873,13 @@ a.btn__projects:hover {
 
 .work-content {
   height: 150vh;
+  background-color: lightblue;
+  width: 80%;
 }
 
 .contact-content {
   height: 100vh;
+  width: 80%;
+  background-color: cadetblue;
 }
 /*# sourceMappingURL=main.css.map */

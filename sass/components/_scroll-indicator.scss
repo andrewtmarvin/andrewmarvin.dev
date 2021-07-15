@@ -6,6 +6,7 @@
 	width: 2rem;
 	fill: var(--color-primary);
 	animation: bounce 2s ease-in-out infinite;
+	animation-delay: 3s;
 	img {
 		transform: translateX(-50%);
 	}
@@ -17,7 +18,7 @@
 		transform: translateY(0);
 	}
 	50% {
-		transform: translateY(-3px);
+		transform: translateY(5px);
 	}
 	100% {
 		transform: translateY(0);

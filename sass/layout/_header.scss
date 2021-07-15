@@ -2,7 +2,7 @@
 	position: fixed;
 	width: 100vw;
 	top: 0;
-	height: 100px;
+	height: 6rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -36,8 +36,19 @@
 			display: inline-block;
 			color: var(--color-white);
 			margin-left:1rem;
+			position: relative;
 			span {
 				color: var(--color-tertiary);
+			}
+			&::after {
+				content: "";
+				background-color: var(--color-tertiary);
+				height: 1em;
+				width: .35em;
+				position: absolute;
+				right: -.5em;
+				top: 50%;
+				transform: translateY(-50%);
 			}
 		}
 		&--visible {
@@ -53,6 +64,7 @@
 			margin: 0 .5rem;
 			padding-right: 2rem;
 			white-space: nowrap;
+			user-select: none;
 		}
 	}
 	.active-section {

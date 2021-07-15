@@ -1,24 +1,42 @@
 // NAVIGATION
+const menuLinks = document.querySelectorAll('.navigation ul li a');
+const activateMenuItem = (activeMenuItem) => {
+	menuLinks.forEach((menuItem) => {
+		menuItem.classList.remove('active-section');
+	});
+	activeMenuItem.classList.add('active-section');
+	console.log('menu item activated: ', activeMenuItem);
+};
+
+// User Scrolling
 let pageSectionObserver = new IntersectionObserver(
 	function (section) {
 		section = section[0];
 		const { isIntersecting } = section;
+		console.log(section.target);
+		console.log('intersecting', isIntersecting);
+		console.log('ratio', section.intersectionRatio);
 		const targetLinkHref = '#' + section.target.getAttribute('id');
 		const targetLinkElement = document.querySelector('a[href="' + targetLinkHref + '"]');
 		if (isIntersecting === true && targetLinkElement) {
-			targetLinkElement.classList.add('active-section');
-		} else if (isIntersecting === false && targetLinkElement) {
-			targetLinkElement.classList.remove('active-section');
+			activateMenuItem(targetLinkElement);
 		}
 	},
 	{
 		rootMargin: '0% 0% 0% 0%',
-		threshold: 0.5
+		threshold: 0.2
 	}
 );
 
 const sections = document.querySelectorAll('section');
 sections.forEach((section) => pageSectionObserver.observe(section));
+
+// User clicks on menu link
+menuLinks.forEach((link) => {
+	link.addEventListener('click', (e) => {
+		activateMenuItem(e.target);
+	});
+});
 
 // FADE ELEMENTS
 
