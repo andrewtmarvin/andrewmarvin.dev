@@ -13,9 +13,6 @@ let pageSectionObserver = new IntersectionObserver(
 	function (section) {
 		section = section[0];
 		const { isIntersecting } = section;
-		console.log(section.target);
-		console.log('intersecting', isIntersecting);
-		console.log('ratio', section.intersectionRatio);
 		const targetLinkHref = '#' + section.target.getAttribute('id');
 		const targetLinkElement = document.querySelector('a[href="' + targetLinkHref + '"]');
 		if (isIntersecting === true && targetLinkElement) {
@@ -38,8 +35,7 @@ menuLinks.forEach((link) => {
 	});
 });
 
-// FADE ELEMENTS
-
+// ANIMATIONS
 // Fade in lines
 let fadeInTextLinesObserver = new IntersectionObserver(
 	function (textBlocks) {
@@ -116,8 +112,6 @@ let fadeOutElementObserver = new IntersectionObserver(
 
 const fadeOutElements = document.querySelectorAll('.fade-out-element');
 fadeOutElements.forEach((element) => fadeOutElementObserver.observe(element));
-
-// ANIMATIONS
 
 // Animate typing
 let typingLetters = (element, text) => {
