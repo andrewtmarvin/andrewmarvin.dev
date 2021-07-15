@@ -73,6 +73,10 @@ p.fade-in-text-lines-visible {
           transform: translateY(0px);
 }
 
+.fade-out-element-invisible {
+  display: none;
+}
+
 @-webkit-keyframes fade-up-and-out {
   0% {
     -webkit-transform: translateY(0);
@@ -559,8 +563,8 @@ a.btn__projects:hover {
 }
 
 .side-elements__email:active {
-  -webkit-transform: rotate(-90deg) translateX(-101%);
-          transform: rotate(-90deg) translateX(-101%);
+  -webkit-transform: rotate(-90deg) translateX(-100.5%);
+          transform: rotate(-90deg) translateX(-100.5%);
   opacity: .5;
 }
 
@@ -717,7 +721,7 @@ a.btn__projects:hover {
 }
 
 .hero-content h1:before {
-  content: "Nice to meet you,";
+  content: "Hi there,";
   position: absolute;
   width: -webkit-max-content;
   width: -moz-max-content;

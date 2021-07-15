@@ -21,6 +21,10 @@ p.fade-in-text-lines-visible {
     transform: translateY(0px);
 }
 
+.fade-out-element-invisible {
+    display: none;
+}
+
 // Fade out effect
 @keyframes fade-up-and-out{
     0% {

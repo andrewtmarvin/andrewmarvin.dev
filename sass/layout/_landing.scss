@@ -29,7 +29,7 @@
 		cursor: pointer;
 		transition: .1s all linear;
 		&:active {
-			transform: rotate(-90deg) translateX(-101%);
+			transform: rotate(-90deg) translateX(-100.5%);
 			opacity: .5;
 		}
 		&::after {
@@ -150,7 +150,7 @@
 		margin-bottom: 4rem;
 		color: var(--color-white);
 		&:before {
-			content: "Nice to meet you,";
+			content: "Hi there,";
 			position: absolute;
 			width: max-content;
 			top: -5rem;

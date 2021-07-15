@@ -1,4 +1,4 @@
-// FADE IN ELEMENTS
+// FADE ELEMENTS
 
 // Fade in lines
 let fadeInTextLinesObserver = new IntersectionObserver(
@@ -40,8 +40,42 @@ let fadeInElementObserver = new IntersectionObserver(
 	}
 );
 
-const fadeInElements = document.querySelectorAll('.fade-in-element');
+const fadeInElements = document.querySelectorAll('.fade-out-element');
 fadeInElements.forEach((element) => fadeInElementObserver.observe(element));
+
+// Fade out element
+let fadeOutElementObserver = new IntersectionObserver(
+	function (elements) {
+		elements.forEach(function (element) {
+			const { isIntersecting } = element;
+			const targ = element.target;
+			if (isIntersecting === true) {
+				document.addEventListener(
+					'scroll',
+					scrollFade = function (event, targ) {
+						this.style.opacity = this.getBoundingClientRect().top / (document.body.clientHeight / 10);
+					}.bind(targ),
+					true
+				);
+			} else {
+				try {
+					document.removeEventListener('scroll', scrollFade, true);
+				} catch {
+					// Client refreshed page while not at top, so scrollFade function doesn't exist yet
+				}
+			}
+		});
+	},
+	{
+		rootMargin: '0% 0% 0% 0%',
+		threshold: 0
+	}
+);
+
+const fadeOutElements = document.querySelectorAll('.fade-out-element');
+fadeOutElements.forEach((element) => fadeOutElementObserver.observe(element));
+
+// ANIMATIONS
 
 // Animate typing
 let typingLetters = (element, text) => {
