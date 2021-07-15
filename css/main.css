@@ -4,6 +4,7 @@
   --base-primary-dark: 7, 16, 57;
   --base-secondary-light: 255, 92, 85;
   --base-secondary: 237, 34, 34;
+  --base-secondary-dark: 180, 15, 15;
   --base-tertiary-light: 0, 248, 255;
   --base-tertiary: 4, 211, 209;
   --base-purple-light: 163, 163, 201;
@@ -16,6 +17,7 @@
   --color-primary-dark: rgb(var(--base-primary-dark));
   --color-secondary-light: rgb(var(--base-secondary-light));
   --color-secondary: rgb(var(--base-secondary));
+  --color-secondary-dark: rgb(var(--base-secondary-dark));
   --color-tertiary-light: rgb(var(--base-tertiary-light));
   --color-tertiary: rgb(var(--base-tertiary));
   --color-purple-light: rgb(var(--base-purple-light));
@@ -320,10 +322,20 @@ a.btn__icon {
   width: 2em;
 }
 
-.btn__CTA,
-a.btn__CTA {
+.btn__resume:hover,
+a.btn__resume:hover {
+  color: var(--color-secondary);
+}
+
+.btn__projects,
+a.btn__projects {
   background-color: var(--color-secondary);
   color: var(--color-white);
+}
+
+.btn__projects:hover,
+a.btn__projects:hover {
+  background-color: var(--color-secondary-dark);
 }
 
 .scroll-indicator {
@@ -559,6 +571,14 @@ a.btn__CTA {
           transform: rotate(90deg);
   -webkit-transform-origin: left top;
           transform-origin: left top;
+}
+
+.side-elements__email-clickable-area {
+  width: 125%;
+  height: 250%;
+  position: absolute;
+  top: -50%;
+  left: -12.5%;
 }
 
 .side-elements__social-links {

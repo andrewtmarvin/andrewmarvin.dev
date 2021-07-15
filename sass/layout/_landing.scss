@@ -37,8 +37,14 @@
 			left: -20px;
 			transform: rotate(90deg);
 			transform-origin: left top;
-
 		}
+	}
+	&__email-clickable-area {
+		width: 125%;
+		height: 250%;
+		position: absolute;
+		top: -50%;
+		left: -12.5%;
 	}
 	&__social-links {
 		right: 10vw;
@@ -74,7 +80,6 @@
 		background-color: var(--color-primary);
 		z-index: var(--layer-two);
 	}
-
 }
 .email-tooltip::after {
 	content: "";
@@ -94,9 +99,7 @@
 		background-image: url(../images/checkmark.svg);
 		animation: fade-up-and-out .5s ease-in forwards;
 	}
-
 }
-
 .section {
 	width: 100%;
 	display: flex;

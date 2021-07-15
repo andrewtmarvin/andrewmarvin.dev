@@ -92,6 +92,7 @@ terminalObserver.observe(terminal);
 
 // Copy email on click
 const sideElements = document.querySelector('.side-elements');
+const emailElementWrapper = document.querySelector('.side-elements__email-clickable-area');
 const emailElement = document.querySelector('.side-elements__email');
 emailElement.addEventListener('click', () => {
 	navigator.clipboard.writeText(emailElement.innerText);
@@ -100,15 +101,15 @@ emailElement.addEventListener('click', () => {
 });
 
 // Show copy email tooltip on mouseover
-emailElement.addEventListener('mousemove', (e) => {
+emailElementWrapper.addEventListener('mousemove', (e) => {
 	emailElement.parentElement.style.setProperty('--mouse-x', e.clientX + 25 + 'px');
-	emailElement.parentElement.style.setProperty('--mouse-y', e.clientY - 50 + 'px');
+	emailElement.parentElement.style.setProperty('--mouse-y', e.clientY - 30 + 'px');
 });
-emailElement.addEventListener('mouseenter', () => {
+emailElementWrapper.addEventListener('mouseenter', () => {
 	sideElements.classList.add('email-tooltip');
 });
 
-emailElement.addEventListener('mouseleave', () => {
+emailElementWrapper.addEventListener('mouseleave', () => {
 	sideElements.classList.remove('email-tooltip--copied');
 	sideElements.classList.remove('email-tooltip');
 });

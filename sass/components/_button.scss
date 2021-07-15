@@ -22,12 +22,17 @@ a.btn {
 		width: 2em;
 	}
 	&__resume {
+		&:hover {
+			color: var(--color-secondary);
+		}
 	}
-	&__contact {
-		
-	}
-	&__CTA {
+	&__projects {
 		background-color: var(--color-secondary);
 		color: var(--color-white);
+		&:hover {
+			background-color: var(--color-secondary-dark);
+		}
+	}
+	&__CTA {
 	}
 }
