@@ -298,6 +298,14 @@ a.btn {
           user-select: none;
   font-weight: 600;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .btn:hover,
@@ -305,6 +313,11 @@ a.btn:hover {
   background-color: var(--color-primary-dark);
   color: var(--color-white);
   font-weight: 600;
+}
+
+.btn__icon,
+a.btn__icon {
+  width: 2em;
 }
 
 .btn__CTA,
@@ -573,23 +586,40 @@ a.btn__CTA {
   top: calc(100% + 10px);
 }
 
-.email-tooltip::before {
-  content: "copy";
+.email-tooltip::before, .email-tooltip--copied::before {
+  content: " ";
+  background-image: url(../images/copy.svg);
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
   position: absolute;
   left: var(--mouse-x);
   top: var(--mouse-y);
   border: 1px solid var(--color-tertiary);
   color: var(--color-tertiary);
-  padding: 1rem;
+  background-color: var(--color-primary);
+  z-index: var(--layer-two);
+}
+
+.email-tooltip::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--mouse-x) - 5px);
+  top: calc(var(--mouse-y) + 22px);
+  border-left: 1px solid var(--color-tertiary);
+  border-bottom: 1px solid var(--color-tertiary);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  z-index: var(--layer-three);
+  background-color: var(--color-primary);
 }
 
 .email-tooltip--copied::before {
-  content: "nice!";
-  position: absolute;
-  left: var(--mouse-x);
-  top: var(--mouse-y);
-  border: 1px solid var(--color-tertiary);
-  padding: 1rem;
+  background-image: url(../images/checkmark.svg);
   -webkit-animation: fade-up-and-out .5s ease-in forwards;
           animation: fade-up-and-out .5s ease-in forwards;
 }

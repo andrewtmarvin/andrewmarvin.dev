@@ -57,25 +57,46 @@
 		}
 	}
 }
-.email-tooltip::before {
-	content: "copy";
-	position: absolute;
-	left: var(--mouse-x);
-	top: var(--mouse-y);
-	border: 1px solid var(--color-tertiary);
-	color: var(--color-tertiary);
-	padding: 1rem;
-}
-.email-tooltip--copied::before {
-	content: "nice!";
-	position: absolute;
-	left: var(--mouse-x);
-	top: var(--mouse-y);
-	border: 1px solid var(--color-tertiary);
-	padding: 1rem;
-	animation: fade-up-and-out .5s ease-in forwards;
+.email-tooltip, .email-tooltip--copied {
+	&::before {
+		content: " ";
+		background-image: url(../images/copy.svg);
+		background-size: 30px 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: var(--mouse-x);
+		top: var(--mouse-y);
+		border: 1px solid var(--color-tertiary);
+		color: var(--color-tertiary);
+		background-color: var(--color-primary);
+		z-index: var(--layer-two);
+	}
 
 }
+.email-tooltip::after {
+	content: "";
+	position: absolute;
+	left: calc(var(--mouse-x) - 5px);
+	top: calc(var(--mouse-y) + 22px);
+	border-left: 1px solid var(--color-tertiary);
+	border-bottom: 1px solid var(--color-tertiary);
+	transform: rotate(45deg);
+	width: 10px;
+	height: 10px;
+	z-index: var(--layer-three);
+	background-color: var(--color-primary);
+}
+.email-tooltip--copied{
+	&::before {
+		background-image: url(../images/checkmark.svg);
+		animation: fade-up-and-out .5s ease-in forwards;
+	}
+
+}
+
 .section {
 	width: 100%;
 	display: flex;

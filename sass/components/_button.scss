@@ -9,10 +9,17 @@ a.btn {
 	user-select: none;
 	font-weight: 600;
 	text-transform: uppercase;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
 	&:hover {
 		background-color: var(--color-primary-dark);
 		color: var(--color-white);
 		font-weight: 600;
+	}
+	&__icon {
+		width: 2em;
 	}
 	&__resume {
 	}
