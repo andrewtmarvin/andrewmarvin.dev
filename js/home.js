@@ -1,3 +1,25 @@
+// NAVIGATION
+let pageSectionObserver = new IntersectionObserver(
+	function (section) {
+		section = section[0];
+		const { isIntersecting } = section;
+		const targetLinkHref = '#' + section.target.getAttribute('id');
+		const targetLinkElement = document.querySelector('a[href="' + targetLinkHref + '"]');
+		if (isIntersecting === true && targetLinkElement) {
+			targetLinkElement.classList.add('active-section');
+		} else if (isIntersecting === false && targetLinkElement) {
+			targetLinkElement.classList.remove('active-section');
+		}
+	},
+	{
+		rootMargin: '0% 0% 0% 0%',
+		threshold: 0.5
+	}
+);
+
+const sections = document.querySelectorAll('section');
+sections.forEach((section) => pageSectionObserver.observe(section));
+
 // FADE ELEMENTS
 
 // Fade in lines
@@ -40,7 +62,7 @@ let fadeInElementObserver = new IntersectionObserver(
 	}
 );
 
-const fadeInElements = document.querySelectorAll('.fade-out-element');
+const fadeInElements = document.querySelectorAll('.fade-in-element');
 fadeInElements.forEach((element) => fadeInElementObserver.observe(element));
 
 // Fade out element
@@ -50,17 +72,19 @@ let fadeOutElementObserver = new IntersectionObserver(
 			const { isIntersecting } = element;
 			const targ = element.target;
 			if (isIntersecting === true) {
+				element.target.style.opacity =
+					element.target.getBoundingClientRect().top / (document.body.clientHeight / 10); // So jumping to top of page triggers opacity update
 				document.addEventListener(
 					'scroll',
-					scrollFade = function (event, targ) {
+					(scrollFade = function (event, targ) {
 						this.style.opacity = this.getBoundingClientRect().top / (document.body.clientHeight / 10);
-					}.bind(targ),
+					}.bind(targ)),
 					true
 				);
 			} else {
 				try {
 					document.removeEventListener('scroll', scrollFade, true);
-				} catch {
+				} catch (e) {
 					// Client refreshed page while not at top, so scrollFade function doesn't exist yet
 				}
 			}
@@ -147,3 +171,24 @@ emailElementWrapper.addEventListener('mouseleave', () => {
 	sideElements.classList.remove('email-tooltip--copied');
 	sideElements.classList.remove('email-tooltip');
 });
+
+// Nav bar change when main logo offscreen
+let mainLogoObserver = new IntersectionObserver(
+	function (mainLogo) {
+		const { isIntersecting } = mainLogo[0];
+		if (isIntersecting === false) {
+			document.querySelector('.header').classList.add('header--downpage');
+			document.querySelector('.navigation__logo').classList.add('navigation__logo--visible');
+		} else {
+			document.querySelector('.header').classList.remove('header--downpage');
+			document.querySelector('.navigation__logo').classList.remove('navigation__logo--visible');
+		}
+	},
+	{
+		rootMargin: '0% 0% 0% 0%',
+		threshold: 0
+	}
+);
+
+const mainLogo = document.querySelector('.hero-content__logo');
+mainLogoObserver.observe(mainLogo);
