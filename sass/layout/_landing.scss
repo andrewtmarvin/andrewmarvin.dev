@@ -179,6 +179,31 @@
 		// display: none;
 }
 
+.about-section-image {
+	position: absolute;
+	top: 20rem;
+	left: 0;
+	height: 80rem;
+	width: 80rem;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		background-color: rgba(var(--base-primary-dark), var(--alpha-medium));
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	img {
+		object-fit: cover;
+		transform: scale(0.45) translate(-85%, -85%);
+	}
+}
+.section__about {
+	background: linear-gradient(235deg, rgba(77,75,233,1) 0%, rgba(11,200,204,1) 100%);;
+}
 .about-content {
 	width: 800px;
 	margin:10vh 0;
@@ -186,32 +211,60 @@
 	background-color: var(--color-primary);
 	&__title {
 		color: var(--color-white);
-		text-align: center;
 	}
-	&__image {
-		position: absolute;
-		top: 50%;
-		left: -50%;
-		z-index: var(--layer-one);
-		img {
-			width: 400px;
-			object-fit: cover;
+	&__blurb {
+		display: grid;
+		grid-template-columns: repeat(10, 6rem);
+		grid-template-rows: repeat(2, max-content);
+		gap: 1rem;
+		width: 100%;
+		h3 {
+			grid-row: 1 / 2;
+			grid-column: 1 / 4;
+			color: var(--color-white);
+			position: relative;
+			margin-left: 1.8rem;
+			&::before {
+				content: url(../images/bullet.svg);
+				width: 1.4rem;
+				height: 1.4rem;
+				position: absolute;
+				top: -.5rem;
+				left: -1.8rem;
+			}
 		}
-	}
-	&__text-block {
-
+		p {
+			color: var(--color-purple-light);
+			grid-row: 2 / 3;
+			grid-column: 2 / -1;
+			padding-left: 2rem;
+			border-left: 2px var(--color-secondary) solid;
+		}
 	}
 	&__quote {
 		z-index: var(--layer-one);
 		align-self: center;
 		justify-self: center;
+		background-color: var(--color-white);
+		padding: var(--content-box-padding);
+		width: calc(100% + 15rem);
+		transform: translateX(-25%);
+		position: relative;
+		&::before {
+			content: url(../images/quote.svg);
+			width: 10rem;
+			height: 10rem;
+			position: absolute;
+			top: -4rem;
+			left: -2rem;
+		}
 		& p {
 			padding: 1rem;
-			color: var(--color-white);
-			background-color: rgba(0,0,0,.2);
+			color: var(--color-primary-dark);
+			font-size: var(--font-size-big);
+			white-space: nowrap;
 		}
 	}
-
 	&__terminal {
 		height: fit-content;
 	}

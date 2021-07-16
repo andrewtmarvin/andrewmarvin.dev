@@ -31,7 +31,8 @@
   --font-size-small: 1.2rem;
   --font-size-default: 1.6rem;
   --font-size-big: 2.4rem;
-  --font-size-huge: 6rem;
+  --font-size-huge: 4rem;
+  --font-size-gargantuan: 6rem;
   --font-content: 'Open Sans', sans-serif;
   --font-display: 'Poppins', sans-serif;
   --font-code: 'Fira Code', monospace;
@@ -39,7 +40,7 @@
   --layer-one: 100;
   --layer-two: 200;
   --layer-three: 300;
-  --content-box-padding: 4rem;
+  --content-box-padding: 2rem 5rem;
   --shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));
   --transition-ease-in-out: all .25s ease-in-out;
   --rounded-corners-tight: 2px;
@@ -240,14 +241,19 @@ h6 {
 }
 
 .header-huge {
-  font-size: var(--font-size-huge);
+  font-size: var(--font-size-gargantuan);
   line-height: 1.1;
   font-weight: 600;
 }
 
 .header-big {
-  font-size: var(--font-size-big);
+  font-size: var(--font-size-huge);
   line-height: 1.3;
+}
+
+.header-medium {
+  font-size: var(--font-size-big);
+  line-height: 1.5;
 }
 
 .coding-font {
@@ -266,7 +272,7 @@ h6 {
   visibility: hidden;
 }
 
-.spacer-line:after {
+.spacer-line::after {
   content: "";
   background-color: var(--color-secondary);
   width: 12rem;
@@ -278,12 +284,28 @@ h6 {
           transform: translateX(-50%);
 }
 
+.line-right {
+  position: relative;
+}
+
+.line-right::after {
+  content: "";
+  background-color: var(--color-secondary);
+  width: 7.5rem;
+  height: 2px;
+  position: absolute;
+  bottom: 50%;
+  right: -8rem;
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+
 .big-spacer {
   margin-bottom: 4rem;
 }
 
 .small-spacer {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .btn,
@@ -826,6 +848,36 @@ a.btn__projects:hover {
   margin-right: 10%;
 }
 
+.about-section-image {
+  position: absolute;
+  top: 20rem;
+  left: 0;
+  height: 80rem;
+  width: 80rem;
+  overflow: hidden;
+}
+
+.about-section-image::after {
+  content: "";
+  background-color: rgba(var(--base-primary-dark), var(--alpha-medium));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.about-section-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: scale(0.45) translate(-85%, -85%);
+          transform: scale(0.45) translate(-85%, -85%);
+}
+
+.section__about {
+  background: linear-gradient(235deg, #4d4be9 0%, #0bc8cc 100%);
+}
+
 .about-content {
   width: 800px;
   margin: 10vh 0;
@@ -835,20 +887,49 @@ a.btn__projects:hover {
 
 .about-content__title {
   color: var(--color-white);
-  text-align: center;
 }
 
-.about-content__image {
+.about-content__blurb {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (6rem)[10];
+      grid-template-columns: repeat(10, 6rem);
+  -ms-grid-rows: (max-content)[2];
+      grid-template-rows: repeat(2, -webkit-max-content);
+      grid-template-rows: repeat(2, max-content);
+  gap: 1rem;
+  width: 100%;
+}
+
+.about-content__blurb h3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  color: var(--color-white);
+  position: relative;
+  margin-left: 1.8rem;
+}
+
+.about-content__blurb h3::before {
+  content: url(../images/bullet.svg);
+  width: 1.4rem;
+  height: 1.4rem;
   position: absolute;
-  top: 50%;
-  left: -50%;
-  z-index: var(--layer-one);
+  top: -.5rem;
+  left: -1.8rem;
 }
 
-.about-content__image img {
-  width: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+.about-content__blurb p {
+  color: var(--color-purple-light);
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  grid-column: 2 / -1;
+  padding-left: 2rem;
+  border-left: 2px var(--color-secondary) solid;
 }
 
 .about-content__quote {
@@ -858,12 +939,28 @@ a.btn__projects:hover {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  background-color: var(--color-white);
+  padding: var(--content-box-padding);
+  width: calc(100% + 15rem);
+  -webkit-transform: translateX(-25%);
+          transform: translateX(-25%);
+  position: relative;
+}
+
+.about-content__quote::before {
+  content: url(../images/quote.svg);
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: -4rem;
+  left: -2rem;
 }
 
 .about-content__quote p {
   padding: 1rem;
-  color: var(--color-white);
-  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-big);
+  white-space: nowrap;
 }
 
 .about-content__terminal {

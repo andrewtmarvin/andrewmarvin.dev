@@ -39,7 +39,8 @@
 	--font-size-small: 1.2rem;
 	--font-size-default: 1.6rem;
 	--font-size-big: 2.4rem;
-	--font-size-huge: 6rem;
+	--font-size-huge: 4rem;
+	--font-size-gargantuan: 6rem;
 
 	--font-content: 'Open Sans', sans-serif;
 	--font-display: 'Poppins', sans-serif;
@@ -52,7 +53,7 @@
 	--layer-three: 300;
 
 	// SPACING
-	--content-box-padding: 4rem;
+	--content-box-padding: 2rem 5rem;
 
 	// OTHER
 	--shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));

@@ -2,7 +2,7 @@
     visibility: hidden;
 }
 .spacer-line {
-    &:after{
+    &::after {
         content: "";
         background-color: var(--color-secondary);
         width: 12rem;
@@ -13,10 +13,23 @@
         transform: translateX(-50%);
     }
 }
+.line-right {
+    position: relative;
+    &::after {
+        content: "";
+        background-color: var(--color-secondary);
+        width: 7.5rem;
+        height: 2px;
+        position: absolute;
+        bottom: 50%;
+        right: -8rem;
+        transform: translateX(1rem);
+    }
+}
 .big-spacer {
     margin-bottom: 4rem;
 }
 
 .small-spacer {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }

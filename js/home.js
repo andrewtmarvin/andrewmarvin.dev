@@ -51,8 +51,8 @@ let fadeInTextLinesObserver = new IntersectionObserver(
 		});
 	},
 	{
-		rootMargin: '-20% 0% -20% 0%',
-		threshold: 1
+		rootMargin: '-10% 0% 0% 0%',
+		threshold: 0.5
 	}
 );
 
@@ -184,10 +184,10 @@ emailElementWrapper.addEventListener('mouseleave', () => {
 	sideElements.classList.remove('email-tooltip');
 });
 
-// Nav bar change when main logo offscreen
-let mainLogoObserver = new IntersectionObserver(
-	function (mainLogo) {
-		const { isIntersecting } = mainLogo[0];
+// Nav bar change when hero h1 offscreen
+let heroHeaderObserver = new IntersectionObserver(
+	function (heroHeader) {
+		const { isIntersecting } = heroHeader[0];
 		if (isIntersecting === false) {
 			document.querySelector('.header').classList.add('header--downpage');
 			document.querySelector('.navigation__logo').classList.add('navigation__logo--visible');
@@ -202,5 +202,5 @@ let mainLogoObserver = new IntersectionObserver(
 	}
 );
 
-const mainLogo = document.querySelector('.hero-content__logo');
-mainLogoObserver.observe(mainLogo);
+const heroHeader = document.querySelector('.hero-content h1');
+heroHeaderObserver.observe(heroHeader);
