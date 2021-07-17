@@ -22,7 +22,7 @@
   --color-tertiary: rgb(var(--base-tertiary));
   --color-purple-light: rgb(var(--base-purple-light));
   --color-purple: rgb(var(--base-purple));
-  --color-yellow: rgb(var(--color-yellow));
+  --color-yellow: rgb(var(--base-yellow));
   --color-black: rgb(var(--base-black));
   --color-white: rgb(var(--base-white));
   --alpha-low: 0.2;
@@ -308,6 +308,19 @@ h6 {
   margin-bottom: 2rem;
 }
 
+.header-bullet {
+  position: relative;
+}
+
+.header-bullet::before {
+  content: url(../images/bullet.svg);
+  width: 1.4rem;
+  height: 1.4rem;
+  position: absolute;
+  top: -.5rem;
+  left: -1.8rem;
+}
+
 .btn,
 a.btn {
   padding: 1rem 2rem;
@@ -425,7 +438,7 @@ a.btn__projects:hover {
 }
 
 .terminal-box__hostname {
-  color: #26cc13;
+  color: var(--color-yellow);
 }
 
 .terminal-box__directory {
@@ -479,14 +492,6 @@ a.btn__projects:hover {
 
 .terminal-box ul li:last-child:after {
   display: none;
-}
-
-.terminal-box ::-moz-selection {
-  background-color: #26cc13;
-}
-
-.terminal-box ::selection {
-  background-color: #26cc13;
 }
 
 .header {
@@ -881,6 +886,7 @@ a.btn__projects:hover {
 .about-content {
   width: 800px;
   margin: 10vh 0;
+  margin-left: 10vw;
   padding: var(--content-box-padding);
   background-color: var(--color-primary);
 }
@@ -911,15 +917,6 @@ a.btn__projects:hover {
   color: var(--color-white);
   position: relative;
   margin-left: 1.8rem;
-}
-
-.about-content__blurb h3::before {
-  content: url(../images/bullet.svg);
-  width: 1.4rem;
-  height: 1.4rem;
-  position: absolute;
-  top: -.5rem;
-  left: -1.8rem;
 }
 
 .about-content__blurb p {
@@ -969,10 +966,23 @@ a.btn__projects:hover {
   height: fit-content;
 }
 
-.work-content {
+.section__work {
+  background: linear-gradient(235deg, #FF5C55 0%, #290b0a 100%);
   height: 150vh;
-  background-color: lightblue;
-  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.work-content {
+  width: 80rem;
+  margin: 10vh 0;
+  margin-right: 10vw;
+  padding: var(--content-box-padding);
+  background-color: var(--color-white);
 }
 
 .contact-content {

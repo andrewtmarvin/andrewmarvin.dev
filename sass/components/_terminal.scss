@@ -8,7 +8,7 @@
         display: inline-block;
     }
     &__hostname {
-        color: #26cc13;
+        color: var(--color-yellow);
     }
     &__directory {
         color: var(--color-white);
@@ -53,8 +53,5 @@
               &:after{ display: none }
             }
         }
-    }
-    ::selection {
-        background-color: #26cc13;
     }
 }

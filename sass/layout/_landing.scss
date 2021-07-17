@@ -207,6 +207,7 @@
 .about-content {
 	width: 800px;
 	margin:10vh 0;
+	margin-left :10vw;
 	padding: var(--content-box-padding);
 	background-color: var(--color-primary);
 	&__title {
@@ -224,14 +225,6 @@
 			color: var(--color-white);
 			position: relative;
 			margin-left: 1.8rem;
-			&::before {
-				content: url(../images/bullet.svg);
-				width: 1.4rem;
-				height: 1.4rem;
-				position: absolute;
-				top: -.5rem;
-				left: -1.8rem;
-			}
 		}
 		p {
 			color: var(--color-purple-light);
@@ -269,11 +262,18 @@
 		height: fit-content;
 	}
 }
-
-.work-content {
+.section__work {
+	background: linear-gradient(235deg, #FF5C55 0%, #290b0a 100%);;
 	height: 150vh;
-	background-color: lightblue;
-	width: 80%;
+	display: flex;
+	justify-content: center;
+}
+.work-content {
+	width: 80rem;
+	margin:10vh 0;
+	margin-right: 10vw;
+	padding: var(--content-box-padding);
+	background-color: var(--color-white);
 }
 
 .contact-content {
