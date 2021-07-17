@@ -995,6 +995,7 @@ a.btn__projects:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  counter-reset: project-counter;
 }
 
 .work-content__title {
@@ -1062,7 +1063,6 @@ a.btn__projects:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
-  counter-reset: project-counter;
   padding-left: 5rem;
   position: relative;
 }
@@ -1085,9 +1085,9 @@ a.btn__projects:hover {
   padding-left: 5rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (25%)[4];
-      grid-template-columns: repeat(4, 25%);
-  grid-auto-rows: 4rem;
+  -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-auto-rows: 1fr;
 }
 
 .work-content__showcase-description {
