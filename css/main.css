@@ -36,6 +36,7 @@
   --font-content: 'Open Sans', sans-serif;
   --font-display: 'Poppins', sans-serif;
   --font-code: 'Fira Code', monospace;
+  --layer-negative: -1;
   --layer-base: 0;
   --layer-one: 100;
   --layer-two: 200;
@@ -859,32 +860,6 @@ a.btn__projects:hover {
   margin-right: 10%;
 }
 
-.about-section-image {
-  position: absolute;
-  top: 20rem;
-  left: 0;
-  height: 80rem;
-  width: 80rem;
-  overflow: hidden;
-}
-
-.about-section-image::after {
-  content: "";
-  background-color: rgba(var(--base-primary-dark), var(--alpha-medium));
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.about-section-image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transform: scale(0.45) translate(-85%, -85%);
-          transform: scale(0.45) translate(-85%, -85%);
-}
-
 .section__about {
   background: linear-gradient(235deg, #4d4be9 0%, #0bc8cc 100%);
 }
@@ -895,6 +870,10 @@ a.btn__projects:hover {
   margin-left: 10vw;
   padding: var(--content-box-padding);
   background-color: var(--color-primary);
+}
+
+.about-content > * {
+  z-index: var(--layer-one);
 }
 
 .about-content__title {
@@ -970,6 +949,37 @@ a.btn__projects:hover {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.about-content__image {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  height: 80rem;
+  width: 80rem;
+  overflow: hidden;
+  z-index: var(--layer-negative);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+          clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.about-content__image::after {
+  content: "";
+  background-color: rgba(var(--base-primary-dark), var(--alpha-medium));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.about-content__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: scale(0.45) translate(-85%, -85%);
+          transform: scale(0.45) translate(-85%, -85%);
 }
 
 .section__work {
