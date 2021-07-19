@@ -5,7 +5,6 @@ const activateMenuItem = (activeMenuItem) => {
 		menuItem.classList.remove('active-section');
 	});
 	activeMenuItem.classList.add('active-section');
-	console.log('menu item activated: ', activeMenuItem);
 };
 
 // User Scrolling
@@ -32,6 +31,9 @@ sections.forEach((section) => pageSectionObserver.observe(section));
 menuLinks.forEach((link) => {
 	link.addEventListener('click', (e) => {
 		activateMenuItem(e.target);
+		// Remove scrolling observer while smooth scroll from click is taking place
+		sections.forEach((section) => pageSectionObserver.unobserve(section));
+		setTimeout(() => sections.forEach((section) => pageSectionObserver.observe(section)), 500);
 	});
 });
 
