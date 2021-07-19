@@ -240,6 +240,9 @@
 	}
 	&__terminal {
 		height: fit-content;
+		h3 {
+			color: var(--color-white);
+		}
 	}
 	&__image {
 		position: absolute;

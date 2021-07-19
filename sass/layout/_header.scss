@@ -65,6 +65,16 @@
 			padding-right: 2rem;
 			white-space: nowrap;
 			user-select: none;
+			a {
+				display: inline-block;
+				&:hover {
+					transform: translateY(-1px);
+					opacity: .9;
+				}
+				&:active {
+					transform: translateY(1px);
+				}
+			}
 		}
 	}
 	.active-section {
