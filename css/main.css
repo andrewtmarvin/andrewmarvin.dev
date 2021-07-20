@@ -194,12 +194,12 @@ li {
 
 ::-moz-selection {
   background-color: var(--color-tertiary);
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 ::selection {
   background-color: var(--color-tertiary);
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .link {
