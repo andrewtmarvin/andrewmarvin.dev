@@ -664,7 +664,7 @@ a.btn__projects:hover {
 }
 
 .navigation .active-section {
-  color: var(--color-secondary);
+  color: var(--color-yellow);
   position: relative;
 }
 
@@ -848,6 +848,20 @@ a.btn__projects:hover {
   background-color: rgba(var(--base-primary), var(--alpha-high));
 }
 
+.section__about {
+  background: linear-gradient(235deg, #4d4be9 0%, #0bc8cc 100%);
+}
+
+.section__work {
+  background: linear-gradient(235deg, #FF5C55 0%, #290b0a 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .hero-content {
   height: 100vh;
   width: 80vw;
@@ -914,10 +928,6 @@ a.btn__projects:hover {
 
 .hero-content__blurb .btn:not(:last-of-type) {
   margin-right: 10%;
-}
-
-.section__about {
-  background: linear-gradient(235deg, #4d4be9 0%, #0bc8cc 100%);
 }
 
 .about-content {
@@ -1040,16 +1050,6 @@ a.btn__projects:hover {
      object-fit: cover;
   -webkit-transform: scale(0.45) translate(-85%, -85%);
           transform: scale(0.45) translate(-85%, -85%);
-}
-
-.section__work {
-  background: linear-gradient(235deg, #FF5C55 0%, #290b0a 100%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .work-content {

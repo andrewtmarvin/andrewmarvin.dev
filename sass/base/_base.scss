@@ -25,22 +25,6 @@ a:active {
 	transition: var(--transition-ease-in-out);
 }
 
-// a:hover {
-// 	&::before,
-// 	&::after {
-// 	  position: absolute;
-// 	  content: "";
-// 	  left: 0;
-// 	  bottom: -0.1rem;
-// 	  display: block;
-// 	  width: 100%;
-// 	  height: 1px;
-// 	  background: var(--primary-tertiary);
-// 	  transition: 1.1s ease-out;
-// 	}
-
-// }
-
 li {
 	list-style: none;
 }

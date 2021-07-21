@@ -130,6 +130,14 @@
 		bottom: 0;
 		background-color: rgba(var(--base-primary), var(--alpha-high));
 	}
+	&__about {
+		background: linear-gradient(235deg, rgba(77,75,233,1) 0%, rgba(11,200,204,1) 100%);;
+	}
+	&__work {
+		background: linear-gradient(235deg, #FF5C55 0%, #290b0a 100%);;
+		display: flex;
+		justify-content: center;
+	}
 }
 .hero-content {
 	height: 100vh;
@@ -176,9 +184,6 @@
 
 .page-wrapper > section:not(.section__hero):not(.section__about) {
 		// display: none;
-}
-.section__about {
-	background: linear-gradient(235deg, rgba(77,75,233,1) 0%, rgba(11,200,204,1) 100%);;
 }
 
 .about-content {
@@ -268,11 +273,6 @@
 			transform: scale(0.45) translate(-85%, -85%);
 		}
 	}
-}
-.section__work {
-	background: linear-gradient(235deg, #FF5C55 0%, #290b0a 100%);;
-	display: flex;
-	justify-content: center;
 }
 .work-content {
 	width: 100%;

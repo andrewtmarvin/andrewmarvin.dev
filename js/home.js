@@ -8,7 +8,7 @@ const activateMenuItem = (activeMenuItem) => {
 };
 
 // User Scrolling
-let pageSectionObserver = new IntersectionObserver(
+const pageSectionObserver = new IntersectionObserver(
 	function (section) {
 		section = section[0];
 		const { isIntersecting } = section;
@@ -39,7 +39,7 @@ menuLinks.forEach((link) => {
 
 // ANIMATIONS
 // Fade in lines
-let fadeInTextLinesObserver = new IntersectionObserver(
+const fadeInTextLinesObserver = new IntersectionObserver(
 	function (textBlocks) {
 		textBlocks.forEach(function (textBlock) {
 			const { isIntersecting } = textBlock;
@@ -62,7 +62,7 @@ const fadeInTextElements = document.querySelectorAll('.fade-in-text-lines');
 fadeInTextElements.forEach((element) => fadeInTextLinesObserver.observe(element));
 
 // Fade in element
-let fadeInElementObserver = new IntersectionObserver(
+const fadeInElementObserver = new IntersectionObserver(
 	function (elements) {
 		elements.forEach(function (element) {
 			const { isIntersecting } = element;
@@ -82,18 +82,18 @@ const fadeInElements = document.querySelectorAll('.fade-in-element');
 fadeInElements.forEach((element) => fadeInElementObserver.observe(element));
 
 // Fade out element
-let fadeOutElementObserver = new IntersectionObserver(
+const fadeOutElementObserver = new IntersectionObserver(
 	function (elements) {
 		elements.forEach(function (element) {
 			const { isIntersecting } = element;
 			const targ = element.target;
 			if (isIntersecting === true) {
 				element.target.style.opacity =
-					element.target.getBoundingClientRect().top / (document.body.clientHeight / 10); // So jumping to top of page triggers opacity update
+					element.target.getBoundingClientRect().top / (document.body.clientHeight / 25); // So jumping to top of page triggers opacity update
 				document.addEventListener(
 					'scroll',
 					(scrollFade = function (event, targ) {
-						this.style.opacity = this.getBoundingClientRect().top / (document.body.clientHeight / 10);
+						this.style.opacity = this.getBoundingClientRect().top / (document.body.clientHeight / 25);
 					}.bind(targ)),
 					true
 				);
@@ -116,9 +116,9 @@ const fadeOutElements = document.querySelectorAll('.fade-out-element');
 fadeOutElements.forEach((element) => fadeOutElementObserver.observe(element));
 
 // Animate typing
-let typingLetters = (element, text) => {
+const typingLetters = (element, text) => {
 	return new Promise((resolve, reject) => {
-		let chars = [ ...text ];
+		const chars = [ ...text ];
 		element.innerText = '';
 		for (let i = 0; i < chars.length; i++) {
 			setTimeout(() => {
@@ -135,15 +135,15 @@ let typingLetters = (element, text) => {
 typingLetters(document.querySelector('.header-huge .typing-letters'), "I'm\u00A0Andrew\u00A0Marvin");
 
 // Animates terminal command being executed
-let executeTerminalCommand = (terminal) => {
+const executeTerminalCommand = (terminal) => {
 	document.querySelector('.terminal-box__command.blinking-cursor').classList.remove('blinking-cursor');
-	let nodes = terminal.target.querySelectorAll('*');
+	const nodes = terminal.target.querySelectorAll('*');
 	for (let i = 0; i < nodes.length; i++) {
 		setTimeout(() => nodes[i].classList.remove('hidden'), 10 * i);
 	}
 };
 
-let terminalObserver = new IntersectionObserver(
+const terminalObserver = new IntersectionObserver(
 	async function (terminal) {
 		terminal = terminal[0];
 		const { isIntersecting } = terminal;
@@ -187,7 +187,7 @@ emailElementWrapper.addEventListener('mouseleave', () => {
 });
 
 // Nav bar change when hero h1 offscreen
-let heroHeaderObserver = new IntersectionObserver(
+const heroHeaderObserver = new IntersectionObserver(
 	function (heroHeader) {
 		const { isIntersecting } = heroHeader[0];
 		if (isIntersecting === false) {
