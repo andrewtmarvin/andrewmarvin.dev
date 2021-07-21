@@ -1,12 +1,12 @@
 :root {
   --base-primary-light: 38, 65, 145;
-  --base-primary: 37, 37, 104;
+  --base-primary: 18, 2, 49;
   --base-primary-dark: 7, 16, 57;
   --base-secondary-light: 255, 92, 85;
-  --base-secondary: 237, 34, 34;
+  --base-secondary: 4, 211, 209;
   --base-secondary-dark: 180, 15, 15;
   --base-tertiary-light: 0, 248, 255;
-  --base-tertiary: 4, 211, 209;
+  --base-tertiary: 239, 167, 111;
   --base-purple-light: 163, 163, 201;
   --base-purple: 122, 122, 184;
   --base-yellow: 218, 207, 37;
@@ -122,7 +122,7 @@ p.fade-in-text-lines-visible {
   top: .3rem;
   right: -.4em;
   display: inline-block;
-  background-color: var(--color-white);
+  background-color: var(--color-secondary);
   vertical-align: top;
   width: clamp(0.5rem, 0.5em, 2rem);
   height: clamp(2.2rem, 1em, 4.6rem);
@@ -269,11 +269,15 @@ body {
 }
 
 h1 {
-  color: var(--color-primary-light);
-  font-family: var(--font-code);
+  font-family: var(--font-display);
+  line-height: 1.1;
 }
 
-h2,
+h2 {
+  font-family: var(--font-display);
+  line-height: 1.3;
+}
+
 h3,
 h4,
 h5,
@@ -547,7 +551,7 @@ a.btn__projects:hover {
   position: fixed;
   width: 100vw;
   top: 0;
-  height: 6rem;
+  height: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -610,12 +614,12 @@ a.btn__projects:hover {
 }
 
 .navigation__logo p span {
-  color: var(--color-tertiary);
+  color: var(--color-secondary);
 }
 
 .navigation__logo p::after {
   content: "";
-  background-color: var(--color-tertiary);
+  background-color: var(--color-secondary);
   height: 1em;
   width: .35em;
   position: absolute;
@@ -650,6 +654,8 @@ a.btn__projects:hover {
 
 .navigation ul li a {
   display: inline-block;
+  color: var(--color-secondary);
+  font-size: var(--font-size-default);
 }
 
 .navigation ul li a:hover {
@@ -664,7 +670,7 @@ a.btn__projects:hover {
 }
 
 .navigation .active-section {
-  color: var(--color-yellow);
+  color: var(--color-tertiary);
   position: relative;
 }
 
@@ -885,6 +891,10 @@ a.btn__projects:hover {
 
 .hero-content__logo {
   width: 15rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .hero-content h1 {
@@ -892,6 +902,12 @@ a.btn__projects:hover {
   margin-top: 8rem;
   margin-bottom: 4rem;
   color: var(--color-white);
+}
+
+.hero-content h1 .blinking-cursor {
+  color: var(--color-secondary);
+  font-family: var(--font-code);
+  font-weight: 300;
 }
 
 .hero-content h1:before {

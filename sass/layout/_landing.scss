@@ -151,12 +151,18 @@
 	color: var(--color-purple-light);
 	&__logo {
 		width: 15rem;
+		user-select: none;
 	}
 	h1 {
 		position: relative;
 		margin-top: 8rem;
 		margin-bottom: 4rem;
 		color: var(--color-white);
+		.blinking-cursor {
+			color: var(--color-secondary);
+			font-family: var(--font-code);
+			font-weight: 300;
+		}
 		&:before {
 			content: "Hi there,";
 			position: absolute;
@@ -180,10 +186,6 @@
 			}
 		}
 	}
-}
-
-.page-wrapper > section:not(.section__hero):not(.section__about) {
-		// display: none;
 }
 
 .about-content {

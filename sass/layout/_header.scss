@@ -2,7 +2,7 @@
 	position: fixed;
 	width: 100vw;
 	top: 0;
-	height: 6rem;
+	height: 10rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -38,11 +38,11 @@
 			margin-left:1rem;
 			position: relative;
 			span {
-				color: var(--color-tertiary);
+				color: var(--color-secondary);
 			}
 			&::after {
 				content: "";
-				background-color: var(--color-tertiary);
+				background-color: var(--color-secondary);
 				height: 1em;
 				width: .35em;
 				position: absolute;
@@ -67,6 +67,8 @@
 			user-select: none;
 			a {
 				display: inline-block;
+				color: var(--color-secondary);
+				font-size: var(--font-size-default);
 				&:hover {
 					transform: translateY(-1px);
 					opacity: .9;
@@ -78,7 +80,7 @@
 		}
 	}
 	.active-section {
-		color: var(--color-yellow);
+		color: var(--color-tertiary);
 		position: relative;
 		&::before {
 			content: "[";

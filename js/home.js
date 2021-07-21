@@ -132,7 +132,7 @@ const typingLetters = (element, text) => {
 };
 
 // Animates header being typed
-typingLetters(document.querySelector('.header-huge .typing-letters'), "I'm\u00A0Andrew\u00A0Marvin");
+typingLetters(document.querySelector('.header-huge .typing-letters'), 'Marvin');
 
 // Animates terminal command being executed
 const executeTerminalCommand = (terminal) => {
