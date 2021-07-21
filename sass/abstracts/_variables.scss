@@ -1,34 +1,32 @@
 :root {
 	// COLORS
-	--base-primary-light: 38, 65, 145;
 	--base-primary: 18, 2, 49;
-	--base-primary-dark: 7, 16, 57;
-	--base-secondary-light: 255, 92, 85;
 	--base-secondary: 4, 211, 209;
-	--base-secondary-dark: 180, 15, 15;
-	--base-tertiary-light: 0, 248, 255;
 	--base-tertiary: 239, 167, 111;
 
-	--base-purple-light: 163, 163, 201;
+	--base-purple-light: 196, 196, 229;
 	--base-purple: 122, 122, 184;
-	--base-yellow: 218, 207, 37;
-	--base-black: 0, 0, 0;
-	--base-white: 232, 240, 255;
+	--base-blue: 37, 37, 104;
+	--base-blue-light: 165, 212, 238;
+	--base-blue-gray: 61, 74, 116;
 
-	--color-primary-light: rgb(var(--base-primary-light));
+	--base-black: 18, 19, 20;
+	--base-white: 255, 255, 255;
+	--base-gray: 166, 163, 165;
+
 	--color-primary: rgb(var(--base-primary));
-	--color-primary-dark: rgb(var(--base-primary-dark));
-	--color-secondary-light: rgb(var(--base-secondary-light));
 	--color-secondary: rgb(var(--base-secondary));
-	--color-secondary-dark: rgb(var(--base-secondary-dark));
-	--color-tertiary-light: rgb(var(--base-tertiary-light));
 	--color-tertiary: rgb(var(--base-tertiary));
 
+	--color-blue-gray: rgb(var(--base-blue-gray));
+	--color-blue-light: rgb(var(--color-blue-light));
+	--color-blue: rgb(var(--color-blue));
 	--color-purple-light: rgb(var(--base-purple-light));
 	--color-purple: rgb(var(--base-purple));
-	--color-yellow: rgb(var(--base-yellow));
+
 	--color-black: rgb(var(--base-black));
 	--color-white: rgb(var(--base-white));
+	--color-gray: rgb(var(--base-gray));
 
 	// OPACITY
 	--alpha-low: 0.2;
@@ -56,6 +54,9 @@
 	// SPACING
 	--content-box-padding: 2rem 5rem;
 	--content-box-padding-big: 8rem 10rem;
+
+	// PAGE WIDTH
+	--content-width-desktop: 66%;
 
 	// OTHER
 	--shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));

@@ -138,10 +138,13 @@
 		display: flex;
 		justify-content: center;
 	}
+	&__contact {
+		background-color: cadetblue;
+	}
 }
 .hero-content {
 	height: 100vh;
-	width: 80vw;
+	width: var(--content-width-desktop);
 	z-index: var(--layer-one);
 	display: flex;
 	flex-direction: column;
@@ -189,7 +192,7 @@
 }
 
 .about-content {
-	width: 800px;
+	width: var(--content-width-desktop);
 	margin:10vh 0;
 	margin-left :10vw;
 	padding: var(--content-box-padding);
@@ -277,7 +280,7 @@
 	}
 }
 .work-content {
-	width: 100%;
+	width: var(--content-width-desktop);
 	margin:10vh 0;
 	display: flex;
 	flex-flow: column nowrap;
@@ -391,6 +394,5 @@
 
 .contact-content {
 	height: 100vh;
-	width: 80%;
-	background-color: cadetblue;
+	width: var(--content-width-desktop);
 }

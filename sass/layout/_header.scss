@@ -14,7 +14,7 @@
 }
 
 .navigation {
-	width: 80vw;
+	width: 66vw;
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
@@ -61,8 +61,6 @@
 		display: flex;
 		margin-left: auto;
 		& li {
-			margin: 0 .5rem;
-			padding-right: 2rem;
 			white-space: nowrap;
 			user-select: none;
 			a {
@@ -77,6 +75,9 @@
 					transform: translateY(1px);
 				}
 			}
+		}
+		& li:not(:last-of-type) {
+			margin-right: 5rem;
 		}
 	}
 	.active-section {

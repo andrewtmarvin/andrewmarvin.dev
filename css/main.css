@@ -1,30 +1,26 @@
 :root {
-  --base-primary-light: 38, 65, 145;
   --base-primary: 18, 2, 49;
-  --base-primary-dark: 7, 16, 57;
-  --base-secondary-light: 255, 92, 85;
   --base-secondary: 4, 211, 209;
-  --base-secondary-dark: 180, 15, 15;
-  --base-tertiary-light: 0, 248, 255;
   --base-tertiary: 239, 167, 111;
-  --base-purple-light: 163, 163, 201;
+  --base-purple-light: 196, 196, 229;
   --base-purple: 122, 122, 184;
-  --base-yellow: 218, 207, 37;
-  --base-black: 0, 0, 0;
-  --base-white: 232, 240, 255;
-  --color-primary-light: rgb(var(--base-primary-light));
+  --base-blue: 37, 37, 104;
+  --base-blue-light: 165, 212, 238;
+  --base-blue-gray: 61, 74, 116;
+  --base-black: 18, 19, 20;
+  --base-white: 255, 255, 255;
+  --base-gray: 166, 163, 165;
   --color-primary: rgb(var(--base-primary));
-  --color-primary-dark: rgb(var(--base-primary-dark));
-  --color-secondary-light: rgb(var(--base-secondary-light));
   --color-secondary: rgb(var(--base-secondary));
-  --color-secondary-dark: rgb(var(--base-secondary-dark));
-  --color-tertiary-light: rgb(var(--base-tertiary-light));
   --color-tertiary: rgb(var(--base-tertiary));
+  --color-blue-gray: rgb(var(--base-blue-gray));
+  --color-blue-light: rgb(var(--color-blue-light));
+  --color-blue: rgb(var(--color-blue));
   --color-purple-light: rgb(var(--base-purple-light));
   --color-purple: rgb(var(--base-purple));
-  --color-yellow: rgb(var(--base-yellow));
   --color-black: rgb(var(--base-black));
   --color-white: rgb(var(--base-white));
+  --color-gray: rgb(var(--base-gray));
   --alpha-low: 0.2;
   --alpha-medium: 0.5;
   --alpha-high: 0.7;
@@ -43,6 +39,7 @@
   --layer-three: 300;
   --content-box-padding: 2rem 5rem;
   --content-box-padding-big: 8rem 10rem;
+  --content-width-desktop: 66%;
   --shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));
   --transition-ease-in-out: all .25s ease-in-out;
   --rounded-corners-tight: 2px;
@@ -571,7 +568,7 @@ a.btn__projects:hover {
 }
 
 .navigation {
-  width: 80vw;
+  width: 66vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -643,8 +640,6 @@ a.btn__projects:hover {
 }
 
 .navigation ul li {
-  margin: 0 .5rem;
-  padding-right: 2rem;
   white-space: nowrap;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -667,6 +662,10 @@ a.btn__projects:hover {
 .navigation ul li a:active {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
+}
+
+.navigation ul li:not(:last-of-type) {
+  margin-right: 5rem;
 }
 
 .navigation .active-section {
@@ -868,9 +867,13 @@ a.btn__projects:hover {
           justify-content: center;
 }
 
+.section__contact {
+  background-color: cadetblue;
+}
+
 .hero-content {
   height: 100vh;
-  width: 80vw;
+  width: var(--content-width-desktop);
   z-index: var(--layer-one);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -947,7 +950,7 @@ a.btn__projects:hover {
 }
 
 .about-content {
-  width: 800px;
+  width: var(--content-width-desktop);
   margin: 10vh 0;
   margin-left: 10vw;
   padding: var(--content-box-padding);
@@ -1069,7 +1072,7 @@ a.btn__projects:hover {
 }
 
 .work-content {
-  width: 100%;
+  width: var(--content-width-desktop);
   margin: 10vh 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1240,7 +1243,6 @@ a.btn__projects:hover {
 
 .contact-content {
   height: 100vh;
-  width: 80%;
-  background-color: cadetblue;
+  width: var(--content-width-desktop);
 }
 /*# sourceMappingURL=main.css.map */
