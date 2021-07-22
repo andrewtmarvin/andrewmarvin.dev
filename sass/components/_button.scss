@@ -21,14 +21,14 @@ a.btn {
 	&__resume {
 		border: 1px solid;
 		border-image-slice: 1;
-		border-image-source: linear-gradient(to right, #4D4BE9, #13E8BE);
+		border-image-source: var(--main-gradient);
 		color: var(--color-white);
 		&:hover {
 			border-image-source: linear-gradient(to right, #4D4BE9, 4D4BE9);
 		}
 	}
 	&__projects {
-		background: linear-gradient(to right, #4D4BE9, #13E8BE);
+		background: var(--main-gradient);
 		color: var(--color-white);
 	}
 	&__CTA {
