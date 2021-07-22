@@ -1,37 +1,35 @@
 .btn,
 a.btn {
-	padding: 1rem 2rem;
 	color: var(--color-secondary);
-	border: 1px var(--color-secondary) solid;
 	transition: var(--transition-ease-in-out);
 	width: 17rem;
-	height: min-content;
+	height: 6rem;
 	user-select: none;
 	font-weight: 600;
 	text-transform: uppercase;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
-
+	background-color: transparent;
 	&:hover {
-		background-color: var(--color-primary-dark);
-		color: var(--color-white);
-		font-weight: 600;
+		background-color: var(--color-blue);
 	}
 	&__icon {
-		width: 2em;
+		width: 1.5em;
+		margin-right: 1em;
 	}
 	&__resume {
+		border: 1px solid;
+		border-image-slice: 1;
+		border-image-source: linear-gradient(to right, #4D4BE9, #13E8BE);
+		color: var(--color-white);
 		&:hover {
-			color: var(--color-secondary);
+			border-image-source: linear-gradient(to right, #4D4BE9, 4D4BE9);
 		}
 	}
 	&__projects {
-		background-color: var(--color-secondary);
+		background: linear-gradient(to right, #4D4BE9, #13E8BE);
 		color: var(--color-white);
-		&:hover {
-			background-color: var(--color-secondary-dark);
-		}
 	}
 	&__CTA {
 	}

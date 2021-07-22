@@ -81,16 +81,17 @@
 		}
 	}
 	.active-section {
-		color: var(--color-tertiary);
 		position: relative;
+		&::before, &::after {
+			color: var(--color-tertiary);
+			position: absolute;
+		}
 		&::before {
 			content: "[";
-			position: absolute;
 			left: -1rem;
 		}
 		&::after {
 			content: "]";
-			position: absolute;
 			right: -1rem;
 		}
 	}

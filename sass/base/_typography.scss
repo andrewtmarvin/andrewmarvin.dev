@@ -3,6 +3,7 @@ body {
 	font-size: var(--font-size-default);
 	font-family: var(--font-content);
 	line-height: 1.75;
+	color: var(--color-purple);
 }
 
 h1 {
@@ -47,6 +48,8 @@ h6 {
 	text-transform: uppercase;
 }
 
-.emphasis {
+em, .emphasis {
+	font-style: unset;
 	font-weight: 600;
+	color: var(--color-secondary);
 }

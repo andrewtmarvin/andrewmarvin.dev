@@ -1,9 +1,9 @@
 .scroll-indicator {
 	position: absolute;
 	z-index: var(--layer-three);
-	bottom: 5vh;
+	bottom: 6.5vh;
 	left: 50%;
-	width: 2rem;
+	width: 3.5rem;
 	fill: var(--color-primary);
 	animation: bounce 2s ease-in-out infinite;
 	animation-delay: 3s;

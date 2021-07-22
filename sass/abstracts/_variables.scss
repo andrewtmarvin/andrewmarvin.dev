@@ -19,8 +19,8 @@
 	--color-tertiary: rgb(var(--base-tertiary));
 
 	--color-blue-gray: rgb(var(--base-blue-gray));
-	--color-blue-light: rgb(var(--color-blue-light));
-	--color-blue: rgb(var(--color-blue));
+	--color-blue-light: rgb(var(--base-blue-light));
+	--color-blue: rgb(var(--base-blue));
 	--color-purple-light: rgb(var(--base-purple-light));
 	--color-purple: rgb(var(--base-purple));
 
@@ -31,7 +31,7 @@
 	// OPACITY
 	--alpha-low: 0.2;
 	--alpha-medium: 0.5;
-	--alpha-high: 0.7;
+	--alpha-high: 0.85;
 
 	// FONT
 	--font-size-small: 1.2rem;

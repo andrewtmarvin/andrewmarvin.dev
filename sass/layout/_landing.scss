@@ -4,21 +4,21 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	color: var(--color-tertiary);
+	color: var(--color-secondary);
 	pointer-events: none;
 	z-index: var(--layer-three);
 	--mouse-x: 0px;
 	--mouse-y: 0px;
 	& > * {
 		position: absolute;
-		top: 70vh;
+		top: 60vh;
 		pointer-events: all;
 		user-select: none;
 		&::after {
 			content: "";
-			background-color: var(--color-tertiary);
+			background-color: var(--color-secondary);
 			width: 2px;
-			height: 200px;
+			height: 40vh;
 			position: absolute;
 		}
 	}
@@ -114,11 +114,11 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-image: url(../images/hero.jpg);
+		background-image: url(../images/hero.png);
 		background-size: cover;
-		filter: brightness(.2);
-		image-rendering: -webkit-optimize-contrast;
-		transform: rotate(2deg) scale(2.5);
+		// filter: brightness(.2);
+		// image-rendering: -webkit-optimize-contrast;
+		// transform: rotate(2deg) scale(2.5);
 		background-position: center;
 	}
 	&__hero::after {
@@ -131,7 +131,7 @@
 		background-color: rgba(var(--base-primary), var(--alpha-high));
 	}
 	&__about {
-		background: linear-gradient(235deg, rgba(77,75,233,1) 0%, rgba(11,200,204,1) 100%);;
+		background-color: var(--color-primary);
 	}
 	&__work {
 		background: linear-gradient(235deg, #FF5C55 0%, #290b0a 100%);;
@@ -142,6 +142,9 @@
 		background-color: cadetblue;
 	}
 }
+.section:not(:first-of-type) {
+	display: none;
+}
 .hero-content {
 	height: 100vh;
 	width: var(--content-width-desktop);
@@ -151,7 +154,6 @@
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
-	color: var(--color-purple-light);
 	&__logo {
 		width: 15rem;
 		user-select: none;
@@ -159,7 +161,7 @@
 	h1 {
 		position: relative;
 		margin-top: 8rem;
-		margin-bottom: 4rem;
+		margin-bottom: 2rem;
 		color: var(--color-white);
 		.blinking-cursor {
 			color: var(--color-secondary);
@@ -167,23 +169,31 @@
 			font-weight: 300;
 		}
 		&:before {
-			content: "Hi there,";
+			content: "Hello, I'm";
 			position: absolute;
 			width: max-content;
 			top: -5rem;
 			left: 50%;
 			transform: translateX(-50%);
 			font-size: var(--font-size-big);
+			font-family: var(--font-code);
 		}
 	}
 	&__blurb {
-		width: 50rem;
+		width: 80rem;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
 		text-align: center;
+		p {
+			font-size: var(--font-size-big);
+			font-family: var(--font-code);
+			font-weight: 600;
+			line-height: 2;
+		}
 		& .btn {
 			text-align: center;
+			margin-top: 4rem;
 			&:not(:last-of-type){
 				margin-right: 10%
 			}
