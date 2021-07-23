@@ -29,7 +29,9 @@
 	--color-gray: rgb(var(--base-gray));
 
 	--main-gradient: linear-gradient(to right, #4D4BE9, #13E8BE);
-	
+	--main-gradient-btn--1: linear-gradient(to right, #120231 0%, #4D4BE9 50%, #13E8BE 100% );
+	--main-gradient-btn--2: linear-gradient(to right, #120231 50%, #4D4BE9 100%, #ffffff00 0%, #ffffff00 50% );
+	// --main-gradient-btn--2: linear-gradient(to right, #ffffff00 50%, #ffffff00 100%, #120231 50%, #4D4BE9 100%);
 	// OPACITY
 	--alpha-low: 0.2;
 	--alpha-medium: 0.5;

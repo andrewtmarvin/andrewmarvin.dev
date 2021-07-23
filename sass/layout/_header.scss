@@ -83,7 +83,7 @@
 	.active-section {
 		position: relative;
 		&::before, &::after {
-			color: var(--color-tertiary);
+			top: -1px;
 			position: absolute;
 		}
 		&::before {

@@ -2,13 +2,14 @@
     visibility: hidden;
 }
 .spacer-line {
+    position: relative;
     &::after {
         content: "";
         background-image: var(--main-gradient);
         width: 12rem;
         height: 2px;
         position: absolute;
-        bottom: -2rem;
+        bottom: -1rem;
         left: 50%;
         transform: translateX(-50%);
     }

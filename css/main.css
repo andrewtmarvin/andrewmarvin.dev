@@ -22,6 +22,8 @@
   --color-white: rgb(var(--base-white));
   --color-gray: rgb(var(--base-gray));
   --main-gradient: linear-gradient(to right, #4D4BE9, #13E8BE);
+  --main-gradient-btn--1: linear-gradient(to right, #120231 0%, #4D4BE9 50%, #13E8BE 100% );
+  --main-gradient-btn--2: linear-gradient(to right, #120231 50%, #4D4BE9 100%, #ffffff00 0%, #ffffff00 50% );
   --alpha-low: 0.2;
   --alpha-medium: 0.5;
   --alpha-high: 0.85;
@@ -319,13 +321,17 @@ em, .emphasis {
   visibility: hidden;
 }
 
+.spacer-line {
+  position: relative;
+}
+
 .spacer-line::after {
   content: "";
   background-image: var(--main-gradient);
   width: 12rem;
   height: 2px;
   position: absolute;
-  bottom: -2rem;
+  bottom: -1rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -379,8 +385,8 @@ em, .emphasis {
 .btn,
 a.btn {
   color: var(--color-secondary);
-  -webkit-transition: var(--transition-ease-in-out);
-  transition: var(--transition-ease-in-out);
+  -webkit-transition: .25s background-position linear;
+  transition: .25s background-position linear;
   width: 17rem;
   height: 6rem;
   -webkit-user-select: none;
@@ -398,12 +404,6 @@ a.btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: transparent;
-}
-
-.btn:hover,
-a.btn:hover {
-  background-color: var(--color-blue);
 }
 
 .btn__icon,
@@ -412,23 +412,36 @@ a.btn__icon {
   margin-right: 1em;
 }
 
+.btn__projects,
+a.btn__projects {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: var(--main-gradient);
+  background: var(--main-gradient-btn--1);
+  background-position: right;
+  background-size: 200%;
+  color: var(--color-white);
+}
+
+.btn__projects:hover,
+a.btn__projects:hover {
+  background-position: left;
+}
+
 .btn__resume,
 a.btn__resume {
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: var(--main-gradient);
+  background: var(--main-gradient-btn--2);
+  background-position: left;
+  background-size: 200%;
   color: var(--color-white);
 }
 
 .btn__resume:hover,
 a.btn__resume:hover {
-  border-image-source: linear-gradient(to right, #4D4BE9, 4D4BE9);
-}
-
-.btn__projects,
-a.btn__projects {
-  background: var(--main-gradient);
-  color: var(--color-white);
+  background-position: right;
 }
 
 .scroll-indicator {
@@ -676,7 +689,7 @@ a.btn__projects {
 }
 
 .navigation .active-section::before, .navigation .active-section::after {
-  color: var(--color-tertiary);
+  top: -1px;
   position: absolute;
 }
 
@@ -705,7 +718,7 @@ a.btn__projects {
 
 .side-elements > * {
   position: absolute;
-  top: 60vh;
+  top: 65vh;
   pointer-events: all;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -717,7 +730,7 @@ a.btn__projects {
   content: "";
   background-color: var(--color-secondary);
   width: 2px;
-  height: 40vh;
+  height: 35vh;
   position: absolute;
 }
 
@@ -839,6 +852,7 @@ a.btn__projects {
   right: 0;
   bottom: 0;
   background-image: url(../images/hero.png);
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }

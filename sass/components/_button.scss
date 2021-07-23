@@ -1,7 +1,7 @@
 .btn,
 a.btn {
 	color: var(--color-secondary);
-	transition: var(--transition-ease-in-out);
+	transition: .25s background-position linear;
 	width: 17rem;
 	height: 6rem;
 	user-select: none;
@@ -10,27 +10,34 @@ a.btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: transparent;
-	&:hover {
-		background-color: var(--color-blue);
-	}
 	&__icon {
 		width: 1.5em;
 		margin-right: 1em;
+	}
+	&__projects {
+		border: 1px solid;
+		border-image-slice: 1;
+		border-image-source: var(--main-gradient);
+		background: var(--main-gradient-btn--1);
+		background-position: right;
+		background-size: 200%;
+		color: var(--color-white);
+		&:hover {
+			background-position: left;
+		}
 	}
 	&__resume {
 		border: 1px solid;
 		border-image-slice: 1;
 		border-image-source: var(--main-gradient);
+		background: var(--main-gradient-btn--2);
+		background-position: left;
+		background-size: 200%;
 		color: var(--color-white);
 		&:hover {
-			border-image-source: linear-gradient(to right, #4D4BE9, 4D4BE9);
+			background-position: right;
 		}
 	}
-	&__projects {
-		background: var(--main-gradient);
-		color: var(--color-white);
-	}
-	&__CTA {
-	}
+
+
 }

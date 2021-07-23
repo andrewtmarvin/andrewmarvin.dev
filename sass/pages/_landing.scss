@@ -11,14 +11,14 @@
 	--mouse-y: 0px;
 	& > * {
 		position: absolute;
-		top: 60vh;
+		top: 65vh;
 		pointer-events: all;
 		user-select: none;
 		&::after {
 			content: "";
 			background-color: var(--color-secondary);
 			width: 2px;
-			height: 40vh;
+			height: 35vh;
 			position: absolute;
 		}
 	}
@@ -115,6 +115,7 @@
 		right: 0;
 		bottom: 0;
 		background-image: url(../images/hero.png);
+		background-attachment: fixed;
 		background-size: cover;
 		// filter: brightness(.2);
 		// image-rendering: -webkit-optimize-contrast;
