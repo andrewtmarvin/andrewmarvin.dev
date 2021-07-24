@@ -136,6 +136,9 @@ typingLetters(document.querySelector('.header-huge .typing-letters'), 'Marvin');
 
 // Animates terminal command being executed
 const executeTerminalCommand = (terminal) => {
+	const audio = new Audio('../media/keystroke.mp3');
+	audio.volume = 0.3;
+	audio.play();
 	document.querySelector('.terminal-box__command.blinking-cursor').classList.remove('blinking-cursor');
 	const nodes = terminal.target.querySelectorAll('*');
 	for (let i = 0; i < nodes.length; i++) {
@@ -148,8 +151,12 @@ const terminalObserver = new IntersectionObserver(
 		terminal = terminal[0];
 		const { isIntersecting } = terminal;
 		if (isIntersecting === true) {
+			const audio = new Audio('../media/typing.mp3');
+			audio.volume = 0.05;
+			audio.play();
 			await typingLetters(terminal.target.querySelector('.typing-letters'), 'tree\u00A0techskills/\u00A0');
-			setTimeout(executeTerminalCommand, 500, terminal);
+			audio.pause();
+			setTimeout(executeTerminalCommand, 1000, terminal);
 			terminalObserver.unobserve(terminal.target);
 		}
 	},

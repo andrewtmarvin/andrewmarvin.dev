@@ -1,17 +1,18 @@
 .terminal-box {
-    color: var(--color-purple-light);
+    color: var(--color-purple);
     padding: 4px;
+    line-height: 2.8rem;
     &__command {
         font-family: var(--font-code);
         // Needed for blinking cursor effect
         position: relative;
         display: inline-block;
     }
-    &__hostname {
-        color: var(--color-yellow);
-    }
     &__directory {
-        color: var(--color-white);
+        color: var(--color-tertiary);
+    }
+    &__main-item {
+        color: var(--color-blue-light);
     }
     & ul{
         margin: 0px 0px 0px 3rem; 
@@ -26,9 +27,9 @@
                 top: -4px;
                 content: '';
                 display: block;
-                border-left: 1px solid #ddd;
+                border-left: 1px solid var(--color-secondary);
                 height: 2rem;
-                border-bottom: 1px solid #ddd;
+                border-bottom: 1px solid var(--color-secondary);
                 width: 10px;
             }
             &:after{
@@ -37,11 +38,12 @@
                 bottom: -7px;
                 content: '';
                 display: block;
-                border-left: 1px solid #ddd;
+                border-left: 1px solid var(--color-secondary);
                 height: 100%;
             }
           &.terminal-box__tree-root{
               margin: 0px 0px 0px -20px;
+              color: var(--color-tertiary);
               &:before{
                 display: none;
               }

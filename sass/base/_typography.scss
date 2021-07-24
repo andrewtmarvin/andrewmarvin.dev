@@ -2,10 +2,9 @@ body {
     color: var(--color-black);
 	font-size: var(--font-size-default);
 	font-family: var(--font-content);
-	line-height: 1.75;
+	line-height: 1.5;
 	color: var(--color-purple);
 }
-
 h1 {
 	font-family: var(--font-display);
 	line-height: 1.1;
@@ -21,6 +20,8 @@ h6 {
 	color: var(--color-primary);
 	line-height: 1.5;
 	font-family: var(--font-display);
+	font-weight: 500;
+	font-size: var(--font-size-big);
 }
 
 .header-huge {
