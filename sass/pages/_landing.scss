@@ -52,7 +52,7 @@
 		ul {
 			display: flex;
 			flex-flow: column nowrap;
-			gap: 1rem;
+			gap: var(--gap-small);
 			li a {
 				display: block;
 			}
@@ -151,7 +151,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 1rem;
+	gap: var(--gap-small);
 	&__logo {
 		width: 15rem;
 		user-select: none;
@@ -203,9 +203,9 @@
 	width: var(--content-width-desktop);
 	margin:10vh 0;
 	display: grid;
-	grid-template-columns: repeat(3, 30%);
-	grid-template-rows: 1fr repeat(3, 30%);
-	gap: 4rem;
+	grid-template-columns: repeat(3, calc((100% - var(--gap-big) * 2) / 3));
+	grid-template-rows: 1fr repeat(3, calc((100% - var(--gap-big) * 2) / 3));
+	gap: var(--gap-big);
 
 	&__title {
 		color: var(--color-white);
@@ -214,9 +214,9 @@
 		justify-self: center;
 	}
 	&__blurb {
-		display: flex;
+		display: flex; 
 		flex-flow: column nowrap;
-		gap: 2rem;
+		gap: var(--gap-small);
 		width: 100%;
 		h3 {
 			color: var(--color-white);
@@ -287,13 +287,12 @@
 	}
 	&__image-quote {
 		width: 100%;
-		transform: translateX(-25%);
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
 		justify-content: space-around;
-		gap: 2rem;
+		gap: var(--gap-small);
 		& p {
 			padding: 2rem;
 			padding-left: 7rem;
@@ -340,7 +339,7 @@
 		display: grid;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 1fr 1fr repeat(3, 10rem);
-		gap: 1rem;
+		gap: var(--gap-small);
 		&--1 {
 			background-color: var(--color-primary-dark);
 			.work-content__showcase-description {

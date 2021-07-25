@@ -18,7 +18,7 @@ a.btn {
 		border: 1px solid;
 		border-image-slice: 1;
 		border-image-source: var(--main-gradient);
-		background: var(--main-gradient-btn--1);
+		background: var(--btn-gradient--1);
 		background-position: right;
 		background-size: 200%;
 		color: var(--color-white);
@@ -30,7 +30,7 @@ a.btn {
 		border: 1px solid;
 		border-image-slice: 1;
 		border-image-source: var(--main-gradient);
-		background: var(--main-gradient-btn--2);
+		background: var(--btn-gradient--2);
 		background-position: left;
 		background-size: 200%;
 		color: var(--color-white);

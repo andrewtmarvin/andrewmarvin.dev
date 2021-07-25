@@ -22,8 +22,8 @@
   --color-white: rgb(var(--base-white));
   --color-gray: rgb(var(--base-gray));
   --main-gradient: linear-gradient(to right, #4D4BE9, #13E8BE);
-  --main-gradient-btn--1: linear-gradient(to right, #120231 0%, #4D4BE9 50%, #13E8BE 100% );
-  --main-gradient-btn--2: linear-gradient(to right, #ffffff00 0%, #ffffff00 50%, #120231 50%, #4D4BE9 100%);
+  --btn-gradient--1: linear-gradient(to right, #120231 0%, #4D4BE9 50%, #13E8BE 100% );
+  --btn-gradient--2: linear-gradient(to right, #ffffff00 0%, #ffffff00 50%, #120231 50%, #4D4BE9 100%);
   --alpha-low: 0.2;
   --alpha-medium: 0.5;
   --alpha-high: 0.85;
@@ -42,6 +42,8 @@
   --layer-three: 300;
   --content-box-padding: 2rem 5rem;
   --content-box-padding-big: 8rem 10rem;
+  --gap-small: 2rem;
+  --gap-big: 4rem;
   --content-width-desktop: 1200px;
   --shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));
   --shadow-style-strong: 0 .5rem 1rem rgba(var(--base-black), var(--alpha-medium));
@@ -220,6 +222,9 @@ li {
 
 .link-line {
   position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .link-line::before, .link-line::after {
@@ -422,7 +427,7 @@ a.btn__projects {
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: var(--main-gradient);
-  background: var(--main-gradient-btn--1);
+  background: var(--btn-gradient--1);
   background-position: right;
   background-size: 200%;
   color: var(--color-white);
@@ -438,7 +443,7 @@ a.btn__resume {
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: var(--main-gradient);
-  background: var(--main-gradient-btn--2);
+  background: var(--btn-gradient--2);
   background-position: left;
   background-size: 200%;
   color: var(--color-white);
@@ -790,7 +795,7 @@ a.btn__resume:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  gap: 1rem;
+  gap: var(--gap-small);
 }
 
 .side-elements__social-links ul li a {
@@ -915,7 +920,7 @@ a.btn__resume:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
+  gap: var(--gap-small);
 }
 
 .hero-content__logo {
@@ -989,11 +994,11 @@ a.btn__resume:hover {
   margin: 10vh 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (30%)[3];
-      grid-template-columns: repeat(3, 30%);
-  -ms-grid-rows: 1fr (30%)[3];
-      grid-template-rows: 1fr repeat(3, 30%);
-  gap: 4rem;
+  -ms-grid-columns: (calc((100% - var(--gap-big) * 2) / 3))[3];
+      grid-template-columns: repeat(3, calc((100% - var(--gap-big) * 2) / 3));
+  -ms-grid-rows: 1fr (calc((100% - var(--gap-big) * 2) / 3))[3];
+      grid-template-rows: 1fr repeat(3, calc((100% - var(--gap-big) * 2) / 3));
+  gap: var(--gap-big);
 }
 
 .about-content__title {
@@ -1016,7 +1021,7 @@ a.btn__resume:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  gap: 2rem;
+  gap: var(--gap-small);
   width: 100%;
 }
 
@@ -1128,8 +1133,6 @@ a.btn__resume:hover {
 
 .about-content__image-quote {
   width: 100%;
-  -webkit-transform: translateX(-25%);
-          transform: translateX(-25%);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1143,7 +1146,7 @@ a.btn__resume:hover {
           align-items: flex-end;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  gap: 2rem;
+  gap: var(--gap-small);
 }
 
 .about-content__image-quote p {
@@ -1205,7 +1208,7 @@ a.btn__resume:hover {
       grid-template-columns: 50% 50%;
   -ms-grid-rows: 1fr 1fr (10rem)[3];
       grid-template-rows: 1fr 1fr repeat(3, 10rem);
-  gap: 1rem;
+  gap: var(--gap-small);
 }
 
 .work-content__showcase-project--1 {
