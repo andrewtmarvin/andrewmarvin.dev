@@ -139,7 +139,7 @@ const executeTerminalCommand = (terminal) => {
 	const audio = new Audio('../media/keystroke.mp3');
 	audio.volume = 0.3;
 	audio.play();
-	document.querySelector('.terminal-box__command.blinking-cursor').classList.remove('blinking-cursor');
+	document.querySelector('.terminal-box__command.blinking-linux-cursor').classList.remove('blinking-linux-cursor');
 	const nodes = terminal.target.querySelectorAll('*');
 	for (let i = 0; i < nodes.length; i++) {
 		setTimeout(() => nodes[i].classList.remove('hidden'), 10 * i);

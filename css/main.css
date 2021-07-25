@@ -121,7 +121,7 @@ p.fade-in-text-lines-visible {
   }
 }
 
-.blinking-cursor:after {
+.blinking-linux-cursor:after {
   content: "";
   position: absolute;
   top: .3rem;
@@ -135,8 +135,18 @@ p.fade-in-text-lines-visible {
           animation: blink 1s step-end infinite;
 }
 
-.header-huge .blinking-cursor:after {
-  top: 1.1rem;
+.blinking-windows-cursor:after {
+  content: "";
+  position: absolute;
+  bottom: .3rem;
+  right: -.7em;
+  display: inline-block;
+  background-color: var(--color-secondary);
+  vertical-align: top;
+  width: .6em;
+  height: .1em;
+  -webkit-animation: blink 1s step-end infinite;
+          animation: blink 1s step-end infinite;
 }
 
 @-webkit-keyframes blink {
@@ -647,11 +657,11 @@ a.btn__resume:hover {
 .navigation__logo p::after {
   content: "";
   background-color: var(--color-secondary);
-  height: 1em;
-  width: .35em;
+  height: .1em;
+  width: .6em;
   position: absolute;
-  right: -.5em;
-  top: 50%;
+  right: -.7em;
+  bottom: .1em;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -938,7 +948,7 @@ a.btn__resume:hover {
   color: var(--color-white);
 }
 
-.hero-content h1 .blinking-cursor {
+.hero-content h1 .blinking-windows-cursor {
   color: var(--color-secondary);
   font-family: var(--font-code);
   font-weight: 300;

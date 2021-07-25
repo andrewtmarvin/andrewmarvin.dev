@@ -42,7 +42,7 @@ p.fade-in-text-lines-visible {
 }
 
 // Blinking cursor effect
-.blinking-cursor {
+.blinking-linux-cursor {
     &:after {
         content: "";
         position: absolute;
@@ -56,9 +56,19 @@ p.fade-in-text-lines-visible {
         animation: blink 1s step-end infinite;
     }
 }
-// Bigger top offset for larger text
-.header-huge .blinking-cursor:after {
-    top: 1.1rem;
+.blinking-windows-cursor {
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: .3rem;
+        right: -.7em;
+        display: inline-block;
+        background-color: var(--color-secondary);
+        vertical-align: top;
+        width: .6em;
+        height: .1em;
+        animation: blink 1s step-end infinite;
+    }
 }
 @keyframes blink {
   0% { opacity: 1.0; }
