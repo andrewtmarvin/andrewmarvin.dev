@@ -203,9 +203,9 @@
 	width: var(--content-width-desktop);
 	margin:10vh 0;
 	display: grid;
-	grid-template-columns: repeat(3, calc((100% - var(--gap-big) * 2) / 3));
-	grid-template-rows: 1fr repeat(3, calc((100% - var(--gap-big) * 2) / 3));
-	gap: var(--gap-big);
+	grid-template-columns: repeat(3, calc((100% - var(--gap-huge) * 2) / 3));
+	grid-template-rows: 1fr repeat(3, calc((100% - var(--gap-huge) * 2) / 3));
+	gap: var(--gap-huge);
 
 	&__title {
 		color: var(--color-white);
@@ -217,13 +217,19 @@
 		display: flex; 
 		flex-flow: column nowrap;
 		gap: var(--gap-small);
-		width: 100%;
+		width: 100%; 
 		h3 {
 			color: var(--color-white);
 			position: relative;
 			margin-left: 7rem;
 			text-transform: uppercase;
 			letter-spacing: 1px;
+			&::before {
+				position: absolute;
+				width: 5rem;
+				top: -1.5rem;
+				left: -7rem;
+			}
 		}
 		p {
 			color: var(--color-purple);
@@ -233,9 +239,6 @@
 			grid-column: 1 / 2;
 			h3::before {
 				content: url(../images/whyme.svg);
-				width: 5rem;
-				top: -1.5rem;
-				left: -7rem;
 			}
 		}
 		&--2 {
@@ -243,9 +246,6 @@
 			grid-column: 1 / 2;
 			h3::before {
 				content: url(../images/careerpath.svg);
-				width: 5rem;
-				top: -1.5rem;
-				left: -7rem;
 			}
 		}
 		&--3 {
@@ -253,9 +253,6 @@
 			grid-column: 1 / 2;
 			h3::before {
 				content: url(../images/currently.svg);
-				width: 5rem;
-				top: -1.5rem;
-				left: -7rem;
 			}
 		}
 	}
@@ -265,10 +262,17 @@
 		grid-column: 2 / 3;
 		height: fit-content;
 		h3 {
+			position: relative;
+			text-transform: uppercase;
+			letter-spacing: 1px;
 			color: var(--color-white);
 			margin-left: 7rem;
 			&::before {
 				content: url(../images/github.svg);
+				width: 5rem;
+				position: absolute;
+				top: -1.5rem;
+				left: -7rem;
 				width: 5rem;
 				top: -1.5rem;
 				left: -7rem;
@@ -283,10 +287,12 @@
 		background-position-y: -33px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-end;
+		image-rendering: -webkit-optimize-contrast;
 	}
 	&__image-quote {
 		width: 100%;
+		margin-bottom: 13rem;
 		position: relative;
 		display: flex;
 		flex-direction: column;

@@ -40,15 +40,3 @@
 .padding-bottom-small {
     padding-bottom: 2rem;
 }
-
-.header-bullet {
-    position: relative;
-    &::before {
-        content: url(../images/bullet.svg);
-        width: 1.4rem;
-        height: 1.4rem;
-        position: absolute;
-        top: -.5rem;
-        left: -1.8rem;
-    }
-}

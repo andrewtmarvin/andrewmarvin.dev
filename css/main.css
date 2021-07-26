@@ -44,6 +44,7 @@
   --content-box-padding-big: 8rem 10rem;
   --gap-small: 2rem;
   --gap-big: 4rem;
+  --gap-huge: 8rem;
   --content-width-desktop: 1200px;
   --shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));
   --shadow-style-strong: 0 .5rem 1rem rgba(var(--base-black), var(--alpha-medium));
@@ -124,8 +125,8 @@ p.fade-in-text-lines-visible {
 .blinking-linux-cursor:after {
   content: "";
   position: absolute;
-  top: .3rem;
-  right: -.4em;
+  top: .2rem;
+  right: -.2em;
   display: inline-block;
   background-color: var(--color-secondary);
   vertical-align: top;
@@ -387,19 +388,6 @@ em, .emphasis {
 
 .padding-bottom-small {
   padding-bottom: 2rem;
-}
-
-.header-bullet {
-  position: relative;
-}
-
-.header-bullet::before {
-  content: url(../images/bullet.svg);
-  width: 1.4rem;
-  height: 1.4rem;
-  position: absolute;
-  top: -.5rem;
-  left: -1.8rem;
 }
 
 .btn,
@@ -1004,11 +992,11 @@ a.btn__resume:hover {
   margin: 10vh 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (calc((100% - var(--gap-big) * 2) / 3))[3];
-      grid-template-columns: repeat(3, calc((100% - var(--gap-big) * 2) / 3));
-  -ms-grid-rows: 1fr (calc((100% - var(--gap-big) * 2) / 3))[3];
-      grid-template-rows: 1fr repeat(3, calc((100% - var(--gap-big) * 2) / 3));
-  gap: var(--gap-big);
+  -ms-grid-columns: (calc((100% - var(--gap-huge) * 2) / 3))[3];
+      grid-template-columns: repeat(3, calc((100% - var(--gap-huge) * 2) / 3));
+  -ms-grid-rows: 1fr (calc((100% - var(--gap-huge) * 2) / 3))[3];
+      grid-template-rows: 1fr repeat(3, calc((100% - var(--gap-huge) * 2) / 3));
+  gap: var(--gap-huge);
 }
 
 .about-content__title {
@@ -1043,6 +1031,13 @@ a.btn__resume:hover {
   letter-spacing: 1px;
 }
 
+.about-content__blurb h3::before {
+  position: absolute;
+  width: 5rem;
+  top: -1.5rem;
+  left: -7rem;
+}
+
 .about-content__blurb p {
   color: var(--color-purple);
 }
@@ -1058,9 +1053,6 @@ a.btn__resume:hover {
 
 .about-content__blurb--1 h3::before {
   content: url(../images/whyme.svg);
-  width: 5rem;
-  top: -1.5rem;
-  left: -7rem;
 }
 
 .about-content__blurb--2 {
@@ -1074,9 +1066,6 @@ a.btn__resume:hover {
 
 .about-content__blurb--2 h3::before {
   content: url(../images/careerpath.svg);
-  width: 5rem;
-  top: -1.5rem;
-  left: -7rem;
 }
 
 .about-content__blurb--3 {
@@ -1090,9 +1079,6 @@ a.btn__resume:hover {
 
 .about-content__blurb--3 h3::before {
   content: url(../images/currently.svg);
-  width: 5rem;
-  top: -1.5rem;
-  left: -7rem;
 }
 
 .about-content__terminal {
@@ -1108,12 +1094,19 @@ a.btn__resume:hover {
 }
 
 .about-content__terminal h3 {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: var(--color-white);
   margin-left: 7rem;
 }
 
 .about-content__terminal h3::before {
   content: url(../images/github.svg);
+  width: 5rem;
+  position: absolute;
+  top: -1.5rem;
+  left: -7rem;
   width: 5rem;
   top: -1.5rem;
   left: -7rem;
@@ -1136,13 +1129,15 @@ a.btn__resume:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .about-content__image-quote {
   width: 100%;
+  margin-bottom: 13rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
