@@ -132,15 +132,16 @@
 		background-color: var(--color-primary);
 	}
 	&__work {
-		background: linear-gradient(235deg, #FF5C55 0%, #290b0a 100%);;
+		background-color: var(--color-primary);
 		display: flex;
-		justify-content: center;
+		flex-flow: column nowrap;
+		align-items: center;
 	}
 	&__contact {
-		background-color: cadetblue;
+		background-color: var(--color-primary);
 	}
 }
-.section:not(:first-of-type):not(:nth-of-type(2)) {
+.section:not(:first-of-type):not(:nth-of-type(2)):not(:nth-of-type(3)) {
 	display: none;
 }
 .hero-content {
@@ -335,8 +336,7 @@
 	align-items: center;
 	counter-reset: project-counter;
 	&__title {
-		width: 60%;
-		background-color: var(--color-white);
+		color: var(--color-white);
 	}
 	h3 {
 		width: 60%;

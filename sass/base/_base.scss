@@ -59,13 +59,13 @@ li {
 .link-line {
 	position: relative;
 	display: inline-flex;
-	color: var(--color-secondary);
+	color: var(--color-purple-light);
 	&::before,
 	&::after {
 	  position: absolute;
 	  content: "";
 	  left: 0;
-	  bottom: -0.1rem;
+	  bottom: 0.3rem;
 	  display: block;
 	  width: 100%;
 	  height: 1px;
