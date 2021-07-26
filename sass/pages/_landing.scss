@@ -186,7 +186,6 @@
 		p {
 			font-size: var(--font-size-big);
 			font-family: var(--font-code);
-			font-weight: 600;
 			line-height: 2;
 		}
 		& .btn {
@@ -204,7 +203,7 @@
 	margin:10vh 0;
 	display: grid;
 	grid-template-columns: repeat(3, calc((100% - var(--gap-huge) * 2) / 3));
-	grid-template-rows: 1fr repeat(3, calc((100% - var(--gap-huge) * 2) / 3));
+	grid-template-rows: 8rem repeat(3, 1fr);
 	gap: var(--gap-huge);
 
 	&__title {
@@ -217,18 +216,20 @@
 		display: flex; 
 		flex-flow: column nowrap;
 		gap: var(--gap-small);
-		width: 100%; 
+		align-self: center; 
+		justify-self: center;
 		h3 {
 			color: var(--color-white);
 			position: relative;
-			margin-left: 7rem;
+			margin-left: 7.5rem;
 			text-transform: uppercase;
-			letter-spacing: 1px;
+			letter-spacing: 4px;
+			font-weight: 600;
 			&::before {
 				position: absolute;
-				width: 5rem;
+				width: 5.5rem;
 				top: -1.5rem;
-				left: -7rem;
+				left: -7.5rem;
 			}
 		}
 		p {
@@ -266,13 +267,15 @@
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			color: var(--color-white);
-			margin-left: 7rem;
+			margin-left: 7.5rem;
+			letter-spacing: 4px;
+			font-weight: 600;
 			&::before {
-				content: url(../images/github.svg);
+				content: url(../images/skills.svg);
 				width: 5rem;
 				position: absolute;
 				top: -1.5rem;
-				left: -7rem;
+				left: -7.5rem;
 				width: 5rem;
 				top: -1.5rem;
 				left: -7rem;
@@ -284,7 +287,7 @@
 		grid-column: 3 / 4;
 		background-image: url(../images/andrew_about.png);
 		background-size: cover;
-		background-position-y: -33px;
+		background-position:  -33px -33px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -292,7 +295,7 @@
 	}
 	&__image-quote {
 		width: 100%;
-		margin-bottom: 13rem;
+		margin-bottom: 6rem;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -305,6 +308,7 @@
 			text-indent: -5rem;
 			width: 80%;
 			background-color: var(--color-blue);
+			color: var(--color-purple);
 			border-radius: var(--rounded-corners-huge);
 
 			&:first-of-type {

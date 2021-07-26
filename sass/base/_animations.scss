@@ -2,6 +2,7 @@
 .fade-in-text-lines p {
     opacity: 0;
     transform: translateY(10px);
+    line-height: 2.8rem;
     transition: .5s opacity linear, .75s transform ease-out;
 }
 

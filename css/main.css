@@ -27,8 +27,8 @@
   --alpha-low: 0.2;
   --alpha-medium: 0.5;
   --alpha-high: 0.85;
-  --font-size-small: 1.2rem;
-  --font-size-default: 1.6rem;
+  --font-size-small: 1.4rem;
+  --font-size-default: 1.7rem;
   --font-size-big: 2rem;
   --font-size-huge: 4rem;
   --font-size-gargantuan: 6rem;
@@ -45,7 +45,7 @@
   --gap-small: 2rem;
   --gap-big: 4rem;
   --gap-huge: 8rem;
-  --content-width-desktop: 1200px;
+  --content-width-desktop: 1220px;
   --shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));
   --shadow-style-strong: 0 .5rem 1rem rgba(var(--base-black), var(--alpha-medium));
   --transition-ease-in-out: all .25s ease-in-out;
@@ -58,6 +58,7 @@
   opacity: 0;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
+  line-height: 2.8rem;
   -webkit-transition: .5s opacity linear, .75s transform ease-out;
   transition: .5s opacity linear, .75s transform ease-out;
 }
@@ -236,6 +237,7 @@ li {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  color: var(--color-secondary);
 }
 
 .link-line::before, .link-line::after {
@@ -287,6 +289,11 @@ body {
   color: var(--color-purple);
 }
 
+p, li {
+  font-weight: 600;
+  line-height: 1.7;
+}
+
 h1 {
   font-family: var(--font-display);
   line-height: 1.1;
@@ -328,14 +335,10 @@ h6 {
   font-family: var(--font-code);
 }
 
-.dramatic-effect {
-  text-transform: uppercase;
-}
-
 em, .emphasis {
   font-style: unset;
   font-weight: 600;
-  color: var(--color-secondary);
+  color: var(--color-purple-light);
 }
 
 .hidden {
@@ -517,7 +520,7 @@ a.btn__resume:hover {
 }
 
 .terminal-box__main-item {
-  color: var(--color-blue-light);
+  color: var(--color-purple-light);
 }
 
 .terminal-box ul {
@@ -974,7 +977,6 @@ a.btn__resume:hover {
 .hero-content__blurb p {
   font-size: var(--font-size-big);
   font-family: var(--font-code);
-  font-weight: 600;
   line-height: 2;
 }
 
@@ -994,8 +996,8 @@ a.btn__resume:hover {
   display: grid;
   -ms-grid-columns: (calc((100% - var(--gap-huge) * 2) / 3))[3];
       grid-template-columns: repeat(3, calc((100% - var(--gap-huge) * 2) / 3));
-  -ms-grid-rows: 1fr (calc((100% - var(--gap-huge) * 2) / 3))[3];
-      grid-template-rows: 1fr repeat(3, calc((100% - var(--gap-huge) * 2) / 3));
+  -ms-grid-rows: 8rem (1fr)[3];
+      grid-template-rows: 8rem repeat(3, 1fr);
   gap: var(--gap-huge);
 }
 
@@ -1020,22 +1022,25 @@ a.btn__resume:hover {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   gap: var(--gap-small);
-  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
 }
 
 .about-content__blurb h3 {
   color: var(--color-white);
   position: relative;
-  margin-left: 7rem;
+  margin-left: 7.5rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
+  font-weight: 600;
 }
 
 .about-content__blurb h3::before {
   position: absolute;
-  width: 5rem;
+  width: 5.5rem;
   top: -1.5rem;
-  left: -7rem;
+  left: -7.5rem;
 }
 
 .about-content__blurb p {
@@ -1098,15 +1103,17 @@ a.btn__resume:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--color-white);
-  margin-left: 7rem;
+  margin-left: 7.5rem;
+  letter-spacing: 4px;
+  font-weight: 600;
 }
 
 .about-content__terminal h3::before {
-  content: url(../images/github.svg);
+  content: url(../images/skills.svg);
   width: 5rem;
   position: absolute;
   top: -1.5rem;
-  left: -7rem;
+  left: -7.5rem;
   width: 5rem;
   top: -1.5rem;
   left: -7rem;
@@ -1121,7 +1128,7 @@ a.btn__resume:hover {
   grid-column: 3 / 4;
   background-image: url(../images/andrew_about.png);
   background-size: cover;
-  background-position-y: -33px;
+  background-position: -33px -33px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1137,7 +1144,7 @@ a.btn__resume:hover {
 
 .about-content__image-quote {
   width: 100%;
-  margin-bottom: 13rem;
+  margin-bottom: 6rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1160,6 +1167,7 @@ a.btn__resume:hover {
   text-indent: -5rem;
   width: 80%;
   background-color: var(--color-blue);
+  color: var(--color-purple);
   border-radius: var(--rounded-corners-huge);
 }
 
