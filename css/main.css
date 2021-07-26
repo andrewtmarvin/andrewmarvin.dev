@@ -192,7 +192,19 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: var(--color-white);
+}
+
+body::-webkit-scrollbar {
+  width: 2px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--color-primary);
+  border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary);
 }
 
 a,
@@ -1176,7 +1188,7 @@ a.btn__resume:hover {
   width: 6rem;
   height: 6rem;
   position: absolute;
-  top: -2rem;
+  top: -3rem;
   right: -2rem;
 }
 
