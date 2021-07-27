@@ -323,7 +323,7 @@ h6 {
   color: var(--color-primary);
   line-height: 1.5;
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   font-size: var(--font-size-big);
 }
 
@@ -336,11 +336,6 @@ h6 {
 .header-big {
   font-size: var(--font-size-huge);
   line-height: 1.3;
-}
-
-.header-medium {
-  font-size: var(--font-size-big);
-  line-height: 1.5;
 }
 
 .coding-font {
@@ -410,7 +405,7 @@ a.btn {
   color: var(--color-secondary);
   -webkit-transition: .25s background-position linear;
   transition: .25s background-position linear;
-  width: 17rem;
+  width: 20rem;
   height: 6rem;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -435,8 +430,8 @@ a.btn__icon {
   margin-right: 1em;
 }
 
-.btn__projects,
-a.btn__projects {
+.btn__gradient-background,
+a.btn__gradient-background {
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: var(--main-gradient);
@@ -446,13 +441,13 @@ a.btn__projects {
   color: var(--color-white);
 }
 
-.btn__projects:hover,
-a.btn__projects:hover {
+.btn__gradient-background:hover,
+a.btn__gradient-background:hover {
   background-position: left;
 }
 
-.btn__resume,
-a.btn__resume {
+.btn__transparent-background,
+a.btn__transparent-background {
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: var(--main-gradient);
@@ -462,8 +457,8 @@ a.btn__resume {
   color: var(--color-white);
 }
 
-.btn__resume:hover,
-a.btn__resume:hover {
+.btn__transparent-background:hover,
+a.btn__transparent-background:hover {
   background-position: right;
 }
 
@@ -1223,20 +1218,20 @@ a.btn__resume:hover {
 
 .work-content__project-type {
   color: var(--color-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
 }
 
 .work-content__project-title {
   color: var(--color-white);
+  font-size: var(--font-size-huge);
 }
 
 .work-content__project-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1253,9 +1248,11 @@ a.btn__resume:hover {
 .work-content__project-techstack {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  grid-auto-rows: 1fr;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-auto-rows: var(--gap-big);
+  color: var(--color-blue-light);
+  font-family: var(--font-code);
 }
 
 .work-content__project-description {
@@ -1289,12 +1286,12 @@ a.btn__resume:hover {
 }
 
 .work-content__project-card--1 {
-  -ms-grid-columns: max-content auto;
-      grid-template-columns: -webkit-max-content auto;
-      grid-template-columns: max-content auto;
-  -ms-grid-rows: (max-content)[4];
-      grid-template-rows: repeat(4, -webkit-max-content);
-      grid-template-rows: repeat(4, max-content);
+  -ms-grid-columns: min-content auto;
+      grid-template-columns: -webkit-min-content auto;
+      grid-template-columns: min-content auto;
+  -ms-grid-rows: 3rem (max-content)[3];
+      grid-template-rows: 3rem repeat(3, -webkit-max-content);
+      grid-template-rows: 3rem repeat(3, max-content);
 }
 
 .work-content__project-card--1 .work-content__project-type {
@@ -1316,12 +1313,20 @@ a.btn__resume:hover {
 }
 
 .work-content__project-card--1 .work-content__project-links {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
-  grid-row: 3 / 5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.work-content__project-card--1 .work-content__project-links a:last-of-type {
+  margin-top: var(--gap-big);
 }
 
 .work-content__project-card--1 .work-content__project-model {

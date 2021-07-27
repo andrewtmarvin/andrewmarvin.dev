@@ -340,13 +340,16 @@
 	}
 	&__project-type {
 		color: var(--color-tertiary);
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		white-space: nowrap;
 	}
 	&__project-title {
 		color: var(--color-white);
+		font-size: var(--font-size-huge);
 	}
 	&__project-links {
 		display: flex;
-		flex-flow: row nowrap;
 		align-items: center;
 		align-self: center;
 	}
@@ -358,8 +361,10 @@
 	}
 	&__project-techstack {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-		grid-auto-rows: 1fr;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		grid-auto-rows: var(--gap-big);
+		color: var(--color-blue-light);
+		font-family: var(--font-code);
 	}
 	&__project-description {
 		direction: rtl;
@@ -385,8 +390,8 @@
 		display: grid;
 		gap: var(--gap-small);
 		&--1 {
-			grid-template-columns: max-content auto;
-			grid-template-rows: repeat(4, max-content);
+			grid-template-columns: min-content auto;
+			grid-template-rows: 3rem repeat(3, max-content);
 			#{ $self }__project-type {
 				grid-row: 1 / 2;
 				grid-column: 1 / 2;
@@ -396,8 +401,12 @@
 				grid-column: 1 / 2;
 			}
 			#{ $self }__project-links {
-				grid-row: 3 / 5;
+				grid-row: 4 / 5;
 				grid-column: 1 / 2;
+				flex-direction: column;
+				a:last-of-type {
+					margin-top: var(--gap-big);
+				}
 			}
 			#{ $self }__project-model {
 				grid-row: 1 / 3;

@@ -2,7 +2,7 @@
 a.btn {
 	color: var(--color-secondary);
 	transition: .25s background-position linear;
-	width: 17rem;
+	width: 20rem;
 	height: 6rem;
 	user-select: none;
 	font-weight: 600;
@@ -14,7 +14,7 @@ a.btn {
 		width: 1.5em;
 		margin-right: 1em;
 	}
-	&__projects {
+	&__gradient-background {
 		border: 1px solid;
 		border-image-slice: 1;
 		border-image-source: var(--main-gradient);
@@ -26,7 +26,7 @@ a.btn {
 			background-position: left;
 		}
 	}
-	&__resume {
+	&__transparent-background {
 		border: 1px solid;
 		border-image-slice: 1;
 		border-image-source: var(--main-gradient);
