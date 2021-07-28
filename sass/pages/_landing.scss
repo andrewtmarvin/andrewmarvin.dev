@@ -204,7 +204,7 @@
 	margin:10vh 0;
 	display: grid;
 	grid-template-columns: repeat(3, calc((100% - var(--gap-huge) * 2) / 3));
-	grid-template-rows: 8rem repeat(3, 1fr);
+	grid-template-rows: auto repeat(3, 1fr);
 	gap: var(--gap-huge);
 
 	&__title {
@@ -361,19 +361,14 @@
 	}
 	&__project-techstack {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
 		grid-auto-rows: var(--gap-big);
 		color: var(--color-blue-light);
 		font-family: var(--font-code);
+		font-size: var(--font-size-small);
 	}
 	&__project-description {
-		direction: rtl;
-		overflow-y:auto;
 		height: 20rem;
-		padding-left: var(--gap-big);
-		p {
-			direction:ltr;
-		}
 		&::-webkit-scrollbar-thumb {
 			background-color: var(--color-tertiary);
 		}
@@ -486,6 +481,89 @@
 				grid-row: 4 / 5;
 				grid-column: 1 / 2;
 			}
+		}
+	}
+	&__other-products {
+		display: none;
+	}
+	&__past-clients {
+		display: flex;
+		flex-flow: column nowrap;
+		width: 100%;
+		align-items: center;
+		h3 {
+			align-self: flex-start;
+		}
+	}
+	&__testimonial {
+		margin: var(--gap-huge);
+		padding: var(--gap-small);
+		position: relative;
+		background-color: var(--color-blue);
+		height: 15rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		&::before {
+			content: url(../images/quote-start.svg);
+			position: absolute;
+			top: -22px;
+			left: -2px;
+			width: 6rem;
+		}
+	}
+	&__testimonial-left, &__testimonial-right {
+		flex-basis: 50%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		font-size: var(--font-size-small);
+	}
+	&__testimonial-left {
+		color: var(--color-white);
+		text-align: center;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-around;
+		height: 100%;
+		p:first-of-type {
+			font-size: var(--font-size-default);
+		}
+	}
+	&__testimonial-right {
+		color: var(--color-blue-light);
+		font-family: var(--font-code);
+	}
+
+	&__testimonial-quote {
+		text-transform: uppercase;
+		line-height: 1.3;
+	}
+	&__testimonial-client {
+	}
+	&__testimonial-brief {
+		height: 10rem;
+		padding: 0 2rem;
+		padding-left: var(--gap-big);
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--color-tertiary);
+		}
+		&::-webkit-scrollbar {
+			width: 2px;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: var(--color-white);
+			border-radius: 50px;
+		}
+	}
+	&__cycle-testimonials {
+		width: 12rem;
+		display: flex;
+		justify-content: space-between;
+		img {
+			width: 4rem;
 		}
 	}
 }

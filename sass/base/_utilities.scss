@@ -9,7 +9,7 @@
         width: 12rem;
         height: 2px;
         position: absolute;
-        bottom: -1rem;
+        bottom: calc(0px - var(--gap-small));
         left: 50%;
         transform: translateX(-50%);
     }
@@ -39,4 +39,13 @@
 }
 .padding-bottom-small {
     padding-bottom: 2rem;
+}
+
+.scroll-box {
+    direction: rtl;
+    overflow-y: scroll;
+    padding-left: var(--gap-big);
+    p {
+        direction: ltr;
+    }
 }
