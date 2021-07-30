@@ -836,8 +836,8 @@ a.btn__transparent-background:hover {
   position: absolute;
   left: var(--mouse-x);
   top: var(--mouse-y);
-  border: 1px solid var(--color-tertiary);
-  color: var(--color-tertiary);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
   background-color: var(--color-primary);
   z-index: var(--layer-two);
 }
@@ -847,8 +847,8 @@ a.btn__transparent-background:hover {
   position: absolute;
   left: calc(var(--mouse-x) - 5px);
   top: calc(var(--mouse-y) + 22px);
-  border-left: 1px solid var(--color-tertiary);
-  border-bottom: 1px solid var(--color-tertiary);
+  border-left: 1px solid var(--color-secondary);
+  border-bottom: 1px solid var(--color-secondary);
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   width: 10px;
@@ -1165,7 +1165,7 @@ a.btn__transparent-background:hover {
 
 .about-content__image-quote {
   width: 100%;
-  margin-bottom: 6rem;
+  margin-bottom: 30px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1174,9 +1174,9 @@ a.btn__transparent-background:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   gap: var(--gap-small);
@@ -1202,8 +1202,8 @@ a.btn__transparent-background:hover {
 }
 
 .about-content__image-quote p:nth-last-of-type(2) {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .work-content {
