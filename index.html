@@ -313,12 +313,23 @@
         </section>
         <section class="section section__contact" id="contact">
             <div class="contact-content">
-                <h2 class="contact-content__title header-big big-spacer spacer-line">Contact</h2>
-                <div class="contact-content__image">
-                    <img src="./images/andrew_beach.png" alt="andrew Vietnam beach">
+                <h2 class="contact-content__title header-big big-spacer spacer-line">Contact Me</h2>
+                <div class="contact-content__contact-left">
+                    <h3 class="contact-content__contact-type">Need my expertise? Message me anytime.</h3>
+                    <p class="contact-content__andrew-message">Accepting freelance work, computer science and IT students, and other employment opportunities.</p>
                 </div>
-                <form action="#">
-                    contact
+                <form action="#" class="contact-content__contact-form" name="contact" netlify>
+                    <input type="text" name="name" id="contact-form-name">
+                    <input type="email" name="email" id="contact-form-email">
+                    <input type="tel" name="phone" id="contact-form-phone">
+                    <input list="subject-list" id="contact-form-subject" name="subject" />
+                    <datalist id="contact-form-subject-list">
+                        <option value="Employment">
+                        <option value="Freelance Work">
+                        <option value="Tutoring">
+                    </datalist>
+                    <textarea name="message" id="contact-form-message"></textarea>
+                    <button type="submit" class="btn btn__gradient-background">send</button>
                 </form>
             </div>
         </section>

@@ -195,16 +195,16 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 2px;
+  width: 4px;
 }
 
 body::-webkit-scrollbar-track {
   background-color: var(--color-primary);
-  border-radius: 50px;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--color-secondary);
+  border-radius: 50px;
 }
 
 a,
@@ -432,6 +432,7 @@ a.btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .btn__icon,
@@ -921,10 +922,6 @@ a.btn__transparent-background:hover {
   background-color: var(--color-primary);
 }
 
-.section:not(:first-of-type):not(:nth-of-type(2)):not(:nth-of-type(3)) {
-  display: none;
-}
-
 .hero-content {
   height: 100vh;
   width: var(--content-width-desktop);
@@ -1236,6 +1233,7 @@ a.btn__transparent-background:hover {
 .work-content__project-title {
   color: var(--color-white);
   font-size: var(--font-size-huge);
+  line-height: 1.2;
 }
 
 .work-content__project-links {
@@ -1626,16 +1624,162 @@ a.btn__transparent-background:hover {
 }
 
 .contact-content {
-  height: 100vh;
   width: var(--content-width-desktop);
+  margin-top: 10vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% calc(67% - var(--gap-huge));
+      grid-template-columns: 33% calc(67% - var(--gap-huge));
+  gap: var(--gap-huge);
+  position: relative;
 }
 
-.contact-content__image {
-  width: 80rem;
+.contact-content__title {
+  color: var(--color-white);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  text-align: center;
 }
 
-.contact-content__image img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.contact-content__contact-left {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.contact-content__contact-type {
+  color: var(--color-white);
+  font-size: var(--font-size-huge);
+  text-align: right;
+  line-height: 1.2;
+}
+
+.contact-content__andrew-message {
+  width: 66%;
+  margin-left: auto;
+  margin-top: var(--gap-small);
+  text-align: right;
+  font-size: var(--font-size-small);
+  color: var(--color-blue-light);
+}
+
+.contact-content__contact-form {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  margin-bottom: var(--gap-huge);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: var(--gap-small);
+}
+
+.contact-content__contact-form > *:not(button) {
+  color: var(--color-purple-light);
+  width: 100%;
+  background-color: unset;
+  border: unset;
+  border-bottom: 1px var(--color-white) solid;
+  line-height: 2;
+  padding: .5rem 1rem;
+}
+
+.contact-content__contact-form > *:not(button):focus {
+  outline: unset;
+  background-color: var(--color-blue);
+}
+
+.contact-content__contact-form > *:not(button):-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px var(--color-primary) inset;
+  -webkit-text-fill-color: var(--color-purple-light);
+}
+
+.contact-content__contact-form > *:not(button):-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px var(--color-blue) inset;
+  -webkit-text-fill-color: var(--color-purple-light);
+}
+
+.contact-content__contact-form #contact-form-email, .contact-content__contact-form #contact-form-phone {
+  width: calc(50% - var(--gap-small));
+}
+
+.contact-content__contact-form #contact-form-name {
+  position: relative;
+}
+
+.contact-content__contact-form #contact-form-name::before {
+  content: "name";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color-white);
+  z-index: 10000;
+}
+
+.contact-content__contact-form #contact-form-phone {
+  margin-left: auto;
+}
+
+.contact-content__contact-form #contact-form-subject::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: url(../images/down.svg) no-repeat;
+  opacity: 1;
+  background-position: center;
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+
+.contact-content__contact-form #contact-form-subject:focus::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.contact-content__contact-form #contact-form-message {
+  height: 20rem;
+  resize: none;
+  padding: 1rem;
+}
+
+.contact-content__contact-form #contact-form-message::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary);
+}
+
+.contact-content__contact-form #contact-form-message::-webkit-scrollbar {
+  width: 2px;
+}
+
+.contact-content__contact-form #contact-form-message::-webkit-scrollbar-track {
+  background-color: var(--color-blue);
+  border-radius: 50px;
+}
+
+.contact-content::after {
+  content: "";
+  background: url(../images/andrew_beach.png) no-repeat;
+  background-position: bottom left;
+  background-size: 400px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--layer-negative);
 }
 /*# sourceMappingURL=main.css.map */
