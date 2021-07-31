@@ -162,7 +162,7 @@ const terminalObserver = new IntersectionObserver(
 	},
 	{
 		rootMargin: '-25% 0% -25% 0%',
-		threshold: 0.5
+		threshold: 0
 	}
 );
 

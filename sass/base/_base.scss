@@ -39,7 +39,7 @@ li {
 
 ::selection {
 	background-color: var(--color-tertiary);
-	color: var(--color-black);
+	color: rgba(var(--base-black), 1);
 }
 
 .link {

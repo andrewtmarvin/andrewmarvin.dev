@@ -83,7 +83,7 @@
                 </div>
                 <div class="about-content__terminal terminal-box">
                     <h3 class="small-spacer">tech skills</h3>
-                    <p class="terminal-box__command blinking-linux-cursor">andrewmarvin@dev:<span
+                    <p class="terminal-box__command blinking-linux-cursor">admin@andrewmarvin.dev:<span
                             class="terminal-box__directory">~</span>$&nbsp;<span class="typing-letters"></span></p>
                     <ul class="hidden">
                         <li class="terminal-box__tree-root hidden">andrewmarvin/techskills&nbsp;</li>
@@ -245,12 +245,10 @@
                         <img src="./images/showcasemodel3.png" alt="project 3 model">
                     </div>
                     <ul class="work-content__project-techstack">
-                        <li>Wordpress</li>
-                        <li>CSS</li>
                         <li>HTML</li>
-                        <li>PHP</li>
-                        <li>Hotjar</li>
-                        <li>Google Analytics</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
                     </ul>
                     <div class="work-content__project-description scroll-box">
                         <p>
@@ -319,16 +317,31 @@
                     <p class="contact-content__andrew-message">Accepting freelance work, computer science and IT students, and other employment opportunities.</p>
                 </div>
                 <form action="#" class="contact-content__contact-form" name="contact" netlify>
-                    <input type="text" name="name" id="contact-form-name">
-                    <input type="email" name="email" id="contact-form-email">
-                    <input type="tel" name="phone" id="contact-form-phone">
-                    <input list="subject-list" id="contact-form-subject" name="subject" />
-                    <datalist id="contact-form-subject-list">
-                        <option value="Employment">
-                        <option value="Freelance Work">
-                        <option value="Tutoring">
-                    </datalist>
-                    <textarea name="message" id="contact-form-message"></textarea>
+                    <div class="input-group input-group--full-width">
+                        <input type="text" name="name" class="input-group__input-field" id="contact-form-name" placeholder=" ">
+                        <label class="input-group__input-label" for="name">name</label>
+                    </div>
+                    <div class="input-group input-group--half-width">
+                        <input type="email" name="email" class="input-group__input-field" id="contact-form-email" placeholder=" ">
+                        <label class="input-group__input-label" for="email">email</label>
+                    </div>
+                    <div class="input-group input-group--half-width">
+                        <input type="tel" name="phone" class="input-group__input-field" id="contact-form-phone" placeholder=" ">
+                        <label class="input-group__input-label" for="phone">phone</label>
+                    </div>
+                    <div class="input-group input-group--full-width">
+                        <input list="contact-form-subject-list" id="contact-form-subject" name="subject" class="input-group__input-field"  placeholder=" ">
+                        <label class="input-group__input-label" for="subject">subject</label>
+                        <datalist id="contact-form-subject-list">
+                            <option value="Employment">
+                            <option value="Freelance Work">
+                            <option value="Tutoring">
+                        </datalist>
+                    </div>
+                    <div class="input-group input-group--full-width">
+                        <textarea name="message" id="contact-form-message" class="input-group__input-field"  placeholder=" "></textarea>
+                        <label class="input-group__input-label" for="message">message</label>
+                    </div>
                     <button type="submit" class="btn btn__gradient-background">send</button>
                 </form>
             </div>

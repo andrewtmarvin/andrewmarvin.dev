@@ -6,6 +6,8 @@ a.btn {
 	height: 6rem;
 	user-select: none;
 	font-weight: 600;
+	font-size: var(--font-size-default);
+	font-family: var(--font-content);
 	text-transform: uppercase;
 	display: flex;
 	justify-content: center;
