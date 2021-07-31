@@ -213,3 +213,26 @@ const heroHeaderObserver = new IntersectionObserver(
 
 const heroHeader = document.querySelector('.hero-content h1');
 heroHeaderObserver.observe(heroHeader);
+
+// Form validation
+const isValid = (form) => {
+	const name = form.querySelector('[name=name]');
+	const email = form.querySelector('[name=email]');
+	const phone = form.querySelector('[name=phone]');
+	const subject = form.querySelector('[name=subject]');
+	const message = form.querySelector('[name=message]');
+	return true;
+};
+// Form submission
+document.querySelector('.form-submit').addEventListener('click', (e) => {
+	e.preventDefault();
+	const form = e.target.form;
+
+	if (isValid(form)) {
+		console.log('submitted');
+	}
+});
+
+// Update footer year
+const today = new Date();
+document.querySelector('.current-year').innerText = today.getFullYear();

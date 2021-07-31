@@ -1,3 +1,16 @@
 .footer {
-    
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: var(--layer-three);
+    p {
+        color: var(--color-gray);
+        font-size: var(--font-size-small);
+        width: var(--content-width-desktop);
+        padding: var(--content-box-padding);
+
+    }
+
 }

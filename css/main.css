@@ -738,6 +738,28 @@ a.btn__transparent-background:hover {
   right: -1rem;
 }
 
+.footer {
+  background-color: var(--color-black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: var(--layer-three);
+}
+
+.footer p {
+  color: var(--color-gray);
+  font-size: var(--font-size-small);
+  width: var(--content-width-desktop);
+  padding: var(--content-box-padding);
+}
+
 .side-elements {
   position: fixed;
   top: 0;
