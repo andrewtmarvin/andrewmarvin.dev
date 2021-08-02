@@ -247,9 +247,16 @@ document.querySelector('.form-submit').addEventListener('click', (e) => {
 	const form = e.target.form;
 
 	if (isValid(form)) {
-		console.log('submitted');
+		let formData = new FormData(form);
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: new URLSearchParams(formData).toString()
+		})
+			.then(() => console.log('Form successfully submitted'))
+			.catch((error) => alert(error));
 	} else {
-		console.log('failed');
+		console.log('form incomplete');
 	}
 });
 
