@@ -659,7 +659,7 @@ a.btn__transparent-background:hover {
   position: absolute;
   top: .5rem;
   left: 1rem;
-  z-index: var(--layer-one);
+  z-index: var(--layer-negative);
   pointer-events: none;
   -webkit-transition: var(--transition-ease-in-out);
   transition: var(--transition-ease-in-out);

@@ -29,7 +29,7 @@
             position: absolute;
             top: .5rem;
             left: 1rem;
-            z-index: var(--layer-one);
+            z-index: var(--layer-negative);
             pointer-events: none;
             transition: var(--transition-ease-in-out);
         }
@@ -51,6 +51,7 @@
                 -webkit-box-shadow:0 0 0 50px var(--color-primary) inset;
                 -webkit-text-fill-color: var(--color-purple-light);
                 transition: background-color 600000s 0s, color 600000s 0s;
+
             }
             &:-webkit-autofill:focus {
                 -webkit-box-shadow: 0 0 0 50px var(--color-blue) inset;
