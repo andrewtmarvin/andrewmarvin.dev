@@ -216,12 +216,30 @@ heroHeaderObserver.observe(heroHeader);
 
 // Form validation
 const isValid = (form) => {
-	const name = form.querySelector('[name=name]');
-	const email = form.querySelector('[name=email]');
-	const phone = form.querySelector('[name=phone]');
-	const subject = form.querySelector('[name=subject]');
-	const message = form.querySelector('[name=message]');
-	return true;
+	const nameElement = form.querySelector('[name=name]');
+	const emailElement = form.querySelector('[name=email]');
+	const phoneElement = form.querySelector('[name=phone]');
+	const messageElement = form.querySelector('[name=message]');
+	const name = nameElement.value;
+	const email = emailElement.value;
+	const phone = phoneElement.value;
+	const message = messageElement.value;
+	for (input of form) {
+		input.parentElement.classList.remove('required');
+	}
+	if (name && (email || phone) && message) {
+		return true;
+	}
+	if (!name) {
+		nameElement.parentElement.classList.add('required');
+	}
+	if (!email & !phone) {
+		emailElement.parentElement.classList.add('required');
+	}
+	if (!message) {
+		messageElement.parentElement.classList.add('required');
+	}
+	return false;
 };
 // Form submission
 document.querySelector('.form-submit').addEventListener('click', (e) => {
@@ -230,6 +248,8 @@ document.querySelector('.form-submit').addEventListener('click', (e) => {
 
 	if (isValid(form)) {
 		console.log('submitted');
+	} else {
+		console.log('failed');
 	}
 });
 

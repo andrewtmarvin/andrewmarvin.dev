@@ -55,11 +55,11 @@ li {
 	}
 }
 
-
 .link-line {
 	position: relative;
 	display: inline-flex;
-	color: var(--color-purple-light);
+	line-height: 1.7;
+	color: var(--color-purple);
 	&::before,
 	&::after {
 	  position: absolute;
@@ -91,4 +91,8 @@ li {
 		transition-delay: 0s;
 	  }
 	}
+  }
+
+  img {
+	  user-select: none;
   }
