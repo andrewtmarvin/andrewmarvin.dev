@@ -46,6 +46,7 @@
   --gap-small: 2rem;
   --gap-big: 4rem;
   --gap-huge: 8rem;
+  --gap-gigantic: 12rem;
   --content-width-desktop: 1220px;
   --shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));
   --shadow-style-strong: 0 .5rem 1rem rgba(var(--base-black), var(--alpha-medium));
@@ -956,6 +957,7 @@ a.btn__transparent-background:hover {
   left: 0;
   right: 0;
   bottom: 0;
+  font-size: var(--font-size-small);
   color: var(--color-secondary);
   pointer-events: none;
   z-index: var(--layer-three);
@@ -982,7 +984,7 @@ a.btn__transparent-background:hover {
 }
 
 .side-elements__email {
-  left: var(--gap-huge);
+  left: var(--gap-big);
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   -webkit-transform-origin: left top;
@@ -1016,7 +1018,7 @@ a.btn__transparent-background:hover {
 }
 
 .side-elements__social-links {
-  right: var(--gap-huge);
+  right: var(--gap-big);
   width: 20px;
 }
 
@@ -1111,7 +1113,8 @@ a.btn__transparent-background:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(var(--base-primary), var(--alpha-high));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(var(--base-primary), var(--alpha-high))), color-stop(70%, rgba(var(--base-primary), var(--alpha-high))), to(rgba(var(--base-primary), 1)));
+  background: linear-gradient(180deg, rgba(var(--base-primary), var(--alpha-high)) 0%, rgba(var(--base-primary), var(--alpha-high)) 70%, rgba(var(--base-primary), 1) 100%);
 }
 
 .section__about {
@@ -1498,6 +1501,7 @@ a.btn__transparent-background:hover {
   display: -ms-grid;
   display: grid;
   gap: var(--gap-small);
+  margin-bottom: var(--gap-huge);
 }
 
 .work-content__project-card--1 {

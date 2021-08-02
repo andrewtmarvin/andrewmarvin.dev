@@ -4,6 +4,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+	font-size: var(--font-size-small);
 	color: var(--color-secondary);
 	pointer-events: none;
 	z-index: var(--layer-three);
@@ -23,7 +24,7 @@
 		}
 	}
 	&__email {
-		left: var(--gap-huge);
+		left: var(--gap-big);
 		transform: rotate(-90deg);
 		transform-origin: left top;
 		cursor: pointer;
@@ -47,7 +48,7 @@
 		left: -12.5%;
 	}
 	&__social-links {
-		right: var(--gap-huge);
+		right: var(--gap-big);
 		width: 20px;
 		ul {
 			display: flex;
@@ -126,7 +127,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-color: rgba(var(--base-primary), var(--alpha-high));
+		background: linear-gradient(180deg, rgba(var(--base-primary), var(--alpha-high)) 0%, rgba(var(--base-primary), var(--alpha-high)) 70%, rgba(var(--base-primary), 1) 100%);
 	}
 	&__about {
 		background-color: var(--color-primary);
@@ -382,6 +383,7 @@
 	&__project-card {
 		display: grid;
 		gap: var(--gap-small);
+		margin-bottom: var(--gap-huge);
 		&--1 {
 			grid-template-columns: 33% auto;
 			grid-template-rows: 3rem repeat(3, max-content);
