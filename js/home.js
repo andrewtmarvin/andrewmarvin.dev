@@ -217,7 +217,6 @@ heroHeaderObserver.observe(heroHeader);
 // Form validation
 const isValid = (formData) => {
 	if (formData.get('name') && (formData.get('email') || formData.get('phone')) && formData.get('message')) {
-		console.log('valid');
 		return true;
 	}
 	return false;
@@ -228,7 +227,6 @@ document.querySelector('.form-submit').addEventListener('click', (e) => {
 	e.preventDefault();
 	const form = e.target.form;
 	for (input of form) {
-		console.log(input);
 		input.parentElement.classList.remove('required');
 	}
 	const formData = new FormData(form);
@@ -239,9 +237,13 @@ document.querySelector('.form-submit').addEventListener('click', (e) => {
 			body: new URLSearchParams(formData).toString()
 		})
 			.then(() => {
-				// ADD SUBMISSION SUCCESS VISUAL
+				form.classList.add('success');
 				form.reset();
 				console.log('Form successfully submitted');
+				setTimeout(() => {
+					form.querySelector('.success-message').classList.add('transparent');
+				}, 3000);
+				form.querySelector('.success-message').classList.remove('transparent');
 			})
 			.catch((error) => alert(error));
 	} else {

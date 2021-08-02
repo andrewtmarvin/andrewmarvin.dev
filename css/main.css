@@ -361,6 +361,10 @@ em, .emphasis {
   visibility: hidden;
 }
 
+.transparent {
+  opacity: 0;
+}
+
 .spacer-line {
   position: relative;
 }
@@ -624,6 +628,7 @@ a.btn__transparent-background:hover {
       -ms-flex-align: center;
           align-items: center;
   gap: var(--gap-small);
+  position: relative;
 }
 
 .contact-form ::-moz-selection {
@@ -742,6 +747,40 @@ a.btn__transparent-background:hover {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.success-message {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--layer-three);
+  color: var(--color-secondary);
+  font-family: var(--font-display);
+  background-color: var(--color-primary);
+  font-size: var(--font-size-huge);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: visible;
+  -webkit-transition: var(--transition-ease-in-out);
+  transition: var(--transition-ease-in-out);
+  pointer-events: none;
+}
+
+.success-message p:last-of-type {
+  font-size: var(--font-size-default);
 }
 
 .header {

@@ -1,6 +1,9 @@
 .hidden {
     visibility: hidden;
 }
+.transparent {
+    opacity: 0;
+}
 .spacer-line {
     position: relative;
     &::after {

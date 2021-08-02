@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--gap-small);
+    position: relative;
     ::selection {
         background-color: rgba(var(--base-black), 0.25);
         color: rgba(var(--base-white), 1);
@@ -100,4 +101,28 @@
         top: 0;
         left: 0;
       }
+}
+
+.success-message {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--layer-three);
+    color: var(--color-secondary);
+    font-family: var(--font-display);
+    background-color: var(--color-primary);
+    font-size: var(--font-size-huge);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    transition: var(--transition-ease-in-out);
+    pointer-events: none;
+
+    p:last-of-type {
+        font-size: var(--font-size-default);
+    }
 }
