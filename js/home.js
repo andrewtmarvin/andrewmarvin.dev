@@ -215,47 +215,45 @@ const heroHeader = document.querySelector('.hero-content h1');
 heroHeaderObserver.observe(heroHeader);
 
 // Form validation
-const isValid = (form) => {
-	const nameElement = form.querySelector('[name=name]');
-	const emailElement = form.querySelector('[name=email]');
-	const phoneElement = form.querySelector('[name=phone]');
-	const messageElement = form.querySelector('[name=message]');
-	const name = nameElement.value;
-	const email = emailElement.value;
-	const phone = phoneElement.value;
-	const message = messageElement.value;
-	for (input of form) {
-		input.parentElement.classList.remove('required');
-	}
-	if (name && (email || phone) && message) {
+const isValid = (formData) => {
+	if (formData.get('name') && (formData.get('email') || formData.get('phone')) && formData.get('message')) {
+		console.log('valid');
 		return true;
-	}
-	if (!name) {
-		nameElement.parentElement.classList.add('required');
-	}
-	if (!email & !phone) {
-		emailElement.parentElement.classList.add('required');
-	}
-	if (!message) {
-		messageElement.parentElement.classList.add('required');
 	}
 	return false;
 };
+
 // Form submission
 document.querySelector('.form-submit').addEventListener('click', (e) => {
 	e.preventDefault();
 	const form = e.target.form;
-
-	if (isValid(form)) {
-		let formData = new FormData(form);
+	for (input of form) {
+		console.log(input);
+		input.parentElement.classList.remove('required');
+	}
+	const formData = new FormData(form);
+	if (isValid(formData)) {
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: new URLSearchParams(formData).toString()
 		})
-			.then(() => console.log('Form successfully submitted'))
+			.then(() => {
+				// ADD SUBMISSION SUCCESS VISUAL
+				form.reset();
+				console.log('Form successfully submitted');
+			})
 			.catch((error) => alert(error));
 	} else {
+		if (!formData.get('name')) {
+			form.querySelector('[name=name]').parentElement.classList.add('required');
+		}
+		if (!formData.get('email') & !formData.get('phone')) {
+			form.querySelector('[name=email]').parentElement.classList.add('required');
+		}
+		if (!formData.get('message')) {
+			form.querySelector('[name=message]').parentElement.classList.add('required');
+		}
 		console.log('form incomplete');
 	}
 });
