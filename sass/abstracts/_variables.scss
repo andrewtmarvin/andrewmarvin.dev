@@ -1,3 +1,4 @@
+
 :root {
 	// COLORS
 	--base-primary: 18, 2, 49;
@@ -65,16 +66,10 @@
 	--gap-huge: 8rem;
 	--gap-gigantic: 12rem;
 
-	// PAGE WIDTH
-	--content-width: 1220px;
-
-
-	// MEDIA QUERIES
-	--desktop-small: 1440px;
-	--tablet: 965px;
-	--tablet-small: 770px;
-	--phone: 450px;
-
+	// LAYOUT SIZING
+	--content-width: 1080px;
+	--section-top-bottom-margins: 15vh 0;
+	
 	// OTHER
 	--shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));
 	--shadow-style-strong: 0 .5rem 1rem rgba(var(--base-black), var(--alpha-medium));
@@ -84,9 +79,21 @@
 	--rounded-corners-huge: 20px;
 }
 
-@media only screen and (max-width: var(--desktop-small)) {
-	:root {
-		--content-width: 670px;
+// MEDIA QUERIES
+$desktop-small: 1440px;
+$tablet: 1281px;
+$mobile: 961px;
 
+@media screen and (max-width: $desktop-small) {
+	:root {
+		--content-width: 720px;
+		--section-top-bottom-margins: 10vh 0;
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	:root {
+		--content-width: 90vw;
+		--section-top-bottom-margins: 5vh 0;
 	}
 }

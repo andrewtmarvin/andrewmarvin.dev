@@ -5,7 +5,7 @@
     align-items: center;
     position: relative;
     z-index: var(--layer-three);
-    p {
+    > p {
         color: var(--color-gray);
         font-size: var(--font-size-small);
         width: var(--content-width);

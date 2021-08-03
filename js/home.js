@@ -126,7 +126,7 @@ const typingLetters = (element, text) => {
 				if (i === chars.length - 1) {
 					resolve();
 				}
-			}, 75 * i);
+			}, 75 * i + i);
 		}
 	});
 };

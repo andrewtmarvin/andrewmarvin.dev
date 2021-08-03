@@ -4,23 +4,34 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	font-size: var(--font-size-small);
-	color: var(--color-secondary);
 	pointer-events: none;
 	z-index: var(--layer-three);
 	--mouse-x: 0px;
 	--mouse-y: 0px;
+	@media only screen and (max-width: $mobile) {
+		position: relative;
+	}
 	& > * {
 		position: absolute;
 		bottom: 15vh;
 		pointer-events: all;
+		font-size: var(--font-size-small);
 		user-select: none;
+		@media only screen and (max-width: $mobile) {
+			position: relative;
+			transform: none!important;
+			left: unset!important;
+			bottom: unset!important;
+		}
 		&::after {
 			content: "";
 			background-color: var(--color-secondary);
 			width: 2px;
 			height: 20vh;
 			position: absolute;
+			@media only screen and (max-width: $mobile) {
+				content: none;
+			}
 		}
 	}
 	&__email {
@@ -39,6 +50,10 @@
 			transform: rotate(90deg);
 			transform-origin: left top;
 		}
+	}
+	.side-elements__email-text {
+		color: var(--color-secondary);
+		
 	}
 	&__email-clickable-area {
 		width: 125%;
@@ -199,16 +214,25 @@
 
 .about-content {
 	width: var(--content-width);
-	margin:15vh 0;
+	margin:var(--section-top-bottom-margins);
 	display: grid;
 	grid-template-columns: repeat(3, calc((100% - var(--gap-huge) * 2) / 3));
 	grid-template-rows: auto repeat(3, 1fr);
 	gap: var(--gap-huge);
+	@media screen and (max-width: $desktop-small) {
+		grid-template-columns: repeat(2, calc((100% - var(--gap-big)) / 2));
+		gap: var(--gap-big);
+	}
 
+	@media screen and (max-width: $mobile) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto repeat(3, 1fr) auto;
+		gap: var(--gap-huge);
+	}
 	&__title {
 		color: var(--color-white);
 		grid-row: 1 / 2;
-		grid-column: 1 / 4;
+		grid-column: 1 / -1;
 		justify-self: center;
 	}
 	&__blurb {
@@ -256,11 +280,14 @@
 			}
 		}
 	}
-
 	&__terminal {
 		grid-row: 2 / 5;
 		grid-column: 2 / 3;
 		height: fit-content;
+		@media screen and (max-width: $mobile) {
+			grid-row: 5 / 6;
+			grid-column: 1 / 2;
+		}
 		h3 {
 			position: relative;
 			text-transform: uppercase;
@@ -291,6 +318,9 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		image-rendering: -webkit-optimize-contrast;
+		@media only screen and (max-width: $desktop-small) {
+			display: none;
+		}
 	}
 	&__image-quote {
 		width: 100%;
@@ -328,7 +358,7 @@
 }
 .work-content {
 	width: var(--content-width);
-	margin:15vh 0;
+	margin: var(--section-top-bottom-margins);
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -570,7 +600,7 @@
 
 .contact-content {
 	width: var(--content-width);
-	margin-top:15vh;
+	margin-top: var(--section-top-bottom-margins);
 	display: grid;
 	grid-template-columns: 33% calc(67% - var(--gap-huge));
 	gap: var(--gap-huge);
