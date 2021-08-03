@@ -414,7 +414,13 @@ em, .emphasis {
 }
 
 .big-spacer {
-  margin-bottom: 4rem;
+  margin-bottom: var(--gap-big);
+}
+
+@media only screen and (max-width: 961px) {
+  .big-spacer {
+    margin-bottom: var(--gap-small);
+  }
 }
 
 .small-spacer {
@@ -422,7 +428,7 @@ em, .emphasis {
 }
 
 .padding-bottom-large {
-  padding-bottom: 4rem;
+  padding-bottom: var(--gap-big);
 }
 
 .padding-bottom-small {
@@ -1292,6 +1298,7 @@ a.btn__transparent-background:hover {
     -ms-grid-rows: auto (1fr)[3] auto;
         grid-template-rows: auto repeat(3, 1fr) auto;
     gap: var(--gap-huge);
+    max-width: 45rem;
   }
 }
 
@@ -1390,7 +1397,7 @@ a.btn__transparent-background:hover {
   height: fit-content;
 }
 
-@media screen and (max-width: 961px) {
+@media only screen and (max-width: 961px) {
   .about-content__terminal {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;

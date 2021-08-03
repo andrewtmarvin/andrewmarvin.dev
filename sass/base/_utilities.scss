@@ -31,14 +31,17 @@
     }
 }
 .big-spacer {
-    margin-bottom: 4rem;
+    margin-bottom: var(--gap-big);
+    @media only screen and (max-width: $mobile) {
+        margin-bottom: var(--gap-small);
+    }
 }
 
 .small-spacer {
     margin-bottom: 2rem;
 }
 .padding-bottom-large {
-    padding-bottom: 4rem;
+    padding-bottom: var(--gap-big);
 }
 .padding-bottom-small {
     padding-bottom: 2rem;
