@@ -66,7 +66,14 @@
 	--gap-gigantic: 12rem;
 
 	// PAGE WIDTH
-	--content-width-desktop: 1220px;
+	--content-width: 1220px;
+
+
+	// MEDIA QUERIES
+	--desktop-small: 1440px;
+	--tablet: 965px;
+	--tablet-small: 770px;
+	--phone: 450px;
 
 	// OTHER
 	--shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));
@@ -75,4 +82,11 @@
 	--rounded-corners-tight: 2px;
 	--rounded-corners-big: 10px;
 	--rounded-corners-huge: 20px;
+}
+
+@media only screen and (max-width: var(--desktop-small)) {
+	:root {
+		--content-width: 670px;
+
+	}
 }

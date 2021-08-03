@@ -47,13 +47,23 @@
   --gap-big: 4rem;
   --gap-huge: 8rem;
   --gap-gigantic: 12rem;
-  --content-width-desktop: 1220px;
+  --content-width: 1220px;
+  --desktop-small: 1440px;
+  --tablet: 965px;
+  --tablet-small: 770px;
+  --phone: 450px;
   --shadow-style-light: 0 1.5rem 4rem rgba(var(--base-primary), var(--alpha-low));
   --shadow-style-strong: 0 .5rem 1rem rgba(var(--base-black), var(--alpha-medium));
   --transition-ease-in-out: all .25s ease-in-out;
   --rounded-corners-tight: 2px;
   --rounded-corners-big: 10px;
   --rounded-corners-huge: 20px;
+}
+
+@media only screen and (max-width: var(--desktop-small)) {
+  :root {
+    --content-width: 670px;
+  }
 }
 
 .fade-in-text-lines p {
@@ -947,7 +957,7 @@ a.btn__transparent-background:hover {
 .footer p {
   color: var(--color-gray);
   font-size: var(--font-size-small);
-  width: var(--content-width-desktop);
+  width: var(--content-width);
   padding: var(--content-box-padding);
 }
 
@@ -1141,7 +1151,7 @@ a.btn__transparent-background:hover {
 
 .hero-content {
   height: 100vh;
-  width: var(--content-width-desktop);
+  width: var(--content-width);
   z-index: var(--layer-one);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1225,7 +1235,7 @@ a.btn__transparent-background:hover {
 }
 
 .about-content {
-  width: var(--content-width-desktop);
+  width: var(--content-width);
   margin: 15vh 0;
   display: -ms-grid;
   display: grid;
@@ -1421,7 +1431,7 @@ a.btn__transparent-background:hover {
 }
 
 .work-content {
-  width: var(--content-width-desktop);
+  width: var(--content-width);
   margin: 15vh 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1842,7 +1852,7 @@ a.btn__transparent-background:hover {
 }
 
 .contact-content {
-  width: var(--content-width-desktop);
+  width: var(--content-width);
   margin-top: 15vh;
   display: -ms-grid;
   display: grid;

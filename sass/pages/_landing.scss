@@ -144,7 +144,7 @@
 }
 .hero-content {
 	height: 100vh;
-	width: var(--content-width-desktop);
+	width: var(--content-width);
 	z-index: var(--layer-one);
 	display: flex;
 	flex-direction: column;
@@ -198,7 +198,7 @@
 }
 
 .about-content {
-	width: var(--content-width-desktop);
+	width: var(--content-width);
 	margin:15vh 0;
 	display: grid;
 	grid-template-columns: repeat(3, calc((100% - var(--gap-huge) * 2) / 3));
@@ -327,7 +327,7 @@
 	}
 }
 .work-content {
-	width: var(--content-width-desktop);
+	width: var(--content-width);
 	margin:15vh 0;
 	display: flex;
 	flex-flow: column nowrap;
@@ -569,7 +569,7 @@
 }
 
 .contact-content {
-	width: var(--content-width-desktop);
+	width: var(--content-width);
 	margin-top:15vh;
 	display: grid;
 	grid-template-columns: 33% calc(67% - var(--gap-huge));
