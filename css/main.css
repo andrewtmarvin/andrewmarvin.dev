@@ -472,6 +472,15 @@ a.btn {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 961px) {
+  .btn,
+  a.btn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 100%;
+            flex: 1 100%;
+  }
+}
+
 .btn__icon,
 a.btn__icon {
   width: 1.5em;
@@ -1075,6 +1084,7 @@ a.btn__transparent-background:hover {
   color: var(--color-white);
   margin-left: 1rem;
   position: relative;
+  white-space: nowrap;
 }
 
 .navigation__logo p span {
@@ -1278,11 +1288,24 @@ a.btn__transparent-background:hover {
           user-select: none;
 }
 
+@media only screen and (max-width: 961px) {
+  .hero-content__logo {
+    width: clamp(5rem, 15vw, 15rem);
+  }
+}
+
 .hero-content h1 {
   position: relative;
   margin-top: 8rem;
   margin-bottom: 2rem;
   color: var(--color-white);
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 961px) {
+  .hero-content h1 {
+    font-size: clamp(var(--font-size-big), 10vw, var(--font-size-huge));
+  }
 }
 
 .hero-content h1 .blinking-windows-cursor {
@@ -1305,6 +1328,12 @@ a.btn__transparent-background:hover {
   font-family: var(--font-code);
 }
 
+@media only screen and (max-width: 961px) {
+  .hero-content h1:before {
+    font-size: var(--font-size-default);
+  }
+}
+
 .hero-content__blurb {
   width: 80rem;
   display: -webkit-box;
@@ -1320,6 +1349,12 @@ a.btn__transparent-background:hover {
   text-align: center;
 }
 
+@media screen and (max-width: 961px) {
+  .hero-content__blurb {
+    width: 90vw;
+  }
+}
+
 .hero-content__blurb p {
   font-size: var(--font-size-big);
   font-family: var(--font-code);
@@ -1333,6 +1368,12 @@ a.btn__transparent-background:hover {
 
 .hero-content__blurb .btn:not(:last-of-type) {
   margin-right: 10%;
+}
+
+@media only screen and (max-width: 961px) {
+  .hero-content__blurb .btn:not(:last-of-type) {
+    margin-right: unset;
+  }
 }
 
 .about-content {

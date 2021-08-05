@@ -51,12 +51,19 @@
 	&__logo {
 		width: 15rem;
 		user-select: none;
+		@media only screen and (max-width: $mobile) {
+			width: clamp(5rem, 15vw, 15rem);
+		}
 	}
 	h1 {
 		position: relative;
 		margin-top: 8rem;
 		margin-bottom: 2rem;
 		color: var(--color-white);
+		white-space: nowrap;
+		@media only screen and (max-width: $mobile) {
+			font-size: clamp(var(--font-size-big), 10vw, var(--font-size-huge));
+		}
 		.blinking-windows-cursor {
 			color: var(--color-secondary);
 			font-family: var(--font-code);
@@ -71,6 +78,9 @@
 			transform: translateX(-50%);
 			font-size: var(--font-size-big);
 			font-family: var(--font-code);
+			@media only screen and (max-width: $mobile) {
+				font-size: var(--font-size-default);
+			}
 		}
 	}
 	&__blurb {
@@ -79,6 +89,9 @@
 		flex-flow: row wrap;
 		justify-content: center;
 		text-align: center;
+		@media screen and (max-width: $mobile) {
+			width: 90vw;
+		}
 		p {
 			font-size: var(--font-size-big);
 			font-family: var(--font-code);
@@ -88,7 +101,10 @@
 			text-align: center;
 			margin-top: 4rem;
 			&:not(:last-of-type){
-				margin-right: 10%
+				margin-right: 10%;
+				@media only screen and (max-width: $mobile) {
+					margin-right: unset;
+				}
 			}
 		}
 	}
