@@ -7,26 +7,29 @@
 	z-index: var(--layer-base);
 	overflow: hidden;
 	position: relative;
-	&__hero::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-image: url(../images/hero.png);
-		background-attachment: fixed;
-		background-size: cover;
-		background-position: center;
-	}
-	&__hero::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: linear-gradient(180deg, rgba(var(--base-primary), var(--alpha-high)) 0%, rgba(var(--base-primary), var(--alpha-high)) 70%, rgba(var(--base-primary), 1) 100%);
+	&__hero {
+		height: 100vh;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url(../images/hero.png);
+			background-attachment: fixed;
+			background-size: cover;
+			background-position: center;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(180deg, rgba(var(--base-primary), var(--alpha-high)) 0%, rgba(var(--base-primary), var(--alpha-high)) 70%, rgba(var(--base-primary), 1) 100%);
+		}
 	}
 	&__about {
 		background-color: var(--color-primary);
@@ -42,7 +45,8 @@
 	}
 }
 .hero-content {
-	min-height: 100vh;
+	height: calc(100vh - var(--header-height));
+	margin-top: var(--header-height);
 	width: var(--content-width);
 	z-index: var(--layer-one);
 	display: flex;
@@ -57,9 +61,8 @@
 		width: 15rem;
 		user-select: none;
 		margin-top: auto;
-		@media only screen and (max-width: $mobile) {
-			width: clamp(5rem, 25vw, 15rem);
-			margin-top: 15vh; // So that opacity is always 1 on mobile at top of page
+		@media only screen and (max-width: $tablet) {
+			height: clamp(5vw, 12vh, 15vw);
 		}
 	}
 	h1 {
@@ -68,8 +71,12 @@
 		margin-bottom: 2rem;
 		color: var(--color-white);
 		white-space: nowrap;
+		@media only screen and (max-width: $tablet) {
+			font-size: var(--font-size-huge);
+			margin-top: var(--gap-big);
+		}
 		@media only screen and (max-width: $mobile) {
-			font-size: clamp(var(--font-size-big), 10vw, var(--font-size-huge));
+			font-size: clamp(var(--font-size-big), 10vh, 8vw);
 			margin-top: var(--gap-big);
 			margin-bottom: 0;
 		}
@@ -87,15 +94,15 @@
 			transform: translateX(-50%);
 			font-size: var(--font-size-big);
 			font-family: var(--font-code);
-			@media only screen and (max-width: $mobile) {
-				font-size: clamp(var(--font-size-small), 1vw, var(--font-size-default));
+			@media only screen and (max-width: $tablet) {
+				font-size: clamp(var(--font-size-small), 2vh, var(--font-size-default));
 				top: calc(0px - 1rem - var(--gap-small));
 			}
 		}
 	}
 	&__blurb {
 		width: 80rem;
-		max-width: 90vw;
+		max-width: 85vw;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
@@ -107,14 +114,15 @@
 			font-size: var(--font-size-big);
 			font-family: var(--font-code);
 			line-height: 2;
-			@media only screen and (max-width: $mobile) {
+			@media only screen and (max-width: $tablet) {
 				font-size: var(--font-size-default);
+				line-height: 1.6;
 			}
 		}
 		& .btn {
 			text-align: center;
 			margin-top: var(--gap-big);
-			@media screen and (max-width: $mobile) {
+			@media screen and (max-width: $desktop-small) {
 				margin-top: var(--gap-small);
 			
 			}

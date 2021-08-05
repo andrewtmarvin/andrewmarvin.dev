@@ -48,6 +48,9 @@
 		transform-origin: left top;
 		cursor: pointer;
 		transition: .1s all linear;
+		@media only screen and (max-width: $tablet) {
+			left: var(--gap-small);
+		}
 		&:active {
 			transform: rotate(-90deg) translateX(-2px);
 			opacity: .5;
@@ -81,6 +84,9 @@
         @media only screen and (max-width: $mobile) { 
             right: unset;
         }
+		@media only screen and (max-width: $tablet) {
+			right: var(--gap-small);
+		}
 		ul {
 			display: flex;
 			flex-flow: column nowrap;

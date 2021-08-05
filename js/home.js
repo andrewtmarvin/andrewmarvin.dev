@@ -87,13 +87,17 @@ const fadeOutElementObserver = new IntersectionObserver(
 		elements.forEach(function (element) {
 			const { isIntersecting } = element;
 			const targ = element.target;
+			console.log(
+				element.target,
+				element.target.getBoundingClientRect().bottom / (document.body.clientHeight / 30)
+			);
 			if (isIntersecting === true) {
 				element.target.style.opacity =
-					element.target.getBoundingClientRect().top / (document.body.clientHeight / 60); // So jumping to top of page triggers opacity update
+					element.target.getBoundingClientRect().bottom / (document.body.clientHeight / 30); // So jumping to top of page triggers opacity update
 				document.addEventListener(
 					'scroll',
 					(scrollFade = function (event, targ) {
-						this.style.opacity = this.getBoundingClientRect().top / (document.body.clientHeight / 60);
+						this.style.opacity = this.getBoundingClientRect().bottom / (document.body.clientHeight / 30);
 					}.bind(targ)),
 					true
 				);

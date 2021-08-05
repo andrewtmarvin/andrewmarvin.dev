@@ -2,7 +2,7 @@
 	position: fixed;
 	width: 100vw;
 	top: 0;
-	height: 10rem;
+	height: var(--header-height);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -21,6 +21,13 @@
 	align-items: center;
 	font-weight: 600;
 	color: var(--color-tertiary);
+
+	@media only screen and (max-width: $desktop-small) {
+		width: 80vw;
+	}
+	@media only screen and (max-width: $tablet) {
+		width: 90vw;
+	}
 	& > * {
 		margin: 0 .5rem;
 	}
@@ -79,7 +86,7 @@
 			}
 		}
 		& li:not(:last-of-type) {
-			margin-right: 5rem;
+			margin-right: 3vw;
 		}
 	}
 	.active-section {

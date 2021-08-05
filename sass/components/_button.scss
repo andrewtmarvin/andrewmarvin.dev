@@ -13,6 +13,12 @@ a.btn {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+	@media only screen and (max-width: $tablet) {
+		width: 15rem;
+		height: 4rem;
+		font-size: var(--font-size-small);
+
+	}
 	@media only screen and (max-width: $mobile) {
 		flex: 1 100%;
 	}
