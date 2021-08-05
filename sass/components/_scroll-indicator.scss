@@ -1,15 +1,12 @@
 .scroll-indicator {
-	position: absolute;
+	position: relative;
 	z-index: var(--layer-three);
-	bottom: 6.5vh;
-	left: 50%;
 	width: 3.5rem;
+	margin-top: auto;
+	margin-bottom: var(--gap-small);
 	fill: var(--color-primary);
 	animation: bounce 2s ease-in-out infinite;
 	animation-delay: 3s;
-	img {
-		transform: translateX(-50%);
-	}
 }
 
 

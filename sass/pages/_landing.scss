@@ -1,6 +1,8 @@
 .section {
 	width: 100%;
 	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
 	justify-content: center;
 	z-index: var(--layer-base);
 	overflow: hidden;
@@ -40,7 +42,7 @@
 	}
 }
 .hero-content {
-	height: 100vh;
+	min-height: 100vh;
 	width: var(--content-width);
 	z-index: var(--layer-one);
 	display: flex;
@@ -48,21 +50,28 @@
 	justify-content: center;
 	align-items: center;
 	gap: var(--gap-small);
+	@media only screen and (max-width: $mobile) {
+		justify-content: unset;
+	}
 	&__logo {
 		width: 15rem;
 		user-select: none;
+		margin-top: auto;
 		@media only screen and (max-width: $mobile) {
-			width: clamp(5rem, 15vw, 15rem);
+			width: clamp(5rem, 25vw, 15rem);
+			margin-top: 15vh; // So that opacity is always 1 on mobile at top of page
 		}
 	}
 	h1 {
 		position: relative;
-		margin-top: 8rem;
+		margin-top: var(--gap-huge);
 		margin-bottom: 2rem;
 		color: var(--color-white);
 		white-space: nowrap;
 		@media only screen and (max-width: $mobile) {
 			font-size: clamp(var(--font-size-big), 10vw, var(--font-size-huge));
+			margin-top: var(--gap-big);
+			margin-bottom: 0;
 		}
 		.blinking-windows-cursor {
 			color: var(--color-secondary);
@@ -73,18 +82,20 @@
 			content: "Hello, I'm";
 			position: absolute;
 			width: max-content;
-			top: -5rem;
+			top: calc(0px - 1rem - var(--gap-big));
 			left: 50%;
 			transform: translateX(-50%);
 			font-size: var(--font-size-big);
 			font-family: var(--font-code);
 			@media only screen and (max-width: $mobile) {
-				font-size: var(--font-size-default);
+				font-size: clamp(var(--font-size-small), 1vw, var(--font-size-default));
+				top: calc(0px - 1rem - var(--gap-small));
 			}
 		}
 	}
 	&__blurb {
 		width: 80rem;
+		max-width: 90vw;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
@@ -96,10 +107,17 @@
 			font-size: var(--font-size-big);
 			font-family: var(--font-code);
 			line-height: 2;
+			@media only screen and (max-width: $mobile) {
+				font-size: var(--font-size-default);
+			}
 		}
 		& .btn {
 			text-align: center;
-			margin-top: 4rem;
+			margin-top: var(--gap-big);
+			@media screen and (max-width: $mobile) {
+				margin-top: var(--gap-small);
+			
+			}
 			&:not(:last-of-type){
 				margin-right: 10%;
 				@media only screen and (max-width: $mobile) {
@@ -120,8 +138,8 @@
 	@media screen and (max-width: $desktop-small) {
 		grid-template-columns: repeat(2, calc((100% - var(--gap-big)) / 2));
 		gap: var(--gap-big);
+		max-width: 80%;
 	}
-
 	@media screen and (max-width: $mobile) {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto repeat(3, 1fr) auto;
@@ -152,10 +170,19 @@
 				width: 5.5rem;
 				top: -1.5rem;
 				left: -7.5rem;
+				@media screen and (max-width: $mobile) {
+					width: 4rem;
+					top: -.4em;
+					left: -7rem;
+				
+				}
 			}
 		}
 		p {
 			color: var(--color-purple);
+			@media screen and (max-width: $mobile) {
+				text-align: justify;
+			}
 		}
 		&--1 {
 			grid-row: 2 / 3;
@@ -204,6 +231,12 @@
 				width: 5rem;
 				top: -1.5rem;
 				left: -7rem;
+				@media screen and (max-width: $mobile) {
+					width: 4rem;
+					top: -.4em;
+					left: -7rem;
+				
+				}
 			}
 		}
 	}
@@ -262,6 +295,12 @@
 	flex-flow: column nowrap;
 	align-items: center;
 	gap: var(--gap-huge);
+	@media screen and (max-width: $desktop-small) {
+		max-width: 80%;
+	}
+	@media screen and (max-width: $mobile) {
+		max-width: 45rem;
+	}
 	&__title {
 		color: var(--color-white);
 	}
@@ -496,7 +535,6 @@
 		}
 	}
 }
-
 .contact-content {
 	width: var(--content-width);
 	margin-top: var(--section-top-bottom-margins);
@@ -504,6 +542,12 @@
 	grid-template-columns: 33% calc(67% - var(--gap-huge));
 	gap: var(--gap-huge);
 	position: relative;
+	@media screen and (max-width: $desktop-small) {
+		max-width: 80%;
+	}
+	@media screen and (max-width: $mobile) {
+		max-width: 45rem;
+	}
 	&__title {
 		color: var(--color-white);
 		grid-row: 1 / 2;

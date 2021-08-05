@@ -64,7 +64,7 @@
   }
 }
 
-@media screen and (max-width: 961px) {
+@media screen and (max-width: 600px) {
   :root {
     --content-width: 90vw;
     --section-top-bottom-margins: 5vh 0;
@@ -417,7 +417,7 @@ em, .emphasis {
   margin-bottom: var(--gap-big);
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .big-spacer {
     margin-bottom: var(--gap-small);
   }
@@ -472,7 +472,7 @@ a.btn {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .btn,
   a.btn {
     -webkit-box-flex: 1;
@@ -520,21 +520,16 @@ a.btn__transparent-background:hover {
 }
 
 .scroll-indicator {
-  position: absolute;
+  position: relative;
   z-index: var(--layer-three);
-  bottom: 6.5vh;
-  left: 50%;
   width: 3.5rem;
+  margin-top: auto;
+  margin-bottom: var(--gap-small);
   fill: var(--color-primary);
   -webkit-animation: bounce 2s ease-in-out infinite;
           animation: bounce 2s ease-in-out infinite;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
-}
-
-.scroll-indicator img {
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 @-webkit-keyframes bounce {
@@ -827,7 +822,7 @@ a.btn__transparent-background:hover {
   --mouse-y: 0px;
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .side-elements {
     position: relative;
     -webkit-box-flex: 1;
@@ -862,7 +857,7 @@ a.btn__transparent-background:hover {
           user-select: none;
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .side-elements > * {
     position: relative;
     -webkit-transform: none !important;
@@ -881,7 +876,7 @@ a.btn__transparent-background:hover {
   position: absolute;
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .side-elements > *::after {
     content: none;
   }
@@ -925,7 +920,7 @@ a.btn__transparent-background:hover {
   left: -12.5%;
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .side-elements__email-clickable-area {
     width: 110%;
     height: 110%;
@@ -938,7 +933,7 @@ a.btn__transparent-background:hover {
   right: var(--gap-big);
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .side-elements__social-links {
     right: unset;
   }
@@ -955,7 +950,7 @@ a.btn__transparent-background:hover {
   gap: var(--gap-micro);
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .side-elements__social-links ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -991,7 +986,7 @@ a.btn__transparent-background:hover {
   z-index: var(--layer-two);
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .email-tooltip::before, .email-tooltip--copied::before {
     content: none;
   }
@@ -1191,7 +1186,7 @@ a.btn__transparent-background:hover {
   text-align: right;
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .footer > p {
     color: var(--color-secondary);
     text-align: center;
@@ -1206,6 +1201,13 @@ a.btn__transparent-background:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1261,7 +1263,7 @@ a.btn__transparent-background:hover {
 }
 
 .hero-content {
-  height: 100vh;
+  min-height: 100vh;
   width: var(--content-width);
   z-index: var(--layer-one);
   display: -webkit-box;
@@ -1280,31 +1282,43 @@ a.btn__transparent-background:hover {
   gap: var(--gap-small);
 }
 
+@media only screen and (max-width: 600px) {
+  .hero-content {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+}
+
 .hero-content__logo {
   width: 15rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  margin-top: auto;
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .hero-content__logo {
-    width: clamp(5rem, 15vw, 15rem);
+    width: clamp(5rem, 25vw, 15rem);
+    margin-top: 15vh;
   }
 }
 
 .hero-content h1 {
   position: relative;
-  margin-top: 8rem;
+  margin-top: var(--gap-huge);
   margin-bottom: 2rem;
   color: var(--color-white);
   white-space: nowrap;
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .hero-content h1 {
     font-size: clamp(var(--font-size-big), 10vw, var(--font-size-huge));
+    margin-top: var(--gap-big);
+    margin-bottom: 0;
   }
 }
 
@@ -1320,7 +1334,7 @@ a.btn__transparent-background:hover {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  top: -5rem;
+  top: calc(0px - 1rem - var(--gap-big));
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -1328,14 +1342,16 @@ a.btn__transparent-background:hover {
   font-family: var(--font-code);
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .hero-content h1:before {
-    font-size: var(--font-size-default);
+    font-size: clamp(var(--font-size-small), 1vw, var(--font-size-default));
+    top: calc(0px - 1rem - var(--gap-small));
   }
 }
 
 .hero-content__blurb {
   width: 80rem;
+  max-width: 90vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1349,7 +1365,7 @@ a.btn__transparent-background:hover {
   text-align: center;
 }
 
-@media screen and (max-width: 961px) {
+@media screen and (max-width: 600px) {
   .hero-content__blurb {
     width: 90vw;
   }
@@ -1361,16 +1377,28 @@ a.btn__transparent-background:hover {
   line-height: 2;
 }
 
+@media only screen and (max-width: 600px) {
+  .hero-content__blurb p {
+    font-size: var(--font-size-default);
+  }
+}
+
 .hero-content__blurb .btn {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: var(--gap-big);
+}
+
+@media screen and (max-width: 600px) {
+  .hero-content__blurb .btn {
+    margin-top: var(--gap-small);
+  }
 }
 
 .hero-content__blurb .btn:not(:last-of-type) {
   margin-right: 10%;
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .hero-content__blurb .btn:not(:last-of-type) {
     margin-right: unset;
   }
@@ -1393,10 +1421,11 @@ a.btn__transparent-background:hover {
     -ms-grid-columns: (calc((100% - var(--gap-big)) / 2))[2];
         grid-template-columns: repeat(2, calc((100% - var(--gap-big)) / 2));
     gap: var(--gap-big);
+    max-width: 80%;
   }
 }
 
-@media screen and (max-width: 961px) {
+@media screen and (max-width: 600px) {
   .about-content {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1447,8 +1476,22 @@ a.btn__transparent-background:hover {
   left: -7.5rem;
 }
 
+@media screen and (max-width: 600px) {
+  .about-content__blurb h3::before {
+    width: 4rem;
+    top: -.4em;
+    left: -7rem;
+  }
+}
+
 .about-content__blurb p {
   color: var(--color-purple);
+}
+
+@media screen and (max-width: 600px) {
+  .about-content__blurb p {
+    text-align: justify;
+  }
 }
 
 .about-content__blurb--1 {
@@ -1502,7 +1545,7 @@ a.btn__transparent-background:hover {
   height: fit-content;
 }
 
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 600px) {
   .about-content__terminal {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
@@ -1532,6 +1575,14 @@ a.btn__transparent-background:hover {
   width: 5rem;
   top: -1.5rem;
   left: -7rem;
+}
+
+@media screen and (max-width: 600px) {
+  .about-content__terminal h3::before {
+    width: 4rem;
+    top: -.4em;
+    left: -7rem;
+  }
 }
 
 .about-content__image {
@@ -1620,6 +1671,18 @@ a.btn__transparent-background:hover {
       -ms-flex-align: center;
           align-items: center;
   gap: var(--gap-huge);
+}
+
+@media screen and (max-width: 1440px) {
+  .work-content {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .work-content {
+    max-width: 45rem;
+  }
 }
 
 .work-content__title {
@@ -2036,6 +2099,18 @@ a.btn__transparent-background:hover {
       grid-template-columns: 33% calc(67% - var(--gap-huge));
   gap: var(--gap-huge);
   position: relative;
+}
+
+@media screen and (max-width: 1440px) {
+  .contact-content {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-content {
+    max-width: 45rem;
+  }
 }
 
 .contact-content__title {
