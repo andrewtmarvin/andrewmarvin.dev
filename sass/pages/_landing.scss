@@ -248,37 +248,61 @@
 			}
 		}
 	}
-	&__image {
+	&__image-quote-container {
 		grid-row: 2 / 5;
 		grid-column: 3 / 4;
-		background-image:  url(../images/frame.png);
-		background-size: 100%;
-		background-repeat: no-repeat;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		image-rendering: -webkit-optimize-contrast;
+		position: relative;
+		margin-top: 60px;
 		@media only screen and (max-width: $desktop-small) {
 			display: none;
 		}
 	}
-	&__image-quote {
-		width: 100%;
-		margin-bottom: 30px;
+	&__image-quote-image {
+		margin-top: 42px;
+		width: 110%;
+		height: 351px;
+		background-image:  url(../images/andrew_pier.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
 		position: relative;
+		&::after {
+			content: "";
+			background: var(--main-gradient);
+			opacity: .3;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+	&__image-quote-text {
+		width: 110%;
+		height: 287px;
+		position: relative;
+		background-color: var(--color-blue);
 		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: space-around;
-		gap: var(--gap-small);
+		justify-content: center;
+		align-items: center;
 		& p {
 			padding: 2rem;
 			width: 80%;
 			color: var(--color-tertiary);
 			text-align: center;
 			position: absolute;
-			
 		}
+	}
+	&__image-quote-frame {
+		background-image: url(../images/frame.svg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: var(--layer-three);
+		pointer-events: none;
 	}
 }
 .work-content {

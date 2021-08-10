@@ -72,12 +72,30 @@
   }
 }
 
+.rotating-text-lines:hover p {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 .rotating-text-lines p {
   line-height: 2.8rem;
   -webkit-transition: .5s opacity linear, .75s transform ease-out;
   transition: .5s opacity linear, .75s transform ease-out;
-  -webkit-animation: rotating-text-lines;
-          animation: rotating-text-lines;
+  -webkit-animation: rotating-text-lines 9s infinite;
+          animation: rotating-text-lines 9s infinite;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+
+.rotating-text-lines p:nth-of-type(2) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.rotating-text-lines p:nth-of-type(3) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
 }
 
 .fade-in-element {
@@ -189,8 +207,11 @@
 @-webkit-keyframes rotating-text-lines {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  4% {
+    opacity: 0;
   }
   10% {
     opacity: 1;
@@ -202,23 +223,29 @@
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
+  36% {
+    opacity: 0;
+  }
   40% {
     opacity: 0;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
 }
 
 @keyframes rotating-text-lines {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  4% {
+    opacity: 0;
   }
   10% {
     opacity: 1;
@@ -230,15 +257,18 @@
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
+  36% {
+    opacity: 0;
+  }
   40% {
     opacity: 0;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
 }
 
@@ -1680,60 +1710,79 @@ a.btn__transparent-background:hover {
   }
 }
 
-.about-content__image {
+.about-content__image-quote-container {
   -ms-grid-row: 2;
   -ms-grid-row-span: 3;
   grid-row: 2 / 5;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / 4;
-  background-image: url(../images/frame.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  image-rendering: -webkit-optimize-contrast;
+  position: relative;
+  margin-top: 60px;
 }
 
 @media only screen and (max-width: 1440px) {
-  .about-content__image {
+  .about-content__image-quote-container {
     display: none;
   }
 }
 
-.about-content__image-quote {
-  width: 100%;
-  margin-bottom: 30px;
+.about-content__image-quote-image {
+  margin-top: 42px;
+  width: 110%;
+  height: 351px;
+  background-image: url(../images/andrew_pier.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
+}
+
+.about-content__image-quote-image::after {
+  content: "";
+  background: var(--main-gradient);
+  opacity: .3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.about-content__image-quote-text {
+  width: 110%;
+  height: 287px;
+  position: relative;
+  background-color: var(--color-blue);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  gap: var(--gap-small);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.about-content__image-quote p {
+.about-content__image-quote-text p {
   padding: 2rem;
   width: 80%;
   color: var(--color-tertiary);
   text-align: center;
   position: absolute;
+}
+
+.about-content__image-quote-frame {
+  background-image: url(../images/frame.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--layer-three);
+  pointer-events: none;
 }
 
 .work-content {

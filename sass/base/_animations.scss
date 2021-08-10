@@ -1,12 +1,22 @@
 // Styles for fade in effects
 .rotating-text-lines{
+    &:hover {
+        p {
+            animation-play-state: paused;
+        }
+    }
     p {
     line-height: 2.8rem;
     transition: .5s opacity linear, .75s transform ease-out;
-    animation: rotating-text-lines;
+    animation: rotating-text-lines 9s infinite;
+    transform: translateX(100%);
+    opacity: 0;
     }
-    p:nth-of-type(1) {
-        
+    p:nth-of-type(2) {
+        animation-delay: 3s;
+    }
+    p:nth-of-type(3) {
+        animation-delay: 6s;
     }
 }
 
@@ -79,7 +89,10 @@
 @keyframes rotating-text-lines {
     0% {
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateX(50%);
+    }
+    4% {
+        opacity: 0;
     }
     10% {
         opacity: 1;
@@ -89,13 +102,16 @@
         opacity: 1;
         transform: translateX(0%)
     }
+    36% {
+        opacity: 0;
+    }
     40% {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
     100% {
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateX(50%);
     }
 
 }
