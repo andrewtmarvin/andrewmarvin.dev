@@ -1,14 +1,13 @@
 // Styles for fade in effects
-.fade-in-text-lines p {
-    opacity: 0;
-    transform: translateY(10px);
+.rotating-text-lines{
+    p {
     line-height: 2.8rem;
     transition: .5s opacity linear, .75s transform ease-out;
-}
-
-p.fade-in-text-lines-visible {
-    opacity: 1;
-    transform: translateY(0px);
+    animation: rotating-text-lines;
+    }
+    p:nth-of-type(1) {
+        
+    }
 }
 
 .fade-in-element {
@@ -75,4 +74,28 @@ p.fade-in-text-lines-visible {
   0% { opacity: 1.0; }
   50% { opacity: 0.0; }
   100% { opacity: 1.0; }
+}
+
+@keyframes rotating-text-lines {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    10% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    30% {
+        opacity: 1;
+        transform: translateX(0%)
+    }
+    40% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
 }

@@ -38,28 +38,6 @@ menuLinks.forEach((link) => {
 });
 
 // ANIMATIONS
-// Fade in lines
-const fadeInTextLinesObserver = new IntersectionObserver(
-	function (textBlocks) {
-		textBlocks.forEach(function (textBlock) {
-			const { isIntersecting } = textBlock;
-			if (isIntersecting === true) {
-				for (let i = 0; i < textBlock.target.children.length; i++) {
-					let element = textBlock.target.children[i];
-					setTimeout(() => element.classList.add('fade-in-text-lines-visible'), i * 2000);
-				}
-				fadeInTextLinesObserver.unobserve(textBlock.target);
-			}
-		});
-	},
-	{
-		rootMargin: '-10% 0% 0% 0%',
-		threshold: 0.5
-	}
-);
-
-const fadeInTextElements = document.querySelectorAll('.fade-in-text-lines');
-fadeInTextElements.forEach((element) => fadeInTextLinesObserver.observe(element));
 
 // Fade in element
 const fadeInElementObserver = new IntersectionObserver(
@@ -87,10 +65,6 @@ const fadeOutElementObserver = new IntersectionObserver(
 		elements.forEach(function (element) {
 			const { isIntersecting } = element;
 			const targ = element.target;
-			console.log(
-				element.target,
-				element.target.getBoundingClientRect().bottom / (document.body.clientHeight / 30)
-			);
 			if (isIntersecting === true) {
 				element.target.style.opacity =
 					element.target.getBoundingClientRect().bottom / (document.body.clientHeight / 30); // So jumping to top of page triggers opacity update
@@ -142,7 +116,9 @@ typingLetters(document.querySelector('.header-huge .typing-letters'), 'Marvin');
 const executeTerminalCommand = (terminal) => {
 	const audio = new Audio('../media/keystroke.mp3');
 	audio.volume = 0.3;
-	audio.play();
+	audio.play().catch(function (error) {
+		// Throws DOMException if user hasn't interacted with page before sound attempts to play
+	});
 	document.querySelector('.terminal-box__command.blinking-linux-cursor').classList.remove('blinking-linux-cursor');
 	const nodes = terminal.target.querySelectorAll('*');
 	for (let i = 0; i < nodes.length; i++) {
@@ -157,7 +133,9 @@ const terminalObserver = new IntersectionObserver(
 		if (isIntersecting === true) {
 			const audio = new Audio('../media/typing.mp3');
 			audio.volume = 0.05;
-			audio.play();
+			audio.play().catch(function (error) {
+				// Throws DOMException if user hasn't interacted with page before sound attempts to play
+			});
 			await typingLetters(terminal.target.querySelector('.typing-letters'), 'tree\u00A0techskills/\u00A0');
 			audio.pause();
 			setTimeout(executeTerminalCommand, 1000, terminal);

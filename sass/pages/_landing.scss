@@ -251,9 +251,9 @@
 	&__image {
 		grid-row: 2 / 5;
 		grid-column: 3 / 4;
-		background-image: url(../images/andrew_about.png);
-		background-size: cover;
-		background-position:  -33px -33px;
+		background-image:  url(../images/frame.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -273,26 +273,11 @@
 		gap: var(--gap-small);
 		& p {
 			padding: 2rem;
-			padding-left: 7rem;
-			text-indent: -5rem;
 			width: 80%;
-			background-color: var(--color-blue);
-			color: var(--color-purple);
-			border-radius: var(--rounded-corners-huge);
-
-			&:first-of-type {
-				&::after {
-					content: url(../images/quote-end.svg);
-					width: 6rem;
-					height: 6rem;
-					position: absolute;
-					top: -3rem;
-					right: -2rem;
-				}
-			}
-			&:nth-last-of-type(2) {
-				align-self: flex-end;
-			}
+			color: var(--color-tertiary);
+			text-align: center;
+			position: absolute;
+			
 		}
 	}
 }

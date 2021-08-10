@@ -72,19 +72,12 @@
   }
 }
 
-.fade-in-text-lines p {
-  opacity: 0;
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+.rotating-text-lines p {
   line-height: 2.8rem;
   -webkit-transition: .5s opacity linear, .75s transform ease-out;
   transition: .5s opacity linear, .75s transform ease-out;
-}
-
-p.fade-in-text-lines-visible {
-  opacity: 1;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  -webkit-animation: rotating-text-lines;
+          animation: rotating-text-lines;
 }
 
 .fade-in-element {
@@ -190,6 +183,62 @@ p.fade-in-text-lines-visible {
   }
   100% {
     opacity: 1.0;
+  }
+}
+
+@-webkit-keyframes rotating-text-lines {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  40% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes rotating-text-lines {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  40% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
 }
 
@@ -1638,9 +1687,9 @@ a.btn__transparent-background:hover {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / 4;
-  background-image: url(../images/andrew_about.png);
-  background-size: cover;
-  background-position: -33px -33px;
+  background-image: url(../images/frame.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1681,26 +1730,10 @@ a.btn__transparent-background:hover {
 
 .about-content__image-quote p {
   padding: 2rem;
-  padding-left: 7rem;
-  text-indent: -5rem;
   width: 80%;
-  background-color: var(--color-blue);
-  color: var(--color-purple);
-  border-radius: var(--rounded-corners-huge);
-}
-
-.about-content__image-quote p:first-of-type::after {
-  content: url(../images/quote-end.svg);
-  width: 6rem;
-  height: 6rem;
+  color: var(--color-tertiary);
+  text-align: center;
   position: absolute;
-  top: -3rem;
-  right: -2rem;
-}
-
-.about-content__image-quote p:nth-last-of-type(2) {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
 }
 
 .work-content {
