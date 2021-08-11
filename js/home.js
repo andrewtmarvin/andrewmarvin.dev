@@ -20,7 +20,7 @@ const pageSectionObserver = new IntersectionObserver(
 	},
 	{
 		rootMargin: '0% 0% 0% 0%',
-		threshold: 0.2
+		threshold: 0.25
 	}
 );
 
