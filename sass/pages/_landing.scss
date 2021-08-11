@@ -62,6 +62,7 @@
 		user-select: none;
 		margin-top: auto;
 		@media only screen and (max-width: $tablet) {
+			margin-top: 10vh;
 			width: clamp(10rem, 17vh, 12rem);
 		}
 	}
@@ -76,7 +77,6 @@
 			margin-top: var(--gap-big);
 		}
 		@media only screen and (max-width: $mobile) {
-			font-size: var(--font-size-big);
 			margin-top: var(--gap-big);
 			margin-bottom: 0;
 		}
@@ -96,10 +96,6 @@
 			font-family: var(--font-code);
 			@media only screen and (max-width: $tablet) {
 				font-size: var(--font-size-default);
-				top: calc(0px - 1rem - var(--gap-small));
-			}
-			@media only screen and (max-width: $mobile) {
-				font-size: var(--font-size-small);
 				top: calc(0px - 1rem - var(--gap-small));
 			}
 		}
@@ -153,15 +149,19 @@
 	row-gap: var(--gap-big);
 	@media screen and (max-width: $desktop-small) {
 		grid-template-columns: repeat(2, calc((100% - var(--gap-huge)) / 2));
-		max-width: 80%;
+		grid-template-rows: repeat(5, auto);
+		row-gap: var(--gap-huge);
+		max-width: 80vw;
 	}
 	@media screen and (max-width: $tablet) {
-		grid-template-columns: 1fr;
-		grid-template-rows: auto repeat(3, 1fr) auto;
-		row-gap: var(--gap-huge);
+		grid-template-columns: repeat(2, calc((100% - var(--gap-small)) / 2));
+		gap: var(--gap-small);
+		row-gap: var(--gap-big);
+		max-width: 85vw;
+
 	}
 	@media screen and (max-width: $mobile) {
-		max-width: 90vw;
+		grid-template-columns: 1fr;
 
 	}
 	&__title {
@@ -209,6 +209,14 @@
 		&--2 {
 			grid-row: 3 / 4;
 			grid-column: 1 / 2;
+			@media only screen and (max-width: $desktop-small) {
+				grid-row: 4 / 5;
+				grid-column: 1 / 2;
+			}
+			@media only screen and (max-width: $tablet) {
+				grid-row: 4 / 5;
+				grid-column: 2 / 3;
+			}
 			h3::before {
 				content: url(../images/careerpath.svg);
 			}
@@ -216,18 +224,29 @@
 		&--3 {
 			grid-row: 4 / 5;
 			grid-column: 1 / 2;
+			@media only screen and (max-width: $desktop-small) {
+				grid-row: 4 / 5;
+				grid-column: 2 / 3;
+			}
+			@media only screen and (max-width: $tablet) {
+				grid-row: 5 / 6;
+				grid-column: 2 / 3;
+			}
 			h3::before {
 				content: url(../images/currently.svg);
 			}
 		}
 	}
 	&__terminal {
-		grid-row: 2 / 5;
+		grid-row: 2 / 4;
 		grid-column: 2 / 3;
 		height: fit-content;
-		@media only screen and (max-width: $tablet) {
-			grid-row: 5 / 6;
+		@media only screen and (max-width: $desktop-small) {
+			grid-row: 3 / 4;
 			grid-column: 1 / 2;
+		}
+		@media only screen and (max-width: $tablet) {
+			grid-row: 3 / 5;
 		}
 		h3 {
 			position: relative;
@@ -259,10 +278,16 @@
 		grid-row: 2 / 5;
 		grid-column: 3 / 4;
 		position: relative;
-		margin-top: 60px;
-		height: 818px;
+		width: 346px;
+		height: 817px;
+		align-self: center;
 		@media only screen and (max-width: $desktop-small) {
-			display: none;
+			grid-row: 2 / 4;
+			grid-column: 2 / 3;
+		}
+		@media only screen and (max-width: $tablet) {
+			width: 275px;
+    		height: 652px;
 		}
 	}
 	&__image-quote-image {
@@ -275,6 +300,10 @@
 		background-repeat: no-repeat;
 		position: relative;
 		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), 0% 100%);
+		@media  screen and (max-width: $tablet) {
+			margin-top: 39px;
+			height: 315px;
+		}
 		&::after {
 			content: "";
 			background: var(--main-gradient);
@@ -297,6 +326,9 @@
 		align-items: center;
 		clip-path: polygon(0 10px, 100% 0, 100% 100%, 0% 100%);
 		transform: translateY(-10px);
+		@media  screen and (max-width: $tablet) {
+			height: 266px;
+		}
 		p {
 			padding: 2rem;
 			width: 80%;
@@ -305,6 +337,9 @@
 			line-height: 1.8;
 			text-align: center;
 			position: absolute;
+			@media  screen and (max-width: $tablet) {
+				padding: 1rem;
+			}
 			.link-line {
 				color: var(--color-tertiary);
 			}

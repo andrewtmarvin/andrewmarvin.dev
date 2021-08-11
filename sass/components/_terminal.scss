@@ -7,7 +7,7 @@
         // Needed for blinking cursor effect
         position: relative;
         display: inline-block;
-        @media screen and (max-width: $mobile) {
+        @media screen and (max-width: $tablet) {
             overflow-wrap: anywhere;
         }
     }
@@ -24,6 +24,7 @@
             font-family: var(--font-code);
             font-size: 16px;
             position: relative;
+            // white-space: nowrap;
             &:before{
                 position: absolute;
                 left: -15px;
