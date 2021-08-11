@@ -1430,7 +1430,7 @@ a.btn__transparent-background:hover {
 
 @media only screen and (max-width: 963px) {
   .hero-content__logo {
-    height: clamp(5vw, 12vh, 15vw);
+    width: clamp(10rem, 17vh, 12rem);
   }
 }
 
@@ -1451,7 +1451,7 @@ a.btn__transparent-background:hover {
 
 @media only screen and (max-width: 600px) {
   .hero-content h1 {
-    font-size: clamp(var(--font-size-big), 10vh, 8vw);
+    font-size: var(--font-size-big);
     margin-top: var(--gap-big);
     margin-bottom: 0;
   }
@@ -1479,7 +1479,14 @@ a.btn__transparent-background:hover {
 
 @media only screen and (max-width: 963px) {
   .hero-content h1:before {
-    font-size: clamp(var(--font-size-small), 2vh, var(--font-size-default));
+    font-size: var(--font-size-default);
+    top: calc(0px - 1rem - var(--gap-small));
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-content h1:before {
+    font-size: var(--font-size-small);
     top: calc(0px - 1rem - var(--gap-small));
   }
 }
@@ -1502,7 +1509,7 @@ a.btn__transparent-background:hover {
 
 @media screen and (max-width: 600px) {
   .hero-content__blurb {
-    width: 90vw;
+    max-width: 90vw;
   }
 }
 

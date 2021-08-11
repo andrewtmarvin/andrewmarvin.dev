@@ -62,7 +62,7 @@
 		user-select: none;
 		margin-top: auto;
 		@media only screen and (max-width: $tablet) {
-			height: clamp(5vw, 12vh, 15vw);
+			width: clamp(10rem, 17vh, 12rem);
 		}
 	}
 	h1 {
@@ -76,7 +76,7 @@
 			margin-top: var(--gap-big);
 		}
 		@media only screen and (max-width: $mobile) {
-			font-size: clamp(var(--font-size-big), 10vh, 8vw);
+			font-size: var(--font-size-big);
 			margin-top: var(--gap-big);
 			margin-bottom: 0;
 		}
@@ -95,7 +95,11 @@
 			font-size: var(--font-size-big);
 			font-family: var(--font-code);
 			@media only screen and (max-width: $tablet) {
-				font-size: clamp(var(--font-size-small), 2vh, var(--font-size-default));
+				font-size: var(--font-size-default);
+				top: calc(0px - 1rem - var(--gap-small));
+			}
+			@media only screen and (max-width: $mobile) {
+				font-size: var(--font-size-small);
 				top: calc(0px - 1rem - var(--gap-small));
 			}
 		}
@@ -108,7 +112,7 @@
 		justify-content: center;
 		text-align: center;
 		@media screen and (max-width: $mobile) {
-			width: 90vw;
+			max-width: 90vw;
 		}
 		p {
 			font-size: var(--font-size-big);
