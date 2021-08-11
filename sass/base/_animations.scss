@@ -53,11 +53,12 @@
 
 // Blinking cursor effect
 .blinking-linux-cursor {
+    position: relative;
     &:after {
         content: "";
         position: absolute;
-        top: .2rem;
-        right: -.2em;
+        top: .1em;
+        right: -.7em;
         display: inline-block;
         background-color: var(--color-secondary);
         vertical-align: top;

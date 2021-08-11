@@ -67,7 +67,7 @@
 	--gap-gigantic: 12rem;
 
 	// LAYOUT SIZING
-	--content-width: 1080px;
+	--content-width: 1200px;
 	--section-top-bottom-margins: 15vh 0;
 	--header-height: 10rem;
 	
@@ -82,19 +82,24 @@
 
 // MEDIA QUERIES
 $desktop-small: 1440px;
-$tablet: 1281px;
+$tablet: 963px;
 $mobile: 600px;
 
 @media screen and (max-width: $desktop-small) {
 	:root {
-		--content-width: 720px;
+		--content-width: 900px;
 		--section-top-bottom-margins: 10vh 0;
+	}
+}
+@media screen and (max-width: $tablet) {
+	:root {
+		--content-width: 650px;
+		--section-top-bottom-margins: 5vh 0;
 	}
 }
 
 @media screen and (max-width: $mobile) {
 	:root {
 		--content-width: 90vw;
-		--section-top-bottom-margins: 5vh 0;
 	}
 }

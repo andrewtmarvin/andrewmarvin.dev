@@ -7,13 +7,15 @@
         // Needed for blinking cursor effect
         position: relative;
         display: inline-block;
-        overflow-wrap: anywhere;
+        @media screen and (max-width: $mobile) {
+            overflow-wrap: anywhere;
+        }
     }
     &__directory {
-        color: var(--color-tertiary);
+        // color: var(--color-blue-light);
     }
     &__main-item {
-        color: var(--color-purple-light);
+        color: var(--color-white);
     }
     & ul{
         margin: 0px 0px 0px 3rem; 
@@ -44,7 +46,7 @@
             }
           &.terminal-box__tree-root{
               margin: 0px 0px 0px -20px;
-              color: var(--color-tertiary);
+            //   color: var(--color-blue-light);
               &:before{
                 display: none;
               }
