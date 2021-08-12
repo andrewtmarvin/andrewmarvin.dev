@@ -96,7 +96,7 @@
 			font-family: var(--font-code);
 			@media only screen and (max-width: $tablet) {
 				font-size: var(--font-size-default);
-				top: calc(0px - 1rem - var(--gap-small));
+				top: calc(0px - 1.3rem - var(--gap-small));
 			}
 		}
 	}
@@ -217,7 +217,7 @@
 				grid-column: 2 / 3;
 			}
 			@media screen and (max-width: $mobile) {
-				grid-row: 6 / 7;
+				grid-row: 5 / 6;
 				grid-column: 1 / 2; 
 			}
 			h3::before {
@@ -236,7 +236,7 @@
 				grid-column: 2 / 3;
 			}
 			@media screen and (max-width: $mobile) {
-				grid-row: 5 / 6;
+				grid-row: 6 / 7;
 				grid-column: 1 / 2; 
 			}
 			h3::before {

@@ -55,6 +55,7 @@
 	--layer-one: 100;
 	--layer-two: 200;
 	--layer-three: 300;
+	--layer-four: 400;
 
 	// SPACING
 	--content-box-padding: 2rem 5rem;
@@ -93,6 +94,7 @@ $mobile: 600px;
 }
 @media screen and (max-width: $tablet) {
 	:root {
+		--header-height: 8rem;
 		--content-width: 90vw;
 		--section-top-bottom-margins: 5vh 0;
 	}

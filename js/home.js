@@ -182,9 +182,11 @@ const heroHeaderObserver = new IntersectionObserver(
 		if (isIntersecting === false) {
 			document.querySelector('.header').classList.add('header--downpage');
 			document.querySelector('.navigation__logo').classList.add('navigation__logo--visible');
+			document.querySelector('.navigation-mobile__logo').classList.add('navigation-mobile__logo--visible');
 		} else {
 			document.querySelector('.header').classList.remove('header--downpage');
 			document.querySelector('.navigation__logo').classList.remove('navigation__logo--visible');
+			document.querySelector('.navigation-mobile__logo').classList.remove('navigation-mobile__logo--visible');
 		}
 	},
 	{
@@ -203,6 +205,15 @@ const isValid = (formData) => {
 	}
 	return false;
 };
+
+document.querySelector('.navigation-mobile__button').addEventListener('click', (e) => {
+	e.target.classList.toggle('navigation-mobile__button--open');
+	document.querySelector('.navigation-mobile ul').classList.toggle('navigation-mobile--closed');
+});
+document.querySelector('.navigation-mobile ul').addEventListener('click', () => {
+	document.querySelector('.navigation-mobile ul').classList.toggle('navigation-mobile--closed');
+	document.querySelector('.navigation-mobile__button').classList.toggle('navigation-mobile__button--open');
+});
 
 // Form submission
 document.querySelector('.form-submit').addEventListener('click', (e) => {

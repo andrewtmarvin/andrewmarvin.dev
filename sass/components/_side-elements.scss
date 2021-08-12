@@ -30,6 +30,7 @@
 			left: unset!important;
 			bottom: unset!important;
             width: unset;
+			user-select: all;
 		}
 		&::after {
 			content: "";

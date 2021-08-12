@@ -31,6 +31,7 @@ a:visited,
 a:active {
 	text-decoration: none;
 	transition: var(--transition-ease-in-out);
+	-webkit-tap-highlight-color: transparent;
 }
 
 li {
