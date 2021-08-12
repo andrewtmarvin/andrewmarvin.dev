@@ -8,7 +8,7 @@
 	z-index: var(--layer-three);
 	--mouse-x: 0px;
 	--mouse-y: 0px;
-	@media only screen and (max-width: $mobile) {
+	@media only screen and (max-width: $tablet) {
 		position: relative;
         flex: 1 100%;
         display: flex;
@@ -24,7 +24,7 @@
 		pointer-events: all;
 		font-size: var(--font-size-small);
 		user-select: none;
-		@media only screen and (max-width: $mobile) {
+		@media only screen and (max-width: $tablet) {
 			position: relative;
 			transform: none!important;
 			left: unset!important;
@@ -37,7 +37,7 @@
 			width: 2px;
 			height: 20vh;
 			position: absolute;
-			@media only screen and (max-width: $mobile) {
+			@media only screen and (max-width: $tablet) {
 				content: none;
 			}
 		}
@@ -48,9 +48,6 @@
 		transform-origin: left top;
 		cursor: pointer;
 		transition: .1s all linear;
-		@media only screen and (max-width: $tablet) {
-			left: var(--gap-small);
-		}
 		&:active {
 			transform: rotate(-90deg) translateX(-2px);
 			opacity: .5;
@@ -72,7 +69,7 @@
 		position: absolute;
 		top: -50%;
 		left: -12.5%;
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
             width: 110%;
             height: 110%;
             top: -5%;
@@ -81,17 +78,14 @@
 	}
 	&__social-links {
 		right: var(--gap-big);
-        @media only screen and (max-width: $mobile) { 
+        @media only screen and (max-width: $tablet) { 
             right: unset;
         }
-		@media only screen and (max-width: $tablet) {
-			right: var(--gap-small);
-		}
 		ul {
 			display: flex;
 			flex-flow: column nowrap;
 			gap: var(--gap-micro);
-            @media only screen and (max-width: $mobile) { 
+            @media only screen and (max-width: $tablet) { 
                 flex-flow: row nowrap;
             }
 			li a {
@@ -121,7 +115,7 @@
 		color: var(--color-secondary);
 		background-color: var(--color-primary);
 		z-index: var(--layer-two);
-        @media only screen and (max-width: $mobile) { 
+        @media only screen and (max-width: $tablet) { 
             content: none;
         }
 	}

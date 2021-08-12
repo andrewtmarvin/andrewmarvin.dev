@@ -921,7 +921,7 @@ a.btn__transparent-background:hover {
   --mouse-y: 0px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 963px) {
   .side-elements {
     position: relative;
     -webkit-box-flex: 1;
@@ -956,7 +956,7 @@ a.btn__transparent-background:hover {
           user-select: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 963px) {
   .side-elements > * {
     position: relative;
     -webkit-transform: none !important;
@@ -975,7 +975,7 @@ a.btn__transparent-background:hover {
   position: absolute;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 963px) {
   .side-elements > *::after {
     content: none;
   }
@@ -990,12 +990,6 @@ a.btn__transparent-background:hover {
   cursor: pointer;
   -webkit-transition: .1s all linear;
   transition: .1s all linear;
-}
-
-@media only screen and (max-width: 963px) {
-  .side-elements__email {
-    left: var(--gap-small);
-  }
 }
 
 .side-elements__email:active {
@@ -1025,7 +1019,7 @@ a.btn__transparent-background:hover {
   left: -12.5%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 963px) {
   .side-elements__email-clickable-area {
     width: 110%;
     height: 110%;
@@ -1038,15 +1032,9 @@ a.btn__transparent-background:hover {
   right: var(--gap-big);
 }
 
-@media only screen and (max-width: 600px) {
-  .side-elements__social-links {
-    right: unset;
-  }
-}
-
 @media only screen and (max-width: 963px) {
   .side-elements__social-links {
-    right: var(--gap-small);
+    right: unset;
   }
 }
 
@@ -1061,7 +1049,7 @@ a.btn__transparent-background:hover {
   gap: var(--gap-micro);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 963px) {
   .side-elements__social-links ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1097,7 +1085,7 @@ a.btn__transparent-background:hover {
   z-index: var(--layer-two);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 963px) {
   .email-tooltip::before, .email-tooltip--copied::before {
     content: none;
   }
@@ -1681,6 +1669,17 @@ a.btn__transparent-background:hover {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .about-content__blurb--2 {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6 / 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+}
+
 .about-content__blurb--2 h3::before {
   content: url(../images/careerpath.svg);
 }
@@ -1716,6 +1715,17 @@ a.btn__transparent-background:hover {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .about-content__blurb--3 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+}
+
 .about-content__blurb--3 h3::before {
   content: url(../images/currently.svg);
 }
@@ -1748,6 +1758,14 @@ a.btn__transparent-background:hover {
     -ms-grid-row: 3;
     -ms-grid-row-span: 2;
     grid-row: 3 / 5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-content__terminal {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
   }
 }
 
@@ -1810,6 +1828,19 @@ a.btn__transparent-background:hover {
   .about-content__image-quote-container {
     width: 275px;
     height: 652px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-content__image-quote-container {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 }
 
