@@ -1014,6 +1014,12 @@ a.btn__transparent-background:hover {
           transform-origin: left top;
 }
 
+@media only screen and (max-width: 963px) {
+  .side-elements__email {
+    display: none;
+  }
+}
+
 .side-elements .side-elements__email-text {
   color: var(--color-secondary);
 }
@@ -1024,15 +1030,6 @@ a.btn__transparent-background:hover {
   position: absolute;
   top: -50%;
   left: -12.5%;
-}
-
-@media only screen and (max-width: 963px) {
-  .side-elements__email-clickable-area {
-    width: 110%;
-    height: 110%;
-    top: -5%;
-    left: -5%;
-  }
 }
 
 .side-elements__social-links {
@@ -1068,6 +1065,27 @@ a.btn__transparent-background:hover {
 .side-elements__social-links ul li a {
   display: block;
   width: 20px;
+}
+
+.side-elements__social-links ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.side-elements__social-links ul li:last-of-type {
+  display: none;
+}
+
+@media only screen and (max-width: 963px) {
+  .side-elements__social-links ul li:last-of-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .side-elements__social-links::after {
@@ -1461,7 +1479,7 @@ a.btn__transparent-background:hover {
   text-align: right;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 963px) {
   .footer > p {
     color: var(--color-secondary);
     text-align: center;

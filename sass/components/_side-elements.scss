@@ -59,6 +59,9 @@
 			transform: rotate(90deg);
 			transform-origin: left top;
 		}
+		@media only screen and (max-width: $tablet) { 
+			display: none;
+		}
 	}
 	.side-elements__email-text {
 		color: var(--color-secondary);
@@ -70,12 +73,12 @@
 		position: absolute;
 		top: -50%;
 		left: -12.5%;
-        @media only screen and (max-width: $tablet) {
-            width: 110%;
-            height: 110%;
-            top: -5%;
-            left: -5%;
-        }
+        // @media only screen and (max-width: $tablet) {
+        //     width: 110%;
+        //     height: 110%;
+        //     top: -5%;
+        //     left: -5%;
+        // }
 	}
 	&__social-links {
 		right: var(--gap-big);
@@ -92,6 +95,17 @@
 			li a {
 				display: block;
                 width: 20px;
+			}
+			li {
+				display: flex;
+				align-items: center;
+				&:last-of-type {
+					display: none;
+					@media only screen and (max-width: $tablet) { 
+						display: flex;
+					}
+
+			}
 			}
 		}
 		&::after {
