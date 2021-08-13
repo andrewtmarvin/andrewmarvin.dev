@@ -8,15 +8,15 @@
     p {
     line-height: 2.8rem;
     transition: .5s opacity linear, .75s transform ease-out;
-    animation: rotating-text-lines 9s infinite;
+    animation: rotating-text-lines 12s infinite;
     transform: translateX(100%);
     opacity: 0;
     }
     p:nth-of-type(2) {
-        animation-delay: 3s;
+        animation-delay: 4s;
     }
     p:nth-of-type(3) {
-        animation-delay: 6s;
+        animation-delay: 8s;
     }
 }
 

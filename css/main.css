@@ -89,21 +89,21 @@
   line-height: 2.8rem;
   -webkit-transition: .5s opacity linear, .75s transform ease-out;
   transition: .5s opacity linear, .75s transform ease-out;
-  -webkit-animation: rotating-text-lines 9s infinite;
-          animation: rotating-text-lines 9s infinite;
+  -webkit-animation: rotating-text-lines 12s infinite;
+          animation: rotating-text-lines 12s infinite;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   opacity: 0;
 }
 
 .rotating-text-lines p:nth-of-type(2) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 .rotating-text-lines p:nth-of-type(3) {
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
 }
 
 .fade-in-element {
