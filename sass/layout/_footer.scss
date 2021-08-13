@@ -5,7 +5,13 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: var(--layer-three);
+    z-index: var(--layer-two);
+    @media only screen and (max-width: $tablet) {
+        flex-flow: column nowrap;
+        height: 8rem;
+        justify-content: space-evenly;
+        filter: grayscale(1);
+    }
     > p {
         color: var(--color-gray);
         font-size: var(--font-size-small);
@@ -15,8 +21,7 @@
         @media only screen and (max-width: $tablet) { 
             color: var(--color-secondary);
             text-align: center;
-            padding: 0 var(--gap-small);
-            transform: translateY(calc(0px - var(--gap-micro)));
+            padding: unset;
         }
     }
 

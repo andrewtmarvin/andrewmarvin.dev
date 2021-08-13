@@ -10,13 +10,10 @@
 	--mouse-y: 0px;
 	@media only screen and (max-width: $tablet) {
 		position: relative;
-        flex: 1 100%;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        padding: var(--gap-micro);
-        gap: var(--gap-micro);
 	}
 	& > * {
 		position: absolute;
@@ -65,7 +62,6 @@
 	}
 	.side-elements__email-text {
 		color: var(--color-secondary);
-		
 	}
 	&__email-clickable-area {
 		width: 125%;
@@ -73,12 +69,6 @@
 		position: absolute;
 		top: -50%;
 		left: -12.5%;
-        // @media only screen and (max-width: $tablet) {
-        //     width: 110%;
-        //     height: 110%;
-        //     top: -5%;
-        //     left: -5%;
-        // }
 	}
 	&__social-links {
 		right: var(--gap-big);
@@ -104,8 +94,7 @@
 					@media only screen and (max-width: $tablet) { 
 						display: flex;
 					}
-
-			}
+				}
 			}
 		}
 		&::after {
