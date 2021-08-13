@@ -1036,7 +1036,7 @@ a.btn__transparent-background:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  gap: var(--gap-micro);
+  gap: var(--gap-small);
 }
 
 @media only screen and (max-width: 963px) {
@@ -1049,8 +1049,20 @@ a.btn__transparent-background:hover {
 }
 
 .side-elements__social-links ul li a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.side-elements__social-links ul li a img {
   width: 20px;
+}
+
+@media only screen and (max-width: 963px) {
+  .side-elements__social-links ul li a img {
+    width: unset;
+    height: 20px;
+  }
 }
 
 .side-elements__social-links ul li {
@@ -1472,7 +1484,7 @@ a.btn__transparent-background:hover {
   }
 }
 
-.footer > p {
+.footer > small {
   color: var(--color-gray);
   font-size: var(--font-size-small);
   width: var(--content-width);
@@ -1481,7 +1493,7 @@ a.btn__transparent-background:hover {
 }
 
 @media only screen and (max-width: 963px) {
-  .footer > p {
+  .footer > small {
     color: var(--color-secondary);
     text-align: center;
     padding: unset;

@@ -78,13 +78,19 @@
 		ul {
 			display: flex;
 			flex-flow: column nowrap;
-			gap: var(--gap-micro);
+			gap: var(--gap-small);
             @media only screen and (max-width: $tablet) { 
                 flex-flow: row nowrap;
             }
 			li a {
-				display: block;
-                width: 20px;
+				display: flex;
+				img {
+					width: 20px;
+					@media only screen and (max-width: $tablet) {
+						width: unset;
+						height: 20px;
+					}
+				}
 			}
 			li {
 				display: flex;
