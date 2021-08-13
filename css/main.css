@@ -574,15 +574,6 @@ a.btn {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .btn,
-  a.btn {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 100%;
-            flex: 1 100%;
-  }
-}
-
 .btn__icon,
 a.btn__icon {
   width: 1.5em;
@@ -1622,7 +1613,7 @@ a.btn__transparent-background:hover {
 
 @media only screen and (max-width: 963px) {
   .hero-content h1 {
-    font-size: var(--font-size-huge);
+    font-size: clamp(var(--font-size-big), 10vw, var(--font-size-huge));
     margin-top: var(--gap-big);
   }
 }
@@ -1656,7 +1647,7 @@ a.btn__transparent-background:hover {
 
 @media only screen and (max-width: 963px) {
   .hero-content h1:before {
-    font-size: var(--font-size-default);
+    font-size: clamp(var(--font-size-small), 4vw, var(--font-size-default));
     top: calc(0px - 1.3rem - var(--gap-small));
   }
 }
@@ -1679,7 +1670,9 @@ a.btn__transparent-background:hover {
 
 @media screen and (max-width: 600px) {
   .hero-content__blurb {
-    max-width: 90vw;
+    max-width: 80vw;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -1701,19 +1694,19 @@ a.btn__transparent-background:hover {
   margin-top: var(--gap-big);
 }
 
-@media screen and (max-width: 1440px) {
-  .hero-content__blurb .btn {
-    margin-top: var(--gap-small);
-  }
-}
-
 .hero-content__blurb .btn:not(:last-of-type) {
-  margin-right: 10%;
+  margin-right: var(--gap-big);
 }
 
 @media only screen and (max-width: 600px) {
   .hero-content__blurb .btn:not(:last-of-type) {
     margin-right: unset;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .hero-content__blurb .btn {
+    margin-top: var(--gap-small);
   }
 }
 

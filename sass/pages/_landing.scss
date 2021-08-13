@@ -73,7 +73,7 @@
 		color: var(--color-white);
 		white-space: nowrap;
 		@media only screen and (max-width: $tablet) {
-			font-size: var(--font-size-huge);
+			font-size: clamp(var(--font-size-big), 10vw, var(--font-size-huge));
 			margin-top: var(--gap-big);
 		}
 		@media only screen and (max-width: $mobile) {
@@ -95,7 +95,7 @@
 			font-size: var(--font-size-big);
 			font-family: var(--font-code);
 			@media only screen and (max-width: $tablet) {
-				font-size: var(--font-size-default);
+				font-size: clamp(var(--font-size-small), 4vw, var(--font-size-default));
 				top: calc(0px - 1.3rem - var(--gap-small));
 			}
 		}
@@ -108,7 +108,8 @@
 		justify-content: center;
 		text-align: center;
 		@media screen and (max-width: $mobile) {
-			max-width: 90vw;
+			max-width: 80vw;
+			justify-content: space-around;
 		}
 		p {
 			font-size: var(--font-size-big);
@@ -122,16 +123,16 @@
 		& .btn {
 			text-align: center;
 			margin-top: var(--gap-big);
-			@media screen and (max-width: $desktop-small) {
-				margin-top: var(--gap-small);
-			
-			}
 			&:not(:last-of-type){
-				margin-right: 10%;
+				margin-right: var(--gap-big);
 				@media only screen and (max-width: $mobile) {
 					margin-right: unset;
 				}
 			}
+			@media screen and (max-width: $desktop-small) {
+				margin-top: var(--gap-small);
+			}
+
 		}
 	}
 	a.scroll-indicator {
