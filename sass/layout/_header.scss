@@ -143,14 +143,14 @@
 		top: 2rem;
 		right: 2rem;
 		background: linear-gradient(var(--color-secondary), var(--color-secondary)) no-repeat;
-		background-size: 100% 3px;
+		background-size: 100% 4px;
 		background-position: center center;
 		transition: all .25s ease-in-out;
 		z-index: var(--layer-four);
 		&::before, &::after {
 			content: "";
 			width: 100%;
-			height: 3px;
+			height: 4px;
 			background-color: var(--color-secondary);
 			position: absolute;
 			left: 50%;
