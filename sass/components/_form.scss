@@ -8,6 +8,9 @@
     align-items: center;
     gap: var(--gap-small);
     position: relative;
+    @media only screen and (max-width: $mobile) {
+        justify-content: flex-end;
+    }
     ::selection {
         background-color: rgba(var(--base-black), 0.25);
         color: rgba(var(--base-white), 1);
@@ -20,7 +23,7 @@
             }
         }
         &__input-field:not(:placeholder-shown) {
-            
+
             + .input-group__input-label {
                 transform: scale(.8) translate(-.7rem, -3.5rem);
             }
@@ -28,10 +31,11 @@
         &__input-label {
             position: absolute;
             top: .5rem;
-            left: 1rem;
+            left: 0;
             z-index: var(--layer-negative);
             pointer-events: none;
             transition: var(--transition-ease-in-out);
+            color: var(--color-blue-light);
         }
         &__input-field {
             width: 100%;
@@ -45,7 +49,8 @@
             padding: .5rem 1rem;
             &:focus {
                 outline: unset;
-                background-color: var(--color-blue);
+                background-color: rgba(var(--base-blue), .5);
+                backdrop-filter: blur(5px);
             }
             &:-webkit-autofill {
                 -webkit-box-shadow:0 0 0 50px var(--color-primary) inset;
@@ -56,6 +61,7 @@
             &:-webkit-autofill:focus {
                 -webkit-box-shadow: 0 0 0 50px var(--color-blue) inset;
                 -webkit-text-fill-color: var(--color-purple-light);
+
             } 
         }
     }
@@ -68,7 +74,7 @@
     #contact-form-subject {
         &::-webkit-calendar-picker-indicator {
                 color: transparent;
-                background: url(../images/down.svg) no-repeat;
+                background: url(../images/down-angle.png) no-repeat;
                 opacity: 1;
                 background-position: center;
                 transform: translateX(-5px);
@@ -81,7 +87,7 @@
         height: 25rem;
         resize: none;
         &::-webkit-scrollbar-thumb {
-            background-color: var(--color-secondary);
+            background-color: var(--color-purple-light);
         }
         &::-webkit-scrollbar {
             width: 2px;

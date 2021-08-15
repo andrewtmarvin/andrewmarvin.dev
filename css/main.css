@@ -750,6 +750,14 @@ a.btn__transparent-background:hover {
   position: relative;
 }
 
+@media only screen and (max-width: 600px) {
+  .contact-form {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 .contact-form ::-moz-selection {
   background-color: rgba(var(--base-black), 0.25);
   color: rgba(var(--base-white), 1);
@@ -777,11 +785,12 @@ a.btn__transparent-background:hover {
 .contact-form .input-group__input-label {
   position: absolute;
   top: .5rem;
-  left: 1rem;
+  left: 0;
   z-index: var(--layer-negative);
   pointer-events: none;
   -webkit-transition: var(--transition-ease-in-out);
   transition: var(--transition-ease-in-out);
+  color: var(--color-blue-light);
 }
 
 .contact-form .input-group__input-field {
@@ -798,7 +807,9 @@ a.btn__transparent-background:hover {
 
 .contact-form .input-group__input-field:focus {
   outline: unset;
-  background-color: var(--color-blue);
+  background-color: rgba(var(--base-blue), 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .contact-form .input-group__input-field:-webkit-autofill {
@@ -827,7 +838,7 @@ a.btn__transparent-background:hover {
 
 .contact-form #contact-form-subject::-webkit-calendar-picker-indicator {
   color: transparent;
-  background: url(../images/down.svg) no-repeat;
+  background: url(../images/down-angle.png) no-repeat;
   opacity: 1;
   background-position: center;
   -webkit-transform: translateX(-5px);
@@ -844,7 +855,7 @@ a.btn__transparent-background:hover {
 }
 
 .contact-form #contact-form-message::-webkit-scrollbar-thumb {
-  background-color: var(--color-secondary);
+  background-color: var(--color-purple-light);
 }
 
 .contact-form #contact-form-message::-webkit-scrollbar {
@@ -2898,7 +2909,6 @@ a.btn__transparent-background:hover {
   padding: var(--gap-small);
   position: relative;
   background-color: var(--color-blue);
-  height: 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2924,14 +2934,24 @@ a.btn__transparent-background:hover {
 
 @media only screen and (max-width: 963px) {
   .work-content__testimonial::before {
-    width: 4rem;
-    top: -15px;
+    width: 6rem;
+    top: -23px;
   }
 }
 
 @media only screen and (max-width: 963px) {
   .work-content__testimonial {
     margin: var(--gap-big) 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .work-content__testimonial {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: var(--gap-big);
   }
 }
 
@@ -2970,6 +2990,16 @@ a.btn__transparent-background:hover {
   gap: var(--gap-micro);
 }
 
+@media screen and (max-width: 600px) {
+  .work-content__testimonial-left {
+    margin-bottom: var(--gap-small);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse nowrap;
+            flex-flow: column-reverse nowrap;
+  }
+}
+
 .work-content__testimonial-left p:first-of-type {
   font-size: var(--font-size-default);
 }
@@ -2990,6 +3020,12 @@ a.btn__transparent-background:hover {
   height: 10rem;
   padding: 0 2rem;
   padding-left: var(--gap-big);
+}
+
+@media screen and (max-width: 600px) {
+  .work-content__testimonial-brief {
+    padding-left: var(--gap-micro);
+  }
 }
 
 .work-content__testimonial-brief::-webkit-scrollbar-thumb {
@@ -3033,12 +3069,6 @@ a.btn__transparent-background:hover {
 
 @media screen and (max-width: 1440px) {
   .contact-content {
-    max-width: 80%;
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .contact-content {
     max-width: 90%;
     -ms-grid-columns: 33% calc(67% - var(--gap-big));
         grid-template-columns: 33% calc(67% - var(--gap-big));
@@ -3049,6 +3079,16 @@ a.btn__transparent-background:hover {
 @media screen and (max-width: 600px) {
   .contact-content {
     max-width: 45rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -3070,11 +3110,24 @@ a.btn__transparent-background:hover {
   grid-column: 1 / 2;
 }
 
+@media screen and (max-width: 600px) {
+  .contact-content__contact-left {
+    width: 80%;
+  }
+}
+
 .contact-content__contact-type {
   color: var(--color-tertiary);
   font-size: var(--font-size-huge);
   text-align: right;
   line-height: 1.2;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-content__contact-type {
+    font-size: var(--font-size-big);
+    text-align: center;
+  }
 }
 
 .contact-content__andrew-message {
@@ -3083,6 +3136,12 @@ a.btn__transparent-background:hover {
   margin-top: var(--gap-small);
   text-align: right;
   font-size: var(--font-size-small);
+}
+
+@media screen and (max-width: 600px) {
+  .contact-content__andrew-message {
+    display: none;
+  }
 }
 
 .contact-content::after {

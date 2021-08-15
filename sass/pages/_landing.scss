@@ -739,7 +739,6 @@
 		padding: var(--gap-small);
 		position: relative;
 		background-color: var(--color-blue);
-		height: 15rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -751,12 +750,16 @@
 			left: -2px;
 			width: 6rem;
 			@media only screen and (max-width: $tablet) {
-				width: 4rem;
-				top: -15px;
+				width: 6rem;
+				top: -23px;
 			}
 		}
 		@media only screen and (max-width: $tablet) {
 			margin: var(--gap-big) 0;
+		}
+		@media screen and (max-width: $mobile) {
+			flex-direction: column;
+			padding: var(--gap-big);
 		}
 	}
 	&__testimonial-left, &__testimonial-right {
@@ -775,6 +778,10 @@
 		justify-content: space-around;
 		height: 100%;
 		gap: var(--gap-micro);
+		@media screen and (max-width: $mobile) {
+			margin-bottom: var(--gap-small);
+			flex-flow: column-reverse nowrap;
+		}
 		p:first-of-type {
 			font-size: var(--font-size-default);
 		}
@@ -795,6 +802,9 @@
 		height: 10rem;
 		padding: 0 2rem;
 		padding-left: var(--gap-big);
+		@media screen and (max-width: $mobile) {
+			padding-left: var(--gap-micro);
+		}
 		&::-webkit-scrollbar-thumb {
 			background-color: var(--color-tertiary);
 		}
@@ -824,15 +834,15 @@
 	gap: var(--gap-huge);
 	position: relative;
 	@media screen and (max-width: $desktop-small) {
-		max-width: 80%;
-	}
-	@media screen and (max-width: $desktop-small) {
 		max-width: 90%;
 		grid-template-columns: 33% calc(67% - var(--gap-big));
 		gap: var(--gap-big);
 	}
 	@media screen and (max-width: $mobile) {
 		max-width: 45rem;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
 	}
 	&__title {
 		color: var(--color-white);
@@ -843,12 +853,19 @@
 	&__contact-left {
 		grid-row: 2 / 3;
 		grid-column: 1 / 2;
+		@media screen and (max-width: $mobile) {
+			width: 80%;
+		}
 	}
 	&__contact-type {
 		color: var(--color-tertiary);
 		font-size: var(--font-size-huge);
 		text-align: right;
 		line-height: 1.2;
+		@media screen and (max-width: $mobile) {
+			font-size: var(--font-size-big);
+			text-align: center;
+		}
 	}
 	&__andrew-message {
 		width: 66%;
@@ -856,6 +873,9 @@
 		margin-top: var(--gap-small);
 		text-align: right;
 		font-size: var(--font-size-small);
+		@media screen and (max-width: $mobile) {
+			display: none;
+		}
 	}
 	&::after {
 		content: "";
