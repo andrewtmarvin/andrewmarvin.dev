@@ -94,23 +94,26 @@ const fadeOutElements = document.querySelectorAll('.fade-out-element');
 fadeOutElements.forEach((element) => fadeOutElementObserver.observe(element));
 
 // Animate typing
-const typingLetters = (element, text) => {
+const typingLetters = (element, text, typingSpeed = 75) => {
 	return new Promise((resolve, reject) => {
 		const chars = [ ...text ];
+		const textLength = chars.length;
 		element.innerText = '';
-		for (let i = 0; i < chars.length; i++) {
+		for (let i = 0; i < textLength; i++) {
 			setTimeout(() => {
-				element.innerText += chars[i];
-				if (i === chars.length - 1) {
+				element.innerText += chars.shift();
+				if (i === textLength - 1) {
 					resolve();
 				}
-			}, 75 * i + i);
+			}, typingSpeed * i + i);
 		}
 	});
 };
 
 // Animates header being typed
-typingLetters(document.querySelector('.header-huge .typing-letters'), 'Marvin');
+const mainHeaderTyping = document.querySelector('.header-huge .typing-letters');
+mainHeaderTyping.innerText = '';
+setTimeout(typingLetters, 1000, mainHeaderTyping, 'Marvin', 110);
 
 // Animates terminal command being executed
 const executeTerminalCommand = (terminal) => {

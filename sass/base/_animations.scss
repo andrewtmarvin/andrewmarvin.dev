@@ -90,10 +90,15 @@
 @keyframes rotating-text-lines {
     0% {
         opacity: 0;
-        transform: translateX(50%);
+        transform: translateX(100vw);
+    }
+    3% {
+        opacity: 0;
+        transform: translateX(100vw);
     }
     4% {
         opacity: 0;
+        transform: translateX(25%);
     }
     10% {
         opacity: 1;
@@ -101,18 +106,18 @@
     }
     30% {
         opacity: 1;
-        transform: translateX(0%)
+        transform: translateX(0%);
     }
     36% {
         opacity: 0;
+        transform: translateX(-25%)
     }
-    40% {
+    37% {
         opacity: 0;
-        transform: translateX(-50%);
+        transform: translateX(100vw);
     }
     100% {
         opacity: 0;
-        transform: translateX(50%);
+        transform: translateX(100vw);
     }
-
 }

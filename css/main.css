@@ -218,11 +218,18 @@
 @-webkit-keyframes rotating-text-lines {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+  3% {
+    opacity: 0;
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
   }
   4% {
     opacity: 0;
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
   }
   10% {
     opacity: 1;
@@ -236,27 +243,36 @@
   }
   36% {
     opacity: 0;
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
   }
-  40% {
+  37% {
     opacity: 0;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
   }
 }
 
 @keyframes rotating-text-lines {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+  3% {
+    opacity: 0;
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
   }
   4% {
     opacity: 0;
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
   }
   10% {
     opacity: 1;
@@ -270,16 +286,18 @@
   }
   36% {
     opacity: 0;
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
   }
-  40% {
+  37% {
     opacity: 0;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
   }
 }
 
