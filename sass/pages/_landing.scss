@@ -398,18 +398,20 @@
 		white-space: nowrap;
 		position: relative;
 		padding-left: 4.5rem;
+		&--counter {
+			&::before {
+				counter-increment: project-counter;
+				content: "0" counter(project-counter) ".";
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: var(--color-secondary);
+			  } 
+		}
 		@media screen and (max-width: $mobile) {
 			text-align: center;
 			justify-self: center;
 		}
-		&::before {
-			counter-increment: project-counter;
-			content: "0" counter(project-counter) ".";
-			position: absolute;
-			top: 0;
-			left: 0;
-			color: var(--color-secondary);
-		  } 
 	}
 	&__project-title {
 		color: var(--color-tertiary);
@@ -468,7 +470,7 @@
 		margin-bottom: var(--gap-huge);
 		&--1 {
 			grid-template-columns: 33% auto;
-			grid-template-rows: repeat(4, max-content);
+			grid-template-rows: 3rem repeat(3, max-content);
 			@media only screen and (max-width: $tablet) {
 				grid-template-columns: auto 33%;
 				grid-template-rows: repeat(5, max-content);
