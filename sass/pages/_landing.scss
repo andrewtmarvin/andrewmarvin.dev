@@ -438,15 +438,22 @@
 		}
 	}
 	&__project-techstack {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-		grid-auto-rows: var(--gap-big);
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: start;
+		align-self: center;
 		padding: var(--gap-small) 0;
-		color: var(--color-blue-light);
-		font-family: var(--font-code);
-		font-size: var(--font-size-small);
+		gap: 1rem;
 		@media screen and (max-width: $mobile) {
-			grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+			
+		}
+		li {
+			font-family: var(--font-code);
+			font-size: var(--font-size-micro);
+			padding: .2rem .4rem;
+			color: var(--color-gray);
+			background-color: var(--color-gray-dark);
+			clip-path: polygon(100% 0, 100% 100%, 1rem 100%, 0 50%, 1rem 0);
 		}
 	}
 	&__project-description {
@@ -567,7 +574,7 @@
 		}
 		&--2 {
 			grid-template-columns: 50% 50%;
-			grid-template-rows: 3rem 6rem 8rem 20rem 10rem;
+			grid-template-rows: 3rem min-content 8rem 20rem 10rem;
 			@media only screen and (max-width: $tablet) {
 				grid-template-rows: repeat(5, auto);
 			}
@@ -647,7 +654,7 @@
 		}
 		&--3 {
 			grid-template-columns: 50% 50%;
-			grid-template-rows: 3rem 6rem 8rem 20rem 10rem;
+			grid-template-rows: 3rem min-content 8rem 20rem 10rem;
 			@media only screen and (max-width: $tablet) {
 				grid-template-rows: repeat(5, auto);
 			}

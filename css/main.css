@@ -10,6 +10,7 @@
   --base-black: 18, 19, 20;
   --base-white: 255, 255, 255;
   --base-gray: 166, 163, 165;
+  --base-gray-dark: 51, 51, 51;
   --color-primary: rgb(var(--base-primary));
   --color-secondary: rgb(var(--base-secondary));
   --color-tertiary: rgb(var(--base-tertiary));
@@ -21,12 +22,14 @@
   --color-black: rgb(var(--base-black));
   --color-white: rgb(var(--base-white));
   --color-gray: rgb(var(--base-gray));
+  --color-gray-dark: rgb(var(--base-gray-dark));
   --main-gradient: linear-gradient(to right, #4D4BE9, #13E8BE);
   --btn-gradient--1: linear-gradient(to right, #120231 0%, #4D4BE9 50%, #13E8BE 100% );
   --btn-gradient--2: linear-gradient(to right, #ffffff00 0%, #ffffff00 50%, #120231 50%, #4D4BE9 100%);
   --alpha-low: 0.2;
   --alpha-medium: 0.5;
   --alpha-high: 0.85;
+  --font-size-micro: 1.2rem;
   --font-size-small: 1.4rem;
   --font-size-default: 1.7rem;
   --font-size-big: 2rem;
@@ -809,6 +812,7 @@ a.btn__transparent-background:hover {
   -webkit-transition: var(--transition-ease-in-out);
   transition: var(--transition-ease-in-out);
   color: var(--color-blue-light);
+  z-index: var(--layer-three);
 }
 
 .contact-form .input-group__input-field {
@@ -856,7 +860,7 @@ a.btn__transparent-background:hover {
 
 .contact-form #contact-form-subject::-webkit-calendar-picker-indicator {
   color: transparent;
-  background: url(../images/down-angle.png) no-repeat;
+  background: url(../images/down-angle.svg) no-repeat;
   opacity: 1;
   background-position: center;
   -webkit-transform: translateX(-5px);
@@ -2255,22 +2259,30 @@ a.btn__transparent-background:hover {
 }
 
 .work-content__project-techstack {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(12rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  grid-auto-rows: var(--gap-big);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-item-align: center;
+      align-self: center;
   padding: var(--gap-small) 0;
-  color: var(--color-blue-light);
-  font-family: var(--font-code);
-  font-size: var(--font-size-small);
+  gap: 1rem;
 }
 
-@media screen and (max-width: 600px) {
-  .work-content__project-techstack {
-    -ms-grid-columns: (minmax(8rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-  }
+.work-content__project-techstack li {
+  font-family: var(--font-code);
+  font-size: var(--font-size-micro);
+  padding: .2rem .4rem;
+  color: var(--color-gray);
+  background-color: var(--color-gray-dark);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 1rem 100%, 0 50%, 1rem 0);
+          clip-path: polygon(100% 0, 100% 100%, 1rem 100%, 0 50%, 1rem 0);
 }
 
 .work-content__project-description {
@@ -2539,8 +2551,9 @@ a.btn__transparent-background:hover {
 .work-content__project-card--2 {
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
-  -ms-grid-rows: 3rem 6rem 8rem 20rem 10rem;
-      grid-template-rows: 3rem 6rem 8rem 20rem 10rem;
+  -ms-grid-rows: 3rem min-content 8rem 20rem 10rem;
+      grid-template-rows: 3rem -webkit-min-content 8rem 20rem 10rem;
+      grid-template-rows: 3rem min-content 8rem 20rem 10rem;
 }
 
 @media only screen and (max-width: 963px) {
@@ -2724,8 +2737,9 @@ a.btn__transparent-background:hover {
 .work-content__project-card--3 {
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
-  -ms-grid-rows: 3rem 6rem 8rem 20rem 10rem;
-      grid-template-rows: 3rem 6rem 8rem 20rem 10rem;
+  -ms-grid-rows: 3rem min-content 8rem 20rem 10rem;
+      grid-template-rows: 3rem -webkit-min-content 8rem 20rem 10rem;
+      grid-template-rows: 3rem min-content 8rem 20rem 10rem;
 }
 
 @media only screen and (max-width: 963px) {

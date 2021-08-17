@@ -36,6 +36,7 @@
             pointer-events: none;
             transition: var(--transition-ease-in-out);
             color: var(--color-blue-light);
+            z-index: var(--layer-three);
         }
         &__input-field {
             width: 100%;
@@ -74,7 +75,7 @@
     #contact-form-subject {
         &::-webkit-calendar-picker-indicator {
                 color: transparent;
-                background: url(../images/down-angle.png) no-repeat;
+                background: url(../images/down-angle.svg) no-repeat;
                 opacity: 1;
                 background-position: center;
                 transform: translateX(-5px);

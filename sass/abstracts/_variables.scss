@@ -14,6 +14,7 @@
 	--base-black: 18, 19, 20;
 	--base-white: 255, 255, 255;
 	--base-gray: 166, 163, 165;
+	--base-gray-dark: 51, 51, 51;
 
 	--color-primary: rgb(var(--base-primary));
 	--color-secondary: rgb(var(--base-secondary));
@@ -28,6 +29,7 @@
 	--color-black: rgb(var(--base-black));
 	--color-white: rgb(var(--base-white));
 	--color-gray: rgb(var(--base-gray));
+	--color-gray-dark: rgb(var(--base-gray-dark));
 
 	--main-gradient: linear-gradient(to right, #4D4BE9, #13E8BE);
 	--btn-gradient--1: linear-gradient(to right, #120231 0%, #4D4BE9 50%, #13E8BE 100% );
@@ -39,6 +41,7 @@
 	--alpha-high: 0.85;
 
 	// FONT
+	--font-size-micro: 1.2rem;
 	--font-size-small: 1.4rem;
 	--font-size-default: 1.7rem;
 	--font-size-big: 2rem;
