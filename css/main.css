@@ -2327,9 +2327,6 @@ a.btn__transparent-background:hover {
 .work-content__project-card--1 {
   -ms-grid-columns: 33% auto;
       grid-template-columns: 33% auto;
-  -ms-grid-rows: 3rem (max-content)[3];
-      grid-template-rows: 3rem repeat(3, -webkit-max-content);
-      grid-template-rows: 3rem repeat(3, max-content);
 }
 
 @media only screen and (max-width: 963px) {
@@ -2343,9 +2340,6 @@ a.btn__transparent-background:hover {
   .work-content__project-card--1 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (max-content)[5];
-        grid-template-rows: repeat(5, -webkit-max-content);
-        grid-template-rows: repeat(5, max-content);
   }
 }
 
@@ -2419,9 +2413,12 @@ a.btn__transparent-background:hover {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 @media only screen and (max-width: 963px) {
@@ -2443,7 +2440,6 @@ a.btn__transparent-background:hover {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
-    padding-left: unset;
     justify-self: stretch;
     -ms-flex-item-align: stretch;
         align-self: stretch;
@@ -2461,12 +2457,12 @@ a.btn__transparent-background:hover {
 }
 
 .work-content__project-card--1 .work-content__project-links a:last-of-type {
-  margin-top: var(--gap-big);
+  margin-top: var(--gap-small);
 }
 
 @media only screen and (max-width: 963px) {
   .work-content__project-card--1 .work-content__project-links a:last-of-type {
-    margin-top: var(--gap-small);
+    margin-top: var(--gap-micro);
   }
 }
 
@@ -2478,12 +2474,12 @@ a.btn__transparent-background:hover {
 
 .work-content__project-card--1 .work-content__project-model {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1 / 3;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
-  max-height: 400px;
+  max-height: 300px;
 }
 
 @media only screen and (max-width: 963px) {
@@ -2509,9 +2505,9 @@ a.btn__transparent-background:hover {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
+  grid-column: 1 / 2;
 }
 
 @media only screen and (max-width: 963px) {
@@ -2566,20 +2562,10 @@ a.btn__transparent-background:hover {
       grid-template-columns: 50% 50%;
 }
 
-@media only screen and (max-width: 963px) {
-  .work-content__project-card--2 {
-    -ms-grid-rows: (auto)[5];
-        grid-template-rows: repeat(5, auto);
-  }
-}
-
 @media screen and (max-width: 600px) {
   .work-content__project-card--2 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (max-content)[5];
-        grid-template-rows: repeat(5, -webkit-max-content);
-        grid-template-rows: repeat(5, max-content);
   }
 }
 
@@ -2640,12 +2626,11 @@ a.btn__transparent-background:hover {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
-  padding-left: var(--gap-big);
+  padding-left: calc(var(--gap-big) - .6rem);
 }
 
 @media only screen and (max-width: 963px) {
   .work-content__project-card--2 .work-content__project-links {
-    padding-left: unset;
     justify-self: stretch;
     -ms-flex-item-align: stretch;
         align-self: stretch;
@@ -2659,6 +2644,7 @@ a.btn__transparent-background:hover {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    padding-left: unset;
   }
 }
 
@@ -2689,7 +2675,9 @@ a.btn__transparent-background:hover {
 
 @media only screen and (max-width: 963px) {
   .work-content__project-card--2 .work-content__project-model {
-    grid-row: 3 / -1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    grid-row: 3 / 6;
   }
 }
 
@@ -2752,20 +2740,10 @@ a.btn__transparent-background:hover {
       grid-template-columns: 50% 50%;
 }
 
-@media only screen and (max-width: 963px) {
-  .work-content__project-card--3 {
-    -ms-grid-rows: (auto)[5];
-        grid-template-rows: repeat(5, auto);
-  }
-}
-
 @media screen and (max-width: 600px) {
   .work-content__project-card--3 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (max-content)[5];
-        grid-template-rows: repeat(5, -webkit-max-content);
-        grid-template-rows: repeat(5, max-content);
   }
 }
 
@@ -2828,7 +2806,7 @@ a.btn__transparent-background:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
-  padding-left: var(--gap-big);
+  padding-left: calc(var(--gap-big) - .6rem);
 }
 
 @media only screen and (max-width: 963px) {
@@ -2877,7 +2855,9 @@ a.btn__transparent-background:hover {
 
 @media only screen and (max-width: 963px) {
   .work-content__project-card--3 .work-content__project-model {
-    grid-row: 3 / -1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    grid-row: 3 / 6;
   }
 }
 
