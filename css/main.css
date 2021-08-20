@@ -1521,7 +1521,7 @@ a.btn__transparent-background:hover {
   color: var(--color-gray);
   font-size: var(--font-size-small);
   width: var(--content-width);
-  padding: var(--gap-small) var(--gap-big);
+  padding: var(--gap-small) 0;
   text-align: right;
 }
 
