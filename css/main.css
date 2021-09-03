@@ -1770,6 +1770,9 @@ a.btn__transparent-background:hover {
       grid-template-rows: auto repeat(3, 1fr);
   gap: var(--gap-huge);
   row-gap: var(--gap-big);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 @media screen and (max-width: 1440px) {
@@ -1819,8 +1822,6 @@ a.btn__transparent-background:hover {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   gap: var(--gap-small);
-  -ms-flex-item-align: center;
-      align-self: center;
   justify-self: center;
 }
 
@@ -1959,8 +1960,8 @@ a.btn__transparent-background:hover {
 
 .about-content__terminal {
   -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  grid-row: 2 / 4;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / 5;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
@@ -1983,8 +1984,8 @@ a.btn__transparent-background:hover {
 @media only screen and (max-width: 963px) {
   .about-content__terminal {
     -ms-grid-row: 3;
-    -ms-grid-row-span: 2;
-    grid-row: 3 / 5;
+    -ms-grid-row-span: 3;
+    grid-row: 3 / 6;
   }
 }
 
@@ -2035,9 +2036,6 @@ a.btn__transparent-background:hover {
   position: relative;
   width: 346px;
   height: 817px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 @media only screen and (max-width: 1440px) {
