@@ -536,10 +536,6 @@ em, .emphasis {
   }
 }
 
-.small-spacer {
-  margin-bottom: 2rem;
-}
-
 .padding-bottom-large {
   padding-bottom: var(--gap-big);
 }
@@ -2005,6 +2001,8 @@ a.btn__transparent-background:hover {
   margin-left: 7.5rem;
   letter-spacing: 4px;
   font-weight: 600;
+  margin-bottom: var(--gap-small);
+  line-height: 1.2;
 }
 
 .about-content__terminal h3::before {
