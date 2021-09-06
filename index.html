@@ -193,40 +193,55 @@
                 </article>
                 <article class="work-content__project-card work-content__project-card--2">
                     <h3 class="work-content__project-type work-content__project-type--counter">full-stack webapp</h3>
-                    <h4 class="work-content__project-title">Bicycle Expedition Tracker</h4>
+                    <h4 class="work-content__project-title">Bicycle Journey Tracker</h4>
                     <div class="work-content__project-links">
-                        <a rel="noreferrer"  target="_blank"  href="#" class="btn btn__gradient-background"><img class="btn__icon" src="./images/rocket.svg" alt="project icon">DEMO</a>
-                        <a rel="noreferrer"  target="_blank"  href="#" class="btn btn__transparent-background"><img class="btn__icon" src="./images/github-alt.svg" alt="source code icon">CODE</a>
+                        <a rel="noreferrer"  target="_blank"  href="https://vxx-journeys.herokuapp.com/" class="btn btn__gradient-background"><img class="btn__icon" src="./images/rocket.svg" alt="project icon">LIVE</a>
+                        <a rel="noreferrer"  target="_blank"  href="https://github.com/andrewtmarvin/vxx_tracker" class="btn btn__transparent-background"><img class="btn__icon" src="./images/github-alt.svg" alt="source code icon">CODE</a>
                     </div>
-                    <img src="./images/Asset 61.png" alt="project 2 model" class="work-content__project-model">
+                    <img src="./images/showcase-2-tablet.png" alt="project 2 model" class="work-content__project-model">
                     <ul class="work-content__project-techstack">
                         <li>&#8226;&nbsp;Python</li>
                         <li>&#8226;&nbsp;Django</li>
                         <li>&#8226;&nbsp;Instagram API</li>
-                        <li>&#8226;&nbsp;SQL</li>
+                        <li>&#8226;&nbsp;Postgres</li>
                         <li>&#8226;&nbsp;JavaScript</li>
                         <li>&#8226;&nbsp;Leaflet.js</li>
                     </ul>
                     <div class="work-content__project-description scroll-box">
                         <p>
-                            Project began as an independent study conducted under Professor Nikjeh at Moorpark College. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                            diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                            ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                            hendrerit in vulputate velit esse molestie consequat, vel illum
-                            dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
-                            odio dignissim qui blandit praesent luptatum zzril delenit augue
-                            duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, 
-                            consectetuer adipiscing elit, sed
-                            diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                            ex ea commodo consequat. Duis autem vel eum iriure dolor in
-                            hendrerit in vulputate velit esse molestie consequat, vel illum
-                            dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
-                            odio dignissim qui blandit praesent luptatum zzril delenit augue
-                            duis dolore te feugait nulla facilisi.
+                            <span>Background:&nbsp;</span>VXX Journeys began in 2018 during a Python independent study conducted 
+                            under Professor Nikjeh at Moorpark College. My goals were to become competent in Django 
+                            as well to build something valuable that I would update, maintain, and use for years to come. The main 
+                            purpose of the webapp is to document my non-profit organization's bicycle expeditions through Vietnam, 
+                            a country I lived in on and off from 2010 through 2020 first as a teacher and then
+                            as a freelance programming tutor. Recently, I overhauled the webapp to be responsive, 
+                            I refactored or removed bad code, and I added routes from our most recent bicycle trip in 2020. 
+                        </p>
+                        <p>
+                            <span>Features:&nbsp;</span>VXX Journeys uses Python to query the Instagram API for new posts as well as tagged posts for the VXX 
+                            Instagram account. It then plots the posts on a map using the Leaflet.js library.
+                            The admin dashboard is used to upload GPS routes for individual ride days as well as to edit any erroneous
+                            data pulled from Instagram. The webapp is fully responsive. 
+                        </p>
+                        <p>
+                            <span>Challenges:&nbsp;</span>Throughout the project, there were several noteworthy challenges I faced which turned 
+                            me into a better developer. When I began back in 2018, I knew very little about database design. Learning 
+                            my way around the Django ORM taught me to think about databases under the OOP paradigm. I've since 
+                            become much more competent in database design and management. While revamping VXX Journeys this year, 
+                            I also had to convert the database from SQL to Postgres in order to host the site on Heroku. 
+                            I learned the nuts and bolts of exporting and loading data. Another challenge I faced was the ever-
+                            mutating Instagram API. The webapp originally logged in to my account using the Instaloader Python
+                            package in order to download posts. However, when ran from a server, this triggered a suspicious login 
+                            attempt check. I wrote a Selenium script to retrieve the Instagram security code from my Gmail account
+                            in order to bypass this. However, the API had several limitations such as how it structured its data 
+                            and what permissions it required to access certain metadata. Furthermore, the image URLs that I would 
+                            pass to the front-end to be display on the map expired after only a few days requiring the script to 
+                            continually check for dead links and redownload post metadata. Simply put, it was over-engineered. While 
+                            the system I built ensured data confidentiality and integrity, relying on a third party for availability 
+                            was unacceptable. In order to ensure the long-term stability of the webapp, I decided to refactor my script 
+                            to download and store Instagram posts locally. Now I can be positive the webapp will always function as intended. 
+                            This project taught me so much about coding using web frameworks. While I'm not partial to Django specifically, 
+                            I certainly appreciate the power and speed that comes from leveraging it to quickly prototype project ideas. 
                         </p>
                     </div>
                 </article>

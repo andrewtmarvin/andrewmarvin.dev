@@ -2313,6 +2313,14 @@ a.btn__transparent-background:hover {
   border-radius: 50px;
 }
 
+.work-content__project-description p {
+  margin-bottom: var(--gap-small);
+}
+
+.work-content__project-description p span {
+  color: var(--color-purple-light);
+}
+
 .work-content__project-card {
   display: -ms-grid;
   display: grid;
@@ -2475,7 +2483,7 @@ a.btn__transparent-background:hover {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
-  max-height: 300px;
+  max-height: 320px;
 }
 
 @media only screen and (max-width: 963px) {

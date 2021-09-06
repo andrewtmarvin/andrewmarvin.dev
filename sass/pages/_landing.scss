@@ -468,6 +468,12 @@
 			background-color: var(--color-white);
 			border-radius: 50px;
 		}
+		p {
+			margin-bottom: var(--gap-small);
+			span {
+				color: var(--color-purple-light);
+			}
+		}
 	}
 	$self: &;
 	counter-reset: project-counter;
@@ -538,7 +544,7 @@
 			#{ $self }__project-model {
 				grid-row: 1 / 4;
 				grid-column: 2 / 3;
-				max-height: 300px;
+				max-height: 320px;
 				@media only screen and (max-width: $tablet) {
 					grid-row: 3 / 4;
 					grid-column: 1 / 3;
