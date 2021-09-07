@@ -46,4 +46,8 @@ a.btn {
 			background-position: right;
 		}
 	}
+	&__private:hover {
+		transition: .25s filter linear;
+		filter: grayscale(1) opacity(.75);
+	}
 }

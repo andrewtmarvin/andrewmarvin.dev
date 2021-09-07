@@ -628,6 +628,14 @@ a.btn__transparent-background:hover {
   background-position: right;
 }
 
+.btn__private:hover,
+a.btn__private:hover {
+  -webkit-transition: .25s filter linear;
+  transition: .25s filter linear;
+  -webkit-filter: grayscale(1) opacity(0.75);
+          filter: grayscale(1) opacity(0.75);
+}
+
 .scroll-indicator {
   position: relative;
   z-index: var(--layer-three);
