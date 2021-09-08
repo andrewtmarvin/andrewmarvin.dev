@@ -7,7 +7,7 @@ const activateMenuItem = (activeMenuItem) => {
 	activeMenuItem.classList.add('active-section');
 };
 
-// User Scrolling
+// User scroll updates active menu section
 const pageSectionObserver = new IntersectionObserver(
 	function (section) {
 		section = section[0];
@@ -110,12 +110,12 @@ const typingLetters = (element, text, typingSpeed = 75) => {
 	});
 };
 
-// Animates header being typed
+// Animate header being typed
 const mainHeaderTyping = document.querySelector('.header-huge .typing-letters');
 mainHeaderTyping.innerText = '';
 setTimeout(typingLetters, 1000, mainHeaderTyping, 'Marvin', 110);
 
-// Animates terminal command being executed
+// Animate terminal command being executed
 const executeTerminalCommand = (terminal) => {
 	const audio = new Audio('../media/keystroke.mp3');
 	audio.volume = 0.3;
