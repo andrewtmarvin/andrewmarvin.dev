@@ -2,8 +2,7 @@
 	position: relative;
 	z-index: var(--layer-three);
 	width: 3.5rem;
-	margin-top: auto;
-	margin-bottom: var(--gap-small);
+	margin-top: var(--gap-small);
 	fill: var(--color-primary);
 	animation: bounce 2s ease-in-out infinite;
 	animation-delay: 3s;

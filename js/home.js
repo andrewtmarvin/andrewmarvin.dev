@@ -60,38 +60,20 @@ const fadeInElements = document.querySelectorAll('.fade-in-element');
 fadeInElements.forEach((element) => fadeInElementObserver.observe(element));
 
 // Fade out element
-const fadeOutElementObserver = new IntersectionObserver(
-	function (elements) {
-		elements.forEach(function (element) {
-			const { isIntersecting } = element;
-			const targ = element.target;
-			if (isIntersecting === true) {
-				element.target.style.opacity =
-					element.target.getBoundingClientRect().bottom / (document.body.clientHeight / 30); // So jumping to top of page triggers opacity update
-				document.addEventListener(
-					'scroll',
-					(scrollFade = function (event, targ) {
-						this.style.opacity = this.getBoundingClientRect().bottom / (document.body.clientHeight / 30);
-					}.bind(targ)),
-					true
-				);
-			} else {
-				try {
-					document.removeEventListener('scroll', scrollFade, true);
-				} catch (e) {
-					// Client refreshed page while not at top, so scrollFade function doesn't exist yet
-				}
-			}
-		});
-	},
-	{
-		rootMargin: '0% 0% 0% 0%',
-		threshold: 0
-	}
-);
-
 const fadeOutElements = document.querySelectorAll('.fade-out-element');
-fadeOutElements.forEach((element) => fadeOutElementObserver.observe(element));
+fadeOutElements.forEach((element) => {
+	// On some screens, the logo is so close to the top of the page that it starts with less than 1 opacity.
+	let offsetTopFadeStart = element.offsetTop < 175 ? 100 : 175;
+	// Jumping to top of page triggers opacity update
+	element.style.opacity = element.getBoundingClientRect().top / offsetTopFadeStart;
+	document.addEventListener(
+		'scroll',
+		(scrollFade = function (event, targ) {
+			element.style.opacity = element.getBoundingClientRect().top / offsetTopFadeStart;
+		}),
+		true
+	);
+});
 
 // Animate typing
 const typingLetters = (element, text, typingSpeed = 75) => {

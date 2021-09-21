@@ -640,8 +640,7 @@ a.btn__private:hover {
   position: relative;
   z-index: var(--layer-three);
   width: 3.5rem;
-  margin-top: auto;
-  margin-bottom: var(--gap-small);
+  margin-top: var(--gap-small);
   fill: var(--color-primary);
   -webkit-animation: bounce 2s ease-in-out infinite;
           animation: bounce 2s ease-in-out infinite;
@@ -1558,7 +1557,7 @@ a.btn__private:hover {
 }
 
 .section__hero {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section__hero::before {
@@ -1608,7 +1607,7 @@ a.btn__private:hover {
 }
 
 .hero-content {
-  height: calc(100vh - var(--header-height));
+  height: 100%;
   margin-top: var(--header-height);
   width: var(--content-width);
   z-index: var(--layer-one);
