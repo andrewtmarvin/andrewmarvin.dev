@@ -841,12 +841,26 @@
 		}
 	}
 	&__cycle-testimonials {
-		width: 12rem;
+		width: 14rem;
 		display: flex;
 		justify-content: space-between;
 		img {
 			width: 4rem;
+			height: 2.5rem;
+			padding: 1rem;
+			box-sizing: content-box;
+			cursor: pointer;
+			transition: .15s filter ease-in-out;
 			-webkit-user-drag: none; 
+			&:hover {
+				filter: brightness(.8);
+			}
+			&:active {
+				transform: translateX(1px);
+			}
+		}
+		img:first-of-type:active {
+			transform: translateX(-1px);
 		}
 	}
 }

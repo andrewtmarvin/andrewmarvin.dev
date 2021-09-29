@@ -3105,7 +3105,7 @@ a.btn__private:hover {
 }
 
 .work-content__cycle-testimonials {
-  width: 12rem;
+  width: 14rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3116,7 +3116,29 @@ a.btn__private:hover {
 
 .work-content__cycle-testimonials img {
   width: 4rem;
+  height: 2.5rem;
+  padding: 1rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  cursor: pointer;
+  -webkit-transition: .15s filter ease-in-out;
+  transition: .15s filter ease-in-out;
   -webkit-user-drag: none;
+}
+
+.work-content__cycle-testimonials img:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.work-content__cycle-testimonials img:active {
+  -webkit-transform: translateX(1px);
+          transform: translateX(1px);
+}
+
+.work-content__cycle-testimonials img:first-of-type:active {
+  -webkit-transform: translateX(-1px);
+          transform: translateX(-1px);
 }
 
 .contact-content {
