@@ -3067,6 +3067,14 @@ a.btn__private:hover {
   padding-left: var(--gap-big);
 }
 
+.work-content__testimonial-brief p {
+  margin-bottom: 1rem;
+}
+
+.work-content__testimonial-brief p span {
+  color: var(--color-purple-light);
+}
+
 @media screen and (max-width: 600px) {
   .work-content__testimonial-brief {
     padding-left: var(--gap-micro);

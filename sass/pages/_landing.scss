@@ -813,6 +813,12 @@
 		height: 10rem;
 		padding: 0 2rem;
 		padding-left: var(--gap-big);
+		p {
+			margin-bottom: 1rem;
+			span {
+				color: var(--color-purple-light);
+			}
+		} 
 		@media screen and (max-width: $mobile) {
 			padding-left: var(--gap-micro);
 		}
