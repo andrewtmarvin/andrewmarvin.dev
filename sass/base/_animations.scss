@@ -61,7 +61,6 @@
         right: -.7em;
         display: inline-block;
         background-color: var(--color-secondary);
-        vertical-align: top;
         width: clamp(.5rem, .5em, 2rem);
         height: clamp(2.2rem, 1em, 4.6rem);
         animation: blink 1s step-end infinite;
@@ -75,7 +74,6 @@
         right: -.7em;
         display: inline-block;
         background-color: var(--color-secondary);
-        vertical-align: top;
         width: .6em;
         height: .1em;
         animation: blink 1s step-end infinite;
@@ -121,3 +119,26 @@
         transform: translateX(100vw);
     }
 }
+
+@keyframes slide-from-left {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-from-right {
+    0% {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+

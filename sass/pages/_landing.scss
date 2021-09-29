@@ -745,19 +745,22 @@
 			align-self: flex-start;
 		}
 	}
-	&__testimonial {
+	&__testimonial-box {
 		margin: var(--gap-huge);
-		padding: var(--gap-small);
-		min-height: 25.5rem;
+		height: 25.5rem;
+		width: calc(100% - var(--gap-huge) * 2);
 		position: relative;
 		background-color: var(--color-blue);
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		display: none;
-		&.active {
-			display: flex;
+		@media only screen and (max-width: $tablet) {
+			margin: var(--gap-big) 0;
+		}
+		@media screen and (max-width: $mobile) {
+			flex-direction: column;
+			padding: var(--gap-big);
 		}
 		&::before {
 			content: url(../images/quote-start.svg);
@@ -770,12 +773,27 @@
 				top: -23px;
 			}
 		}
-		@media only screen and (max-width: $tablet) {
-			margin: var(--gap-big) 0;
+	}
+	&__testimonial {
+		padding: var(--gap-small);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		position: absolute;
+		z-index: var(--layer-negative);
+		transition: all .1s ease-in-out;
+		&.active {
+			display: flex;
+			opacity: 1;
+			z-index: var(--layer-one);
 		}
-		@media screen and (max-width: $mobile) {
-			flex-direction: column;
-			padding: var(--gap-big);
+		&.appear-from-left {
+			animation: slide-from-right .5s ease-in forwards;
+		}
+		&.appear-from-right {
+			animation: slide-from-left .5s ease-in forwards;
 		}
 	}
 	&__testimonial-left, &__testimonial-right {
@@ -811,8 +829,9 @@
 	}
 
 	&__testimonial-quote {
-		text-transform: uppercase;
-		line-height: 1.3;
+		font-style: italic;
+		font-size: var(--font-size-big);
+		line-height: 1.5;
 	}
 	&__testimonial-client {
 	}

@@ -187,15 +187,15 @@ heroHeaderObserver.observe(heroHeader);
 const pastClientElements = [ ...document.querySelectorAll('.work-content__testimonial') ];
 const cyclePastClientLeft = document.querySelector('.work-content__cycle-testimonials img');
 const cyclePastClientRight = document.querySelector('.work-content__cycle-testimonials img:last-of-type');
-cyclePastClientLeft.addEventListener('click', () => {
-	pastClientElements[0].classList.remove('active');
-	pastClientElements.push(pastClientElements.shift());
-	pastClientElements[0].classList.add('active');
-});
 cyclePastClientRight.addEventListener('click', () => {
-	pastClientElements[0].classList.remove('active');
+	pastClientElements[0].classList.remove('active', 'appear-from-left', 'appear-from-right');
+	pastClientElements.push(pastClientElements.shift());
+	pastClientElements[0].classList.add('active', 'appear-from-left');
+});
+cyclePastClientLeft.addEventListener('click', () => {
+	pastClientElements[0].classList.remove('active', 'appear-from-left', 'appear-from-right');
 	pastClientElements.unshift(pastClientElements.pop());
-	pastClientElements[0].classList.add('active');
+	pastClientElements[0].classList.add('active', 'appear-from-right');
 });
 
 // Form validation
