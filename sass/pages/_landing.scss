@@ -748,12 +748,17 @@
 	&__testimonial {
 		margin: var(--gap-huge);
 		padding: var(--gap-small);
+		min-height: 25.5rem;
 		position: relative;
 		background-color: var(--color-blue);
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+		display: none;
+		&.active {
+			display: flex;
+		}
 		&::before {
 			content: url(../images/quote-start.svg);
 			position: absolute;
@@ -789,9 +794,11 @@
 		justify-content: space-around;
 		height: 100%;
 		gap: var(--gap-micro);
+		padding-right: 2rem;
 		@media screen and (max-width: $mobile) {
 			margin-bottom: var(--gap-small);
 			flex-flow: column-reverse nowrap;
+			padding-right: unset;
 		}
 		p:first-of-type {
 			font-size: var(--font-size-default);
@@ -839,6 +846,7 @@
 		justify-content: space-between;
 		img {
 			width: 4rem;
+			-webkit-user-drag: none; 
 		}
 	}
 }

@@ -183,6 +183,21 @@ const heroHeaderObserver = new IntersectionObserver(
 const heroHeader = document.querySelector('.hero-content h1');
 heroHeaderObserver.observe(heroHeader);
 
+// Past clients component
+const pastClientElements = [ ...document.querySelectorAll('.work-content__testimonial') ];
+const cyclePastClientLeft = document.querySelector('.work-content__cycle-testimonials img');
+const cyclePastClientRight = document.querySelector('.work-content__cycle-testimonials img:last-of-type');
+cyclePastClientLeft.addEventListener('click', () => {
+	pastClientElements[0].classList.remove('active');
+	pastClientElements.push(pastClientElements.shift());
+	pastClientElements[0].classList.add('active');
+});
+cyclePastClientRight.addEventListener('click', () => {
+	pastClientElements[0].classList.remove('active');
+	pastClientElements.unshift(pastClientElements.pop());
+	pastClientElements[0].classList.add('active');
+});
+
 // Form validation
 const isValid = (formData) => {
 	if (formData.get('name') && (formData.get('email') || formData.get('phone')) && formData.get('message')) {

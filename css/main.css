@@ -2952,6 +2952,7 @@ a.btn__private:hover {
 .work-content__testimonial {
   margin: var(--gap-huge);
   padding: var(--gap-small);
+  min-height: 25.5rem;
   position: relative;
   background-color: var(--color-blue);
   display: -webkit-box;
@@ -2967,6 +2968,13 @@ a.btn__private:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
+}
+
+.work-content__testimonial.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .work-content__testimonial::before {
@@ -3033,6 +3041,7 @@ a.btn__private:hover {
       justify-content: space-around;
   height: 100%;
   gap: var(--gap-micro);
+  padding-right: 2rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -3042,6 +3051,7 @@ a.btn__private:hover {
     -webkit-box-direction: reverse;
         -ms-flex-flow: column-reverse nowrap;
             flex-flow: column-reverse nowrap;
+    padding-right: unset;
   }
 }
 
@@ -3106,6 +3116,7 @@ a.btn__private:hover {
 
 .work-content__cycle-testimonials img {
   width: 4rem;
+  -webkit-user-drag: none;
 }
 
 .contact-content {
