@@ -756,11 +756,13 @@
 		justify-content: center;
 		align-items: center;
 		@media only screen and (max-width: $tablet) {
+			width: 100%;
 			margin: var(--gap-big) 0;
+			height: 30rem;
 		}
-		@media screen and (max-width: $mobile) {
-			flex-direction: column;
-			padding: var(--gap-big);
+		@media only screen and (max-width: $mobile) {
+			min-height: 40rem;
+			height: calc(85rem - 100vw);
 		}
 		&::before {
 			content: url(../images/quote-start.svg);
@@ -794,6 +796,10 @@
 		}
 		&.appear-from-right {
 			animation: slide-from-left .5s ease-in forwards;
+		}
+		@media screen and (max-width: $mobile) {
+			flex-direction: column;
+			padding: var(--gap-big);
 		}
 	}
 	&__testimonial-left, &__testimonial-right {
@@ -838,16 +844,13 @@
 	&__testimonial-brief {
 		height: 10rem;
 		padding: 0 2rem;
-		padding-left: var(--gap-big);
+		padding-left: var(--gap-small);
 		p {
 			margin-bottom: 1rem;
 			span {
 				color: var(--color-purple-light);
 			}
 		} 
-		@media screen and (max-width: $mobile) {
-			padding-left: var(--gap-micro);
-		}
 		&::-webkit-scrollbar-thumb {
 			background-color: var(--color-tertiary);
 		}

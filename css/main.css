@@ -3022,17 +3022,16 @@ a.btn__private:hover {
 
 @media only screen and (max-width: 963px) {
   .work-content__testimonial-box {
+    width: 100%;
     margin: var(--gap-big) 0;
+    height: 30rem;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .work-content__testimonial-box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: var(--gap-big);
+    min-height: 40rem;
+    height: calc(85rem - 100vw);
   }
 }
 
@@ -3089,6 +3088,16 @@ a.btn__private:hover {
 .work-content__testimonial.appear-from-right {
   -webkit-animation: slide-from-left .5s ease-in forwards;
           animation: slide-from-left .5s ease-in forwards;
+}
+
+@media screen and (max-width: 600px) {
+  .work-content__testimonial {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: var(--gap-big);
+  }
 }
 
 .work-content__testimonial-left, .work-content__testimonial-right {
@@ -3158,7 +3167,7 @@ a.btn__private:hover {
 .work-content__testimonial-brief {
   height: 10rem;
   padding: 0 2rem;
-  padding-left: var(--gap-big);
+  padding-left: var(--gap-small);
 }
 
 .work-content__testimonial-brief p {
@@ -3167,12 +3176,6 @@ a.btn__private:hover {
 
 .work-content__testimonial-brief p span {
   color: var(--color-purple-light);
-}
-
-@media screen and (max-width: 600px) {
-  .work-content__testimonial-brief {
-    padding-left: var(--gap-micro);
-  }
 }
 
 .work-content__testimonial-brief::-webkit-scrollbar-thumb {
