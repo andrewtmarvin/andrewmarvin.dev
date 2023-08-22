@@ -224,6 +224,7 @@ document.querySelector('.form-submit').addEventListener('click', (e) => {
 	}
 	const formData = new FormData(form);
 	if (isValid(formData)) {
+        // Netlify handles form submission
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -232,7 +233,6 @@ document.querySelector('.form-submit').addEventListener('click', (e) => {
 			.then(() => {
 				form.classList.add('success');
 				form.reset();
-				console.log('Form successfully submitted');
 				setTimeout(() => {
 					form.querySelector('.success-message').classList.add('transparent');
 				}, 3000);
@@ -249,7 +249,6 @@ document.querySelector('.form-submit').addEventListener('click', (e) => {
 		if (!formData.get('message')) {
 			form.querySelector('[name=message]').parentElement.classList.add('required');
 		}
-		console.log('form incomplete');
 	}
 });
 
