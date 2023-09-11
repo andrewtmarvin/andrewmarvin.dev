@@ -1,820 +1,1005 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Andrew Marvin portfolio website" />
-    <meta name="theme-color" content="var(--color-primary)" />
-    <meta property="og:image" content="./images/website-preview.jpg" />
-    <title>Andrew Marvin Portfolio</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@100;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Andrew Marvin portfolio website" />
+        <meta name="theme-color" content="var(--color-primary)" />
+        <meta property="og:image" content="./images/website-preview.jpg" />
+        <title>Andrew Marvin Portfolio</title>
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@100;400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="shortcut icon"
+            href="./images/logo.svg"
+            type="image/x-icon"
+        />
+    </head>
 
-  <body>
-    <header class="header">
-      <nav class="navigation">
-        <a href="#" class="navigation__logo"
-          ><img src="./images/logo.svg" alt="nav site logo" />
-          <p>Andrew <span>Marvin</span></p>
-        </a>
-        <ul>
-          <li><a class="active-section" href="#hero">home</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#work">work</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-      </nav>
-      <nav class="navigation-mobile">
-        <a href="#" class="navigation-mobile__logo"
-          ><img src="./images/logo.svg" alt="nav site logo mobile" />
-          <p>Andrew <span>Marvin</span></p>
-        </a>
-        <div class="navigation-mobile__button"></div>
-        <ul class="navigation-mobile--closed">
-          <li><a class="active-section" href="#hero">home</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#work">work</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="page-wrapper">
-      <section class="section section__hero" id="hero">
-        <div class="hero-content">
-          <img
-            class="hero-content__logo fade-out-element"
-            src="./images/logo.svg"
-            alt="hero site logo"
-          />
-          <h1 class="header-huge big-spacer fade-out-element">
-            Andrew
-            <span class="typing-letters blinking-windows-cursor">Marvin</span>
-          </h1>
-          <div class="hero-content__blurb">
-            <p class="big-spacer fade-out-element">
-              I'm a full-stack <em class="emphasis">web developer</em> based in
-              Austin, TX. If you have an interesting idea and need a technical
-              solution, I'd love to
-              <a class="link-line" href="#contact">discuss</a> it.
-            </p>
-            <a
-              href="#work"
-              class="btn btn__gradient-background fade-out-element"
-              ><img
-                class="btn__icon"
-                src="./images/rocket.svg"
-                alt="hero view projects button"
-              />
-              projects</a
-            >
-            <a
-              href="./resume.pdf"
-              target="_blank"
-              class="btn btn__transparent-background fade-out-element"
-              ><img
-                class="btn__icon"
-                src="./images/download.svg"
-                alt="hero download resume button"
-              />
-              RÉSUMÉ</a
-            >
-          </div>
-          <a href="#about" class="scroll-indicator"
-            ><img src="./images/down.svg" alt="scroll down button"
-          /></a>
-        </div>
-      </section>
-      <section class="section section__about" id="about">
-        <div class="about-content fade-in-element">
-          <h2 class="about-content__title header-big big-spacer spacer-line">
-            About Me
-          </h2>
-          <div class="about-content__blurb about-content__blurb--1">
-            <h3>Why me</h3>
-            <p>
-              I'm a versatile developer comfortable working on any part of your
-              tech stack. My
-              <em class="emphasis">attention to detail,</em> adherence to
-              <em class="emphasis">modern coding practices,</em> and passion for
-              <em class="emphasis">intuitive user experience</em>
-              distinguish my work from that of rival developers.
-            </p>
-          </div>
-          <div class="about-content__blurb about-content__blurb--2">
-            <h3>tech career</h3>
-            <p>
-              I've been coding <em class="emphasis">since 2017</em>. During
-              college, I sought out <em class="emphasis">internships</em> and
-              <em class="emphasis">freelance</em> clients in between traveling
-              to <em class="emphasis">hackathons</em> and
-              <em class="emphasis">algorithm competitions</em>. Since then, I've
-              been freelancing to level up and expand my domain knowledge.
-            </p>
-          </div>
-          <div class="about-content__blurb about-content__blurb--3">
-            <h3>Current Work</h3>
-            <p>
-              These days I'm working on
-              <em class="emphasis">personal projects</em> and
-              <em class="emphasis">tutoring</em> my students. When I'm not at
-              the keyboard, I'm keeping up on the latest web development trends
-              over at
-              <a
-                class="link-line"
-                href="https://syntax.fm/"
-                rel="noreferrer"
-                target="_blank"
-                >Syntax Podcast</a
-              >.
-            </p>
-          </div>
-          <div class="about-content__terminal terminal-box">
-            <h3>tech skills</h3>
-            <p class="terminal-box__command">
-              admin@amarvin.dev:<span class="terminal-box__directory">~</span
-              >$<span class="typing-letters"></span
-              ><span class="blinking-linux-cursor"></span>
-            </p>
-            <ul class="hidden">
-              <!-- <li class="terminal-box__tree-root hidden">andrewmarvin/techskills</li> -->
-              <li class="hidden">
-                <span class="terminal-box__directory">frontend</span>
-                <ul class="hidden">
-                  <li class="hidden">
-                    <span class="terminal-box__main-item">HTML</span>
-                    <ul>
-                      <li class="hidden">semantic markup</li>
-                    </ul>
-                  </li>
-                  <li class="hidden">
-                    <span class="terminal-box__main-item">CSS</span>
-                    <ul>
-                      <li class="hidden">SCSS</li>
-                    </ul>
-                  </li>
-                  <li class="hidden">
-                    <span class="terminal-box__main-item">JavaScript</span>
-                    <ul>
-                      <li class="hidden">React.js</li>
-                      <li class="hidden">Node.js</li>
-                      <li class="hidden">Express.js</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="hidden">
-                <span class="terminal-box__directory">backend</span>
+    <body>
+        <header class="header">
+            <nav class="navigation">
+                <a href="#" class="navigation__logo">
+                    <img src="./images/logo.svg" alt="nav site logo" />
+                    <p>Andrew <span>Marvin</span></p>
+                </a>
                 <ul>
-                  <li class="hidden">
-                    <span class="terminal-box__main-item">PHP</span>
-                    <ul>
-                      <li class="hidden">Wordpress</li>
-                    </ul>
-                  </li>
-                  <li class="hidden">
-                    <span class="terminal-box__main-item">Python</span>
-                    <ul>
-                      <li class="hidden">Django web framework</li>
-                      <li class="hidden">scripting and automation</li>
-                    </ul>
-                  </li>
-                  <li class="hidden">
-                    <span class="terminal-box__main-item">Java</span>
-                    <ul>
-                      <li class="hidden">JavaFX</li>
-                    </ul>
-                  </li>
-                  <li class="hidden">
-                    <span class="terminal-box__main-item">SQL</span>
-                    <ul class="hidden">
-                      <li class="hidden">relational database design</li>
-                      <li class="hidden">DBMS</li>
-                    </ul>
-                  </li>
+                    <li><a class="active-section" href="#hero">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#work">work</a></li>
+                    <li><a href="#contact">contact</a></li>
                 </ul>
-              </li>
-            </ul>
-            <p class="terminal-box__command hidden">
-              <span class="terminal-box__hostname">admin@andrewmarvin.dev</span
-              >:<span class="terminal-box__directory">~</span>$<span
-                class="blinking-linux-cursor"
-              ></span>
-            </p>
-          </div>
-          <div class="about-content__image-quote-container">
-            <div class="about-content__image-quote-image"></div>
-            <div class="about-content__image-quote-text rotating-text-lines">
-              <p>
-                As an
-                <a class="link-line" target="_blank" href="./resume.pdf"
-                  >educator</a
-                >,<br />
-                I learn quickly and efficiently.
-              </p>
-              <p>
-                As a
-                <a class="link-line" target="_blank" href="./resume.pdf"
-                  >startup founder</a
-                >,<br />
-                I understand business needs.
-              </p>
-              <p>
-                As a
-                <a class="link-line" target="_blank" href="./resume.pdf"
-                  >freelancer</a
-                >,<br />
-                I'm resourceful and results-driven.
-              </p>
-            </div>
-            <div class="about-content__image-quote-frame"></div>
-          </div>
-        </div>
-      </section>
-      <section class="section section__work" id="work">
-        <div class="work-content">
-          <h2 class="work-content__title header-big big-spacer spacer-line">
-            My Work
-          </h2>
-          <article
-            class="work-content__project-card work-content__project-card--3"
-          >
-            <h3
-              class="
-                work-content__project-type work-content__project-type--counter
-              "
+            </nav>
+            <nav class="navigation-mobile">
+                <a href="#" class="navigation-mobile__logo">
+                    <img src="./images/logo.svg" alt="nav site logo mobile" />
+                    <p>Andrew <span>Marvin</span></p>
+                </a>
+                <div class="navigation-mobile__button"></div>
+                <ul class="navigation-mobile--closed">
+                    <li><a class="active-section" href="#hero">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#work">work</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="page-wrapper">
+            <section class="section section__hero" id="hero">
+                <div class="hero-content">
+                    <img
+                        class="hero-content__logo fade-out-element"
+                        src="./images/logo.svg"
+                        alt="hero site logo"
+                    />
+                    <h1 class="header-huge big-spacer fade-out-element">
+                        Andrew
+                        <span class="typing-letters blinking-windows-cursor">Marvin</span>
+                    </h1>
+                    <div class="hero-content__blurb">
+                        <p class="big-spacer fade-out-element">
+                            I'm a full-stack
+                            <em class="emphasis">web developer</em> based in
+                            Austin, TX. If you have an interesting idea and need
+                            a technical solution, I'd love to
+                            <a class="link-line" href="#contact">discuss</a> it.
+                        </p>
+                        <a
+                            href="#work"
+                            class="btn btn__gradient-background fade-out-element">
+                            <img
+                                class="btn__icon"
+                                src="./images/rocket.svg"
+                                alt="hero view projects button"
+                            />
+                            projects
+                        </a>
+                        <a
+                            href="./resume.pdf"
+                            target="_blank"
+                            class="btn btn__transparent-background fade-out-element">
+                            <img
+                                class="btn__icon"
+                                src="./images/download.svg"
+                                alt="hero download resume button"
+                            />
+                            RÉSUMÉ
+                        </a>
+                    </div>
+                    <a href="#about" class="scroll-indicator">
+                        <img src="./images/down.svg" alt="scroll down button"/>
+                    </a>
+                </div>
+            </section>
+            <section class="section section__about" id="about">
+                <div class="about-content fade-in-element">
+                    <h2 class="about-content__title header-big big-spacer spacer-line">
+                        About Me
+                    </h2>
+                    <div class="about-content__blurb about-content__blurb--1">
+                        <h3>Why me</h3>
+                        <p>
+                            I'm a seasoned developer with a strong aptitude for leadership 
+                            and expertise in remote Agile methodology. I'm ready to 
+                            contribute to any part of your tech stack on day one. I 
+                            lead with my <em class="emphasis">attention to detail,</em>
+                            adherence to <em class="emphasis">coding best practices,
+                            </em> and passion for<em class="emphasis"> intuitive 
+                            user experience</em>. 
+                        </p>
+                    </div>
+                    <div class="about-content__blurb about-content__blurb--2">
+                        <h3>tech career</h3>
+                        <p>
+                            I began coding <em class="emphasis">in 2017</em>.
+                            During college, I sought out diverse
+                            <em class="emphasis">internships</em> and
+                            <em class="emphasis">freelance</em> opportunities to
+                            expand my domain knowledge. I attended
+                            <em class="emphasis"> hackathons</em> and
+                            <em class="emphasis">algorithm competitions</em>
+                            at top universites across California.
+                        </p>
+                    </div>
+                    <div class="about-content__blurb about-content__blurb--3">
+                        <h3>Current Work</h3>
+                        <p>
+                            In my current role as a digital developer, I work
+                            with <em class="emphasis">React, Node, AWS, Tealium</em>
+                            (tag development), <em class="emphasis">Salesforce 
+                            Commerce Cloud, Adobe Analytics</em>, and other leading 
+                            e-commerce technologies to bring daily solutions to the 
+                            digital team at <em class="emphasis">Crocs Inc.</em>
+                        </p>
+                    </div>
+                    <div class="about-content__terminal terminal-box">
+                        <h3>tech skills</h3>
+                        <p class="terminal-box__command">
+                            admin@amarvin.dev:<span
+                                class="terminal-box__directory"
+                                >~</span
+                            >$<span class="typing-letters"></span
+                            ><span class="blinking-linux-cursor"></span>
+                        </p>
+                        <ul class="hidden">
+                            <!-- <li class="terminal-box__tree-root hidden">andrewmarvin/techskills</li> -->
+                            <li class="hidden">
+                                <span class="terminal-box__directory"
+                                    >currently using</span
+                                >
+                                <ul class="hidden">
+                                    <li class="hidden">
+                                        <span class="terminal-box__main-item"
+                                            >HTML</span
+                                        >
+                                    </li>
+                                    <li class="hidden">
+                                        <span class="terminal-box__main-item"
+                                            >CSS</span
+                                        >
+                                        <ul>
+                                            <li class="hidden">SCSS</li>
+                                        </ul>
+                                    </li>
+                                    <li class="hidden">
+                                        <span class="terminal-box__main-item"
+                                            >JavaScript</span
+                                        >
+                                        <ul>
+                                            <li class="hidden">React.js</li>
+                                            <li class="hidden">Node.js</li>
+                                            <li class="hidden">Express.js</li>
+                                        </ul>
+                                    </li>
+                                    <li class="hidden">
+                                        <span class="terminal-box__main-item"
+                                            >AWS</span
+                                        >
+                                        <ul class="hidden">
+                                            <li class="hidden">
+                                                EC2
+                                            </li>
+                                            <li class="hidden">S3</li>
+                                            <li class="hidden">IAM</li>
+                                        </ul>
+                                    </li>
+                                    <li class="hidden">
+                                        <span class="terminal-box__main-item"
+                                            >Git</span
+                                        >
+                                    </li>
+                                    <li class="hidden">
+                                        <span class="terminal-box__main-item"
+                                            >Bash</span
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="hidden">
+                                <span class="terminal-box__directory"
+                                >experienced with</span
+                                >
+                                <ul>
+                                    <li class="hidden">
+                                        <span class="terminal-box__main-item"
+                                            >Python</span
+                                        >
+                                        <ul>
+                                            <li class="hidden">
+                                                Django
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hidden">
+                                        <span class="terminal-box__main-item"
+                                        >PHP</span
+                                        >
+                                        <ul>
+                                            <li class="hidden">Wordpress</li>
+                                        </ul>
+                                    </li>
+                                    <li class="hidden">
+                                        <span class="terminal-box__main-item"
+                                            >Java</span
+                                        >
+                                    </li>
+                                    <li class="hidden">
+                                        <span class="terminal-box__main-item"
+                                            >SQL</span
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="terminal-box__command hidden">
+                            <span class="terminal-box__hostname"
+                                >admin@andrewmarvin.dev</span
+                            >:<span class="terminal-box__directory">~</span
+                            >$<span class="blinking-linux-cursor"></span>
+                        </p>
+                    </div>
+                    <div class="about-content__image-quote-container">
+                        <div class="about-content__image-quote-image"></div>
+                        <div
+                            class="about-content__image-quote-text rotating-text-lines"
+                        >
+                        <p>
+                            As an
+                            <a
+                                class="link-line"
+                                target="_blank"
+                                href="./resume.pdf"
+                                >educator</a
+                            >,<br />
+                            I learn quickly and efficiently.
+                        </p>
+                        <p>
+                                As an
+                                <a
+                                    class="link-line"
+                                    target="_blank"
+                                    href="./resume.pdf"
+                                    >educator</a
+                                >,<br />
+                                I learn quickly and efficiently.
+                            </p>
+                            <p>
+                                As a
+                                <a
+                                    class="link-line"
+                                    target="_blank"
+                                    href="./resume.pdf"
+                                    >startup founder</a
+                                >,<br />
+                                I understand business needs.
+                            </p>
+                            <p>
+                                As a
+                                <a
+                                    class="link-line"
+                                    target="_blank"
+                                    href="./resume.pdf"
+                                    >freelancer</a
+                                >,<br />
+                                I'm resourceful and results-driven.
+                            </p>
+                        </div>
+                        <div class="about-content__image-quote-frame"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section__work" id="work">
+                <div class="work-content">
+                    <h2
+                        class="work-content__title header-big big-spacer spacer-line"
+                    >
+                        My Work
+                    </h2>
+                    <article
+                        class="work-content__project-card work-content__project-card--3"
+                    >
+                        <h3
+                            class="work-content__project-type work-content__project-type--counter"
+                        >
+                            project lead
+                        </h3>
+                        <h4 class="work-content__project-title">
+                            Consent Management System
+                        </h4>
+                        <div class="work-content__project-links">
+                            <a
+                                rel="noreferrer"
+                                target="_blank"
+                                href="https://crocs.co.uk"
+                                class="btn btn__gradient-background"
+                                ><img
+                                    class="btn__icon"
+                                    src="./images/rocket.svg"
+                                    alt="project icon"
+                                />LIVE</a
+                            >
+                            <a
+                                rel="noreferrer"
+                                target="_blank"
+                                class="btn btn__transparent-background btn__private"
+                                ><img
+                                    class="btn__icon"
+                                    src="./images/restriction.svg"
+                                    alt="source code icon"
+                                />CODE</a
+                            >
+                        </div>
+                        <img
+                            src="./images/showcase-1-phone.png"
+                            alt="project 1 model"
+                            class="work-content__project-model"
+                        />
+                        <ul class="work-content__project-techstack">
+                            <li>&#8226;&nbsp;Tealium</li>
+                            <li>&#8226;&nbsp;JavaScript</li>
+                            <li>&#8226;&nbsp;Tags</li>
+                            <li>&#8226;&nbsp;API integrations</li>
+                            <li>&#8226;&nbsp;Localization</li>
+                        </ul>
+                        <div
+                            class="work-content__project-description scroll-box"
+                        >
+                            <p>
+                                <span>Background:&nbsp;</span>The Crocs consent
+                                management system is a privacy governance frameworks
+                                that undergirds all of Crocs' digital properties. It
+                                builds upon Tealium's Consent Preferences Manager to
+                                ensure that Crocs is in compliance with global and
+                                regional privacy standards such as the GDPR and CCPA.
+                                It does this by soliciting user consent and then 
+                                suppressing any tags or API connections from vendors
+                                in consent categories that the user has opted out of.
+                            </p>
+                            <p>
+                                <span>Features:&nbsp;</span>Last year, I led a 
+                                project in Tealium to implement a comprehensive 
+                                consent management system across our sites, 
+                                bringing Crocs into compliance with global and 
+                                regional privacy standards. This not only 
+                                protected our organization from potential 
+                                legal troubles such as from the GDPR and CCPA 
+                                data privacy frameworks, but also built trust 
+                                with our customers who are now fully in control 
+                                of and understand how we use their PI data to 
+                                better serve them.
+                            </p>
+                            <p>
+                                <span>Challenges:&nbsp;</span>Implenting Tealium's
+                                consent manager across our 12 different sites within
+                                three different regional privacy frameworks required 
+                                a great deal of customization. Furthermore, working 
+                                with internal stateholders such as our legal and UX 
+                                teams challenged me to think about the project from 
+                                different perspectives. Through constant communication 
+                                and iteration, I was able to deliver a product that met
+                                the needs of all stakeholders.
+                            </p>
+                        </div>
+                    </article>
+                    <article
+                        class="work-content__project-card work-content__project-card--2"
+                    >
+                        <h3
+                            class="work-content__project-type work-content__project-type--counter"
+                        >
+                            full-stack webapp
+                        </h3>
+                        <h4 class="work-content__project-title">
+                            VXX Journeys
+                        </h4>
+                        <div class="work-content__project-links">
+                            <a
+                                rel="noreferrer"
+                                target="_blank"
+                                href="https://vxx-journeys.herokuapp.com/"
+                                class="btn btn__gradient-background btn__private"
+                                ><img
+                                    class="btn__icon"
+                                    src="./images/rocket.svg"
+                                    alt="project icon"
+                                />LIVE</a
+                            >
+                            <a
+                                rel="noreferrer"
+                                target="_blank"
+                                href="https://github.com/andrewtmarvin/vxx_tracker"
+                                class="btn btn__transparent-background"
+                                ><img
+                                    class="btn__icon"
+                                    src="./images/github-alt.svg"
+                                    alt="source code icon"
+                                />CODE</a
+                            >
+                        </div>
+                        <img
+                            src="./images/showcase-2-tablet.png"
+                            alt="project 2 model"
+                            class="work-content__project-model"
+                        />
+                        <ul class="work-content__project-techstack">
+                            <li>&#8226;&nbsp;Python</li>
+                            <li>&#8226;&nbsp;Django</li>
+                            <li>&#8226;&nbsp;Instagram API</li>
+                            <li>&#8226;&nbsp;Postgres</li>
+                            <li>&#8226;&nbsp;HTML</li>
+                            <li>&#8226;&nbsp;CSS</li>
+                            <li>&#8226;&nbsp;JavaScript</li>
+                            <li>&#8226;&nbsp;Leaflet.js</li>
+                        </ul>
+                        <div
+                            class="work-content__project-description scroll-box"
+                        >
+                            <p>
+                                <span>Background:&nbsp;</span>VXX Journeys began
+                                in 2018 during a Python independent study
+                                conducted under Professor Nikjeh at Moorpark
+                                College. My goals with the project were to
+                                become competent in Django as well to build
+                                something that brought value to my organization
+                                that I would update, maintain, and use for years
+                                to come. The main purpose of the webapp is to
+                                document my non-profit organization's bicycle
+                                expeditions through Vietnam, a country that I
+                                lived in on and off from 2010 through 2020 first
+                                as a teacher and then as a freelance programming
+                                tutor. Recently, I overhauled the webapp to be
+                                responsive, I refactored or removed bad code,
+                                and I added routes from our most recent bicycle
+                                trip in 2020.
+                            </p>
+                            <p>
+                                <span>Features:&nbsp;</span>VXX Journeys has two
+                                main features. First, it contains filterable
+                                Instagram posts plotted onto a map of Vietnam.
+                                It achieves this by using Python to query the
+                                Instagram API for new posts from the VXX
+                                Instagram account and the Leaflet.js library for
+                                plotting the images on the map. Second, it
+                                allows users to select an individual day from a
+                                journey to have the route plotted onto the map.
+                                The GPS data is passed asynchronously from the
+                                server to the client on demand. An admin
+                                dashboard is used to upload new GPS routes for
+                                individual ride days as well as to edit any
+                                erroneous data pulled from Instagram. The webapp
+                                is fully responsive.
+                            </p>
+                            <p>
+                                <span>Challenges:&nbsp;</span>Throughout the
+                                project, there were several noteworthy
+                                challenges I faced which turned me into a better
+                                developer. When I began back in 2018, I knew
+                                very little about database design. Learning my
+                                way around the Django ORM taught me to think
+                                about data through the lens of object-oriented
+                                programming. I've since become much more
+                                competent in database design and management.
+                                While revamping VXX Journeys this year, I had to
+                                convert the database from SQL to Postgres in
+                                order to host the site on Heroku. Through this
+                                process I learned the nuts and bolts of
+                                exporting and loading data from DBMS. Another
+                                challenge I faced was the ever-mutating
+                                Instagram API. The webapp originally logged in
+                                to my account using the Instaloader Python
+                                package in order to download posts. However,
+                                when ran from a server, this triggered a
+                                suspicious login attempt check. To bypass this,
+                                I wrote a Selenium script to retrieve the
+                                Instagram security code from my Gmail account.
+                                However, the API had several limitations such as
+                                how it structured its data and what permissions
+                                it required to access certain metadata.
+                                Furthermore, the image URLs that I would pass to
+                                the front-end to be displayed on the map expired
+                                after only a few days requiring the script to
+                                continuously check for dead links and redownload
+                                post metadata. Simply put, it was
+                                over-engineered. While the system I built
+                                ensured data confidentiality and integrity, I
+                                decided that relying on a third party for
+                                availability was unacceptable. In order to
+                                ensure the long-term stability of the webapp, I
+                                decided to refactor my script to download and
+                                store Instagram posts locally. Now I can be
+                                positive the webapp will always function as
+                                intended. This project taught me so much about
+                                coding using web frameworks. While I'm not
+                                partial to Django specifically, I certainly
+                                appreciate the power and speed that comes from
+                                leveraging it to quickly prototype project ideas
+                                such as VXX Journeys.
+                            </p>
+                        </div>
+                    </article>
+                    <article
+                        class="work-content__project-card work-content__project-card--1"
+                    >
+                        <h3
+                            class="work-content__project-type work-content__project-type--counter"
+                        >
+                            Front-end Internship
+                        </h3>
+                        <h4 class="work-content__project-title">
+                            Graphic and Multimedia Design Program Website
+                        </h4>
+                        <div class="work-content__project-links">
+                            <a
+                                rel="noreferrer"
+                                target="_blank"
+                                href="http://mc-dma.com/"
+                                class="btn btn__gradient-background"
+                                ><img
+                                    class="btn__icon"
+                                    src="./images/rocket.svg"
+                                    alt="project icon"
+                                />LIVE</a
+                            >
+                            <a
+                                rel="noreferrer"
+                                disabled
+                                class="btn btn__transparent-background btn__private"
+                                ><img
+                                    class="btn__icon"
+                                    src="./images/restriction.svg"
+                                    alt="source code icon"
+                                />CODE</a
+                            >
+                        </div>
+                        <img
+                            src="./images/showcasemodel3.png"
+                            alt="project 3 model"
+                            class="work-content__project-model"
+                        />
+                        <ul class="work-content__project-techstack">
+                            <li>&#8226;&nbsp;HTML</li>
+                            <li>&#8226;&nbsp;CSS</li>
+                            <li>&#8226;&nbsp;JavaScript</li>
+                            <li>&#8226;&nbsp;Wordpress</li>
+                            <li>&#8226;&nbsp;PHP</li>
+                            <li>&#8226;&nbsp;Hotjar</li>
+                            <li>&#8226;&nbsp;Google Analytics</li>
+                        </ul>
+                        <div
+                            class="work-content__project-description scroll-box"
+                        >
+                            <p>
+                                <span>Background:&nbsp;</span>mc-dma is the
+                                official website for the Moorpark College
+                                Graphic and Multimedia Design Program. The main
+                                purpose of the site is to serve as a student
+                                resource as well as to attract potential
+                                students to the program. My work on the website
+                                began as a paid internship under Professor
+                                Svetlana Kasalovic. My goals in undertaking the
+                                internship were to gain professional experience
+                                working under a talented project manager,
+                                prepare myself for taking on freelance clients,
+                                and improve my web design skills. My role was as
+                                the primary front-end developer. I worked
+                                closely with a graphic design intern to recreate
+                                her design in a pixel-perfect, responsive
+                                manner.
+                            </p>
+                            <p>
+                                <span>Features:&nbsp;</span>mc-dma is a
+                                Wordpress-based, multi-page static site. It
+                                features a homepage, a student work gallery, and
+                                several pages with pertinent information and
+                                resources for students. The site runs on
+                                Wordpress, allowing for school administrators to
+                                add future content without the help of a
+                                developer.
+                            </p>
+                            <p>
+                                <span>Challenges:&nbsp;</span>mc-dma had many
+                                developers working on it before me, so I had to
+                                learn how to jump into older codebases rather
+                                than starting fresh. This taught me to integrate
+                                the logical thought processes of people I had
+                                never met into my problem solving skills.
+                                Another challenge I faced was conducting user
+                                testing in order to optimize the site. First, I
+                                developed and distributed surveys to current
+                                stuents in the program to study what they wanted
+                                out of the site. I later conducted end-user
+                                testing through Hotjar and Google Analytic. This
+                                gave me insight into how clients actually used
+                                the site. I learned a great deal about UX during
+                                this process. Finally, the greatest challenge
+                                that I faced was when the site was infected with
+                                malware. The previous developers had hosted
+                                several of the school's websites on a single
+                                server. The infected site, which was not being
+                                maintained by a developer, then infected all the
+                                sites. I had to go through every PHP file and
+                                manually fix the problems. I also ensured that
+                                each site had anti-malware protection going
+                                forward. The process taught me to never go into
+                                an existing project assuming that the previous
+                                developers had secured it.
+                            </p>
+                        </div>
+                    </article>
+                    <div class="work-content__other-projects">
+                        <h3 class="work-content__project-type">
+                            Other projects
+                        </h3>
+                        <p>
+                            retired showcase projects go here (section still
+                            needs to be designed)
+                        </p>
+                        <a href="#" class="btn btn__transparent-background"
+                            >more</a
+                        >
+                    </div>
+                    <div class="work-content__past-clients">
+                        <h3 class="work-content__project-type">Testimonials</h3>
+                        <div class="work-content__testimonial-box">
+                            <div class="work-content__testimonial active">
+                                <div class="work-content__testimonial-left">
+                                    <p class="work-content__testimonial-quote">
+                                        Andrew has proven able to lead projects
+                                        on his own with little oversight.
+                                        Further he's a pleasure to work with and
+                                        readily absorbs new information and
+                                        hungry for new tasks. He is an asset to
+                                        our company and would be of great value
+                                        to any team.
+                                    </p>
+                                    <p class="work-content__testimonial-client">
+                                        Joel Cardinal, Sr. Manager of Digital
+                                        Development at Crocs
+                                    </p>
+                                </div>
+                                <div class="work-content__testimonial-right">
+                                    <div
+                                        class="work-content__testimonial-brief scroll-box"
+                                    >
+                                        <p>
+                                            <span>My role:&nbsp;</span>I was the
+                                            lead developer on a...
+                                        </p>
+                                        <p><span>Challenges:&nbsp;</span>...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-content__testimonial">
+                                <div class="work-content__testimonial-left">
+                                    <p class="work-content__testimonial-quote">
+                                        For multiple jobs, Andrew has provided
+                                        just the right solutions, responding
+                                        promptly and getting work done
+                                        efficiently. Also, in helping a
+                                        non-technical person like me, he has a
+                                        great bedside manner. I'm grateful for
+                                        his work.
+                                    </p>
+                                    <p class="work-content__testimonial-client">
+                                        William Hale, Overland Park, KS
+                                    </p>
+                                </div>
+                                <div class="work-content__testimonial-right">
+                                    <div
+                                        class="work-content__testimonial-brief scroll-box"
+                                    >
+                                        <p>
+                                            <span>My role:&nbsp;</span>I
+                                            improved the design of and wrote new
+                                            components for the client's existing
+                                            website. I also added content to
+                                            various pages as requested.
+                                        </p>
+                                        <p>
+                                            <span>Challenges:&nbsp;</span>The
+                                            challenges with this project all
+                                            stem from the archaic web builder
+                                            environment provided by the client's
+                                            host, web.com. The client did not
+                                            have the resources fund a migration
+                                            to another service. One challenge I
+                                            overcame was when the client
+                                            requested a student portal that
+                                            would be hidden behind an access
+                                            code. Since the web builder provided
+                                            no such functionality, I solved the
+                                            problem by adding onlick JavaScript
+                                            code to a button which prompted
+                                            users for their access code before
+                                            redirecting them to a hidden student
+                                            resources page. This was not a
+                                            perfect solution, but it met the
+                                            needs of the client while remaining
+                                            within budget.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-content__testimonial">
+                                <div class="work-content__testimonial-left">
+                                    <p class="work-content__testimonial-quote">
+                                        Thanks a million for all your help on
+                                        the website and the donation platform. I
+                                        was so pleased you reached out to help
+                                        me during our campaign! It was
+                                        inspiring!
+                                    </p>
+                                    <p class="work-content__testimonial-client">
+                                        Roseann Mikos, Moorpark, CA
+                                    </p>
+                                </div>
+                                <div class="work-content__testimonial-right">
+                                    <div
+                                        class="work-content__testimonial-brief scroll-box"
+                                    >
+                                        <p>
+                                            <span>My role:&nbsp;</span>I was
+                                            brought onto the Mikos for Moorpark
+                                            Mayor campaign as a volunteer to
+                                            manage the WordPress-based campaign
+                                            site. I created video content,
+                                            improved the website's frontend
+                                            design, and assisted with any
+                                            technical issues faced by the
+                                            campaign.
+                                        </p>
+                                        <p>
+                                            <span>Challenges:&nbsp;</span>The
+                                            WordPress site had already been set
+                                            up by a non-tenchical volunteer from
+                                            the campaign before I arrived. I had
+                                            to audit their work to ensure the
+                                            site followed best security
+                                            practices.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-content__testimonial">
+                                <div class="work-content__testimonial-left">
+                                    <p class="work-content__testimonial-quote">
+                                        Andrew designed and built my website. I
+                                        can't wait to start advertising for
+                                        clients through it. I would definitely
+                                        recommend his services.
+                                    </p>
+                                    <p class="work-content__testimonial-client">
+                                        Angela Marvin, Long Beach, CA
+                                    </p>
+                                </div>
+                                <div class="work-content__testimonial-right">
+                                    <div
+                                        class="work-content__testimonial-brief scroll-box"
+                                    >
+                                        <p>
+                                            <span>My role:&nbsp;</span>I built
+                                            the WordPress backend for this
+                                            client's website. Aside from setting
+                                            up the the client's hosting and
+                                            domain, I developed a custom
+                                            must-use plugin which allowed her to
+                                            quickly add her music tracks through
+                                            the dashboard to be displayed on the
+                                            frontend. They had another developer
+                                            designing and building the frontend,
+                                            which I contributed to by fixing
+                                            some styling issues.
+                                        </p>
+                                        <p>
+                                            <span>Challenges:&nbsp;</span>I had
+                                            to develop a must-use plugin to meet
+                                            the client's need of being able to
+                                            add her songs to the frontend by
+                                            herself. It was an ideal use case
+                                            for creating a custom plugin.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-content__cycle-testimonials">
+                            <img
+                                src="./images/arrow-left.svg"
+                                alt="previous testimonial"
+                            />
+                            <img
+                                src="./images/arrow-right.svg"
+                                alt="next testimonial"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section__contact" id="contact">
+                <div class="contact-content">
+                    <h2
+                        class="contact-content__title header-big big-spacer spacer-line"
+                    >
+                        Contact Me
+                    </h2>
+                    <div class="contact-content__contact-left">
+                        <h3 class="contact-content__contact-type">
+                            Hire me and we'll do great things together.
+                        </h3>
+                        <p class="contact-content__andrew-message">
+                            Currently seeking full-time employment
+                            opportunities.
+                        </p>
+                    </div>
+                    <form
+                        action="#"
+                        class="contact-form"
+                        name="contact"
+                        netlify
+                    >
+                        <div class="input-group input-group--full-width">
+                            <input
+                                type="text"
+                                name="name"
+                                class="input-group__input-field"
+                                id="contact-form-name"
+                                placeholder=" "
+                            />
+                            <label class="input-group__input-label" for="name"
+                                >Name</label
+                            >
+                        </div>
+                        <div class="input-group input-group--half-width">
+                            <input
+                                type="email"
+                                name="email"
+                                class="input-group__input-field"
+                                id="contact-form-email"
+                                placeholder=" "
+                            />
+                            <label class="input-group__input-label" for="email"
+                                >Email</label
+                            >
+                        </div>
+                        <div class="input-group input-group--half-width">
+                            <input
+                                type="tel"
+                                name="phone"
+                                class="input-group__input-field"
+                                id="contact-form-phone"
+                                placeholder=" "
+                            />
+                            <label class="input-group__input-label" for="phone"
+                                >Phone</label
+                            >
+                        </div>
+                        <div class="input-group input-group--full-width">
+                            <input
+                                list="contact-form-subject-list"
+                                id="contact-form-subject"
+                                name="subject"
+                                class="input-group__input-field"
+                                placeholder=" "
+                            />
+                            <label
+                                class="input-group__input-label"
+                                for="subject"
+                                >Subject</label
+                            >
+                            <datalist id="contact-form-subject-list">
+                                <option value="Employment"></option>
+                                <option value="Freelance Work"></option>
+                                <option value="Tutoring"></option>
+                            </datalist>
+                        </div>
+                        <div class="input-group input-group--full-width">
+                            <textarea
+                                name="message"
+                                id="contact-form-message"
+                                class="input-group__input-field"
+                                placeholder=" "
+                            ></textarea>
+                            <label
+                                class="input-group__input-label"
+                                for="message"
+                                >Message</label
+                            >
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn btn__gradient-background form-submit"
+                        >
+                            send
+                        </button>
+                        <div class="success-message transparent">
+                            <p>Message received!</p>
+                            <p>We'll be in touch soon.</p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <aside class="side-elements">
+                <div class="side-elements__email">
+                    <p class="side-elements__email-text">
+                        andrewtmarvin@gmail.com
+                    </p>
+                    <div class="side-elements__email-clickable-area"></div>
+                </div>
+                <div class="side-elements__social-links">
+                    <ul>
+                        <li>
+                            <a
+                            href="https://www.linkedin.com/in/andrew-t-marvin"
+                            rel="noreferrer"
+                            target="_blank"
+                            ><img
+                            src="./images/linkedin.svg"
+                            alt="social links linkedin"
+                            /></a>
+                        </li>
+                        <li>
+                            <a
+                                href="./resume.pdf"
+                                rel="noreferrer"
+                                target="_blank"
+                                ><img
+                                    src="./images/resume.svg"
+                                    alt="social links resume"
+                            /></a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.github.com/andrewtmarvin"
+                                rel="noreferrer"
+                                target="_blank"
+                                ><img
+                                    src="./images/github.svg"
+                                    alt="social links github"
+                            /></a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://codepen.io/andrewtmarvin"
+                                rel="noreferrer"
+                                target="_blank"
+                                ><img
+                                    src="./images/codepen.svg"
+                                    alt="social links codepen"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="mailto:andrewtmarvin@gmail.com"
+                                ><img
+                                    src="./images/mail.svg"
+                                    alt="social links email"
+                            /></a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <small
+                >&copy; <span class="current-year"></span> Andrew Marvin</small
             >
-              project lead
-            </h3>
-            <h4 class="work-content__project-title">
-                Consent Management System
-            </h4>
-            <div class="work-content__project-links">
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://crocs.co.uk"
-                class="btn btn__gradient-background"
-                ><img
-                  class="btn__icon"
-                  src="./images/rocket.svg"
-                  alt="project icon"
-                />LIVE</a
-              >
-              <a
-                rel="noreferrer"
-                target="_blank"
-                class="btn btn__transparent-background btn__private"
-                ><img
-                  class="btn__icon"
-                  src="./images/restriction.svg"
-                  alt="source code icon"
-                />CODE</a
-              >
-            </div>
-            <img
-              src="./images/Asset 58.png"
-              alt="project 1 model"
-              class="work-content__project-model"
-            />
-            <ul class="work-content__project-techstack">
-              <li>&#8226;&nbsp;HTML</li>
-              <li>&#8226;&nbsp;CSS</li>
-              <li>&#8226;&nbsp;JavaScript</li>
-              <li>&#8226;&nbsp;Node.js</li>
-            </ul>
-            <div class="work-content__project-description scroll-box">
-              <p>
-                <span>Background:&nbsp;</span>Karma is a popular card game among
-                international travelers. Even though I'm no longer living
-                overseas, I wanted a way to keep in touch with my friends with
-                whom I used to play Karma regularly with. Thus this project was
-                born.
-              </p>
-              <p>
-                <span>Features:&nbsp;</span>Karma has a matchmaking lobby where
-                players can see open games and also create their own. Games are
-                played in real time with all game logic taking place on the
-                Node.js server. Aside from Node, this game was written in
-                vanilla JavaScript. After a game finishes, players can either
-                start a new game, in which case a running tally will be
-                displayed for each player, or head back to the lobby to play
-                with different players.
-              </p>
-              <p>
-                <span>Challenges:&nbsp;</span>The game logic is extremely
-                complex and there are so many edge cases which must be
-                considered. When I started this project, I had no experience
-                with unit testing. My functions were also far too cumbersome.
-                This led to laborious debugging sessions whenever the program
-                was behaving incorrectly. Right now, I am in the process of
-                refactoring the code to be more modular and also writing unit
-                tests to ease the process of debugging.
-              </p>
-            </div>
-          </article>
-          <article
-            class="work-content__project-card work-content__project-card--2"
-          >
-            <h3
-              class="
-                work-content__project-type work-content__project-type--counter
-              "
-            >
-              full-stack webapp
-            </h3>
-            <h4 class="work-content__project-title">VXX Journeys</h4>
-            <div class="work-content__project-links">
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://vxx-journeys.herokuapp.com/"
-                class="btn btn__gradient-background btn__private"
-                ><img
-                  class="btn__icon"
-                  src="./images/rocket.svg"
-                  alt="project icon"
-                />LIVE</a
-              >
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://github.com/andrewtmarvin/vxx_tracker"
-                class="btn btn__transparent-background"
-                ><img
-                  class="btn__icon"
-                  src="./images/github-alt.svg"
-                  alt="source code icon"
-                />CODE</a
-              >
-            </div>
-            <img
-              src="./images/showcase-2-tablet.png"
-              alt="project 2 model"
-              class="work-content__project-model"
-            />
-            <ul class="work-content__project-techstack">
-              <li>&#8226;&nbsp;Python</li>
-              <li>&#8226;&nbsp;Django</li>
-              <li>&#8226;&nbsp;Instagram API</li>
-              <li>&#8226;&nbsp;Postgres</li>
-              <li>&#8226;&nbsp;HTML</li>
-              <li>&#8226;&nbsp;CSS</li>
-              <li>&#8226;&nbsp;JavaScript</li>
-              <li>&#8226;&nbsp;Leaflet.js</li>
-            </ul>
-            <div class="work-content__project-description scroll-box">
-              <p>
-                <span>Background:&nbsp;</span>VXX Journeys began in 2018 during
-                a Python independent study conducted under Professor Nikjeh at
-                Moorpark College. My goals with the project were to become
-                competent in Django as well to build something that brought
-                value to my organization that I would update, maintain, and use
-                for years to come. The main purpose of the webapp is to document
-                my non-profit organization's bicycle expeditions through
-                Vietnam, a country that I lived in on and off from 2010 through
-                2020 first as a teacher and then as a freelance programming
-                tutor. Recently, I overhauled the webapp to be responsive, I
-                refactored or removed bad code, and I added routes from our most
-                recent bicycle trip in 2020.
-              </p>
-              <p>
-                <span>Features:&nbsp;</span>VXX Journeys has two main features.
-                First, it contains filterable Instagram posts plotted onto a map
-                of Vietnam. It achieves this by using Python to query the
-                Instagram API for new posts from the VXX Instagram account and
-                the Leaflet.js library for plotting the images on the map.
-                Second, it allows users to select an individual day from a
-                journey to have the route plotted onto the map. The GPS data is
-                passed asynchronously from the server to the client on demand.
-                An admin dashboard is used to upload new GPS routes for
-                individual ride days as well as to edit any erroneous data
-                pulled from Instagram. The webapp is fully responsive.
-              </p>
-              <p>
-                <span>Challenges:&nbsp;</span>Throughout the project, there were
-                several noteworthy challenges I faced which turned me into a
-                better developer. When I began back in 2018, I knew very little
-                about database design. Learning my way around the Django ORM
-                taught me to think about data through the lens of
-                object-oriented programming. I've since become much more
-                competent in database design and management. While revamping VXX
-                Journeys this year, I had to convert the database from SQL to
-                Postgres in order to host the site on Heroku. Through this
-                process I learned the nuts and bolts of exporting and loading
-                data from DBMS. Another challenge I faced was the ever-mutating
-                Instagram API. The webapp originally logged in to my account
-                using the Instaloader Python package in order to download posts.
-                However, when ran from a server, this triggered a suspicious
-                login attempt check. To bypass this, I wrote a Selenium script
-                to retrieve the Instagram security code from my Gmail account.
-                However, the API had several limitations such as how it
-                structured its data and what permissions it required to access
-                certain metadata. Furthermore, the image URLs that I would pass
-                to the front-end to be displayed on the map expired after only a
-                few days requiring the script to continuously check for dead
-                links and redownload post metadata. Simply put, it was
-                over-engineered. While the system I built ensured data
-                confidentiality and integrity, I decided that relying on a third
-                party for availability was unacceptable. In order to ensure the
-                long-term stability of the webapp, I decided to refactor my
-                script to download and store Instagram posts locally. Now I can
-                be positive the webapp will always function as intended. This
-                project taught me so much about coding using web frameworks.
-                While I'm not partial to Django specifically, I certainly
-                appreciate the power and speed that comes from leveraging it to
-                quickly prototype project ideas such as VXX Journeys.
-              </p>
-            </div>
-          </article>
-          <article
-            class="work-content__project-card work-content__project-card--1"
-          >
-            <h3
-              class="
-                work-content__project-type work-content__project-type--counter
-              "
-            >
-              Front-end Internship
-            </h3>
-            <h4 class="work-content__project-title">
-              Graphic and Multimedia Design Program Website
-            </h4>
-            <div class="work-content__project-links">
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="http://mc-dma.com/"
-                class="btn btn__gradient-background"
-                ><img
-                  class="btn__icon"
-                  src="./images/rocket.svg"
-                  alt="project icon"
-                />LIVE</a
-              >
-              <a
-                rel="noreferrer"
-                disabled
-                class="btn btn__transparent-background btn__private"
-                ><img
-                  class="btn__icon"
-                  src="./images/restriction.svg"
-                  alt="source code icon"
-                />CODE</a
-              >
-            </div>
-            <img
-              src="./images/showcasemodel1.png"
-              alt="project 3 model"
-              class="work-content__project-model"
-            />
-            <ul class="work-content__project-techstack">
-              <li>&#8226;&nbsp;HTML</li>
-              <li>&#8226;&nbsp;CSS</li>
-              <li>&#8226;&nbsp;JavaScript</li>
-              <li>&#8226;&nbsp;Wordpress</li>
-              <li>&#8226;&nbsp;PHP</li>
-              <li>&#8226;&nbsp;Hotjar</li>
-              <li>&#8226;&nbsp;Google Analytics</li>
-            </ul>
-            <div class="work-content__project-description scroll-box">
-              <p>
-                <span>Background:&nbsp;</span>mc-dma is the official website for
-                the Moorpark College Graphic and Multimedia Design Program. The
-                main purpose of the site is to serve as a student resource as
-                well as to attract potential students to the program. My work on
-                the website began as a paid internship under Professor Svetlana
-                Kasalovic. My goals in undertaking the internship were to gain
-                professional experience working under a talented project
-                manager, prepare myself for taking on freelance clients, and
-                improve my web design skills. My role was as the primary
-                front-end developer. I worked closely with a graphic design
-                intern to recreate her design in a pixel-perfect, responsive
-                manner.
-              </p>
-              <p>
-                <span>Features:&nbsp;</span>mc-dma is a Wordpress-based,
-                multi-page static site. It features a homepage, a student work
-                gallery, and several pages with pertinent information and
-                resources for students. The site runs on Wordpress, allowing for
-                school administrators to add future content without the help of
-                a developer.
-              </p>
-              <p>
-                <span>Challenges:&nbsp;</span>mc-dma had many developers working
-                on it before me, so I had to learn how to jump into older
-                codebases rather than starting fresh. This taught me to
-                integrate the logical thought processes of people I had never
-                met into my problem solving skills. Another challenge I faced
-                was conducting user testing in order to optimize the site.
-                First, I developed and distributed surveys to current stuents in
-                the program to study what they wanted out of the site. I later
-                conducted end-user testing through Hotjar and Google Analytic.
-                This gave me insight into how clients actually used the site. I
-                learned a great deal about UX during this process. Finally, the
-                greatest challenge that I faced was when the site was infected
-                with malware. The previous developers had hosted several of the
-                school's websites on a single server. The infected site, which
-                was not being maintained by a developer, then infected all the
-                sites. I had to go through every PHP file and manually fix the
-                problems. I also ensured that each site had anti-malware
-                protection going forward. The process taught me to never go into
-                an existing project assuming that the previous developers had
-                secured it.
-              </p>
-            </div>
-          </article>
-          <div class="work-content__other-projects">
-            <h3 class="work-content__project-type">Other projects</h3>
-            <p>
-              retired showcase projects go here (section still needs to be
-              designed)
-            </p>
-            <a href="#" class="btn btn__transparent-background">more</a>
-          </div>
-          <div class="work-content__past-clients">
-            <h3 class="work-content__project-type">Testimonials</h3>
-            <div class="work-content__testimonial-box">
-              <div class="work-content__testimonial active">
-                <div class="work-content__testimonial-left">
-                  <p class="work-content__testimonial-quote">
-                    Andrew has proven able to lead projects on his own with little oversight. 
-                    Further he's a pleasure to work with and readily absorbs new information and 
-                    hungry for new tasks. He is an asset to our company and would be of great 
-                    value to any team.
-                  </p>
-                  <p class="work-content__testimonial-client">
-                    Joel Cardinal, Sr. Manager of Digital Development at Crocs
-                  </p>
-                </div>
-                <div class="work-content__testimonial-right">
-                  <div class="work-content__testimonial-brief scroll-box">
-                    <p>
-                      <span>My role:&nbsp;</span>I was the lead developer on a...
-                    </p>
-                    <p>
-                      <span>Challenges:&nbsp;</span>...
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="work-content__testimonial">
-                <div class="work-content__testimonial-left">
-                  <p class="work-content__testimonial-quote">
-                    For multiple jobs, Andrew has provided just the right
-                    solutions, responding promptly and getting work done
-                    efficiently. Also, in helping a non-technical person like
-                    me, he has a great bedside manner. I'm grateful for his
-                    work.
-                  </p>
-                  <p class="work-content__testimonial-client">
-                    William Hale, Overland Park, KS
-                  </p>
-                </div>
-                <div class="work-content__testimonial-right">
-                  <div class="work-content__testimonial-brief scroll-box">
-                    <p>
-                      <span>My role:&nbsp;</span>I improved the design of and
-                      wrote new components for the client's existing website. I
-                      also added content to various pages as requested.
-                    </p>
-                    <p>
-                      <span>Challenges:&nbsp;</span>The challenges with this
-                      project all stem from the archaic web builder environment
-                      provided by the client's host, web.com. The client did not
-                      have the resources fund a migration to another service.
-                      One challenge I overcame was when the client requested a
-                      student portal that would be hidden behind an access code.
-                      Since the web builder provided no such functionality, I
-                      solved the problem by adding onlick JavaScript code to a
-                      button which prompted users for their access code before
-                      redirecting them to a hidden student resources page. This
-                      was not a perfect solution, but it met the needs of the
-                      client while remaining within budget.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="work-content__testimonial">
-                <div class="work-content__testimonial-left">
-                  <p class="work-content__testimonial-quote">
-                    Thanks a million for all your help on the website and the
-                    donation platform. I was so pleased you reached out to help
-                    me during our campaign! It was inspiring!
-                  </p>
-                  <p class="work-content__testimonial-client">
-                    Roseann Mikos, Moorpark, CA
-                  </p>
-                </div>
-                <div class="work-content__testimonial-right">
-                  <div class="work-content__testimonial-brief scroll-box">
-                    <p>
-                      <span>My role:&nbsp;</span>I was brought onto the Mikos
-                      for Moorpark Mayor campaign as a volunteer to manage the
-                      WordPress-based campaign site. I created video content,
-                      improved the website's frontend design, and assisted with
-                      any technical issues faced by the campaign.
-                    </p>
-                    <p>
-                      <span>Challenges:&nbsp;</span>The WordPress site had
-                      already been set up by a non-tenchical volunteer from the
-                      campaign before I arrived. I had to audit their work to
-                      ensure the site followed best security practices.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="work-content__testimonial">
-                <div class="work-content__testimonial-left">
-                  <p class="work-content__testimonial-quote">
-                    Andrew designed and built my website. I can't wait to start
-                    advertising for clients through it. I would definitely
-                    recommend his services.
-                  </p>
-                  <p class="work-content__testimonial-client">
-                    Angela Marvin, Long Beach, CA
-                  </p>
-                </div>
-                <div class="work-content__testimonial-right">
-                  <div class="work-content__testimonial-brief scroll-box">
-                    <p>
-                      <span>My role:&nbsp;</span>I built the WordPress backend
-                      for this client's website. Aside from setting up the the
-                      client's hosting and domain, I developed a custom must-use
-                      plugin which allowed her to quickly add her music tracks
-                      through the dashboard to be displayed on the frontend.
-                      They had another developer designing and building the
-                      frontend, which I contributed to by fixing some styling
-                      issues.
-                    </p>
-                    <p>
-                      <span>Challenges:&nbsp;</span>I had to develop a must-use
-                      plugin to meet the client's need of being able to add her
-                      songs to the frontend by herself. It was an ideal use case
-                      for creating a custom plugin.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="work-content__cycle-testimonials">
-              <img src="./images/arrow-left.svg" alt="previous testimonial" />
-              <img src="./images/arrow-right.svg" alt="next testimonial" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section section__contact" id="contact">
-        <div class="contact-content">
-          <h2 class="contact-content__title header-big big-spacer spacer-line">
-            Contact Me
-          </h2>
-          <div class="contact-content__contact-left">
-            <h3 class="contact-content__contact-type">
-              Hire me and we'll do great things together.
-            </h3>
-            <p class="contact-content__andrew-message">
-              Currently seeking full-time employment opportunities.
-            </p>
-          </div>
-          <form action="#" class="contact-form" name="contact" netlify>
-            <div class="input-group input-group--full-width">
-              <input
-                type="text"
-                name="name"
-                class="input-group__input-field"
-                id="contact-form-name"
-                placeholder=" "
-              />
-              <label class="input-group__input-label" for="name">Name</label>
-            </div>
-            <div class="input-group input-group--half-width">
-              <input
-                type="email"
-                name="email"
-                class="input-group__input-field"
-                id="contact-form-email"
-                placeholder=" "
-              />
-              <label class="input-group__input-label" for="email">Email</label>
-            </div>
-            <div class="input-group input-group--half-width">
-              <input
-                type="tel"
-                name="phone"
-                class="input-group__input-field"
-                id="contact-form-phone"
-                placeholder=" "
-              />
-              <label class="input-group__input-label" for="phone">Phone</label>
-            </div>
-            <div class="input-group input-group--full-width">
-              <input
-                list="contact-form-subject-list"
-                id="contact-form-subject"
-                name="subject"
-                class="input-group__input-field"
-                placeholder=" "
-              />
-              <label class="input-group__input-label" for="subject"
-                >Subject</label
-              >
-              <datalist id="contact-form-subject-list">
-                <option value="Employment"></option>
-                <option value="Freelance Work"></option>
-                <option value="Tutoring"></option>
-              </datalist>
-            </div>
-            <div class="input-group input-group--full-width">
-              <textarea
-                name="message"
-                id="contact-form-message"
-                class="input-group__input-field"
-                placeholder=" "
-              ></textarea>
-              <label class="input-group__input-label" for="message"
-                >Message</label
-              >
-            </div>
-            <button
-              type="submit"
-              class="btn btn__gradient-background form-submit"
-            >
-              send
-            </button>
-            <div class="success-message transparent">
-              <p>Message received!</p>
-              <p>We'll be in touch soon.</p>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <aside class="side-elements">
-        <div class="side-elements__email">
-          <p class="side-elements__email-text">andrewtmarvin@gmail.com</p>
-          <div class="side-elements__email-clickable-area"></div>
-        </div>
-        <div class="side-elements__social-links">
-          <ul>
-            <li>
-              <a
-                href="https://www.github.com/andrewtmarvin"
-                rel="noreferrer"
-                target="_blank"
-                ><img src="./images/github.svg" alt="social links github"
-              /></a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/andrew-t-marvin"
-                rel="noreferrer"
-                target="_blank"
-                ><img src="./images/linkedin.svg" alt="social links linkedin"
-              /></a>
-            </li>
-            <li>
-              <a
-                href="https://www.codepen.io/andrewtmarvin"
-                rel="noreferrer"
-                target="_blank"
-                ><img src="./images/codepen.svg" alt="social links codepen"
-              /></a>
-            </li>
-            <li>
-              <a href="./resume.pdf" rel="noreferrer" target="_blank"
-                ><img src="./images/resume.svg" alt="social links resume"
-              /></a>
-            </li>
-            <li>
-              <a href="mailto:andrewtmarvin@gmail.com"
-                ><img src="./images/mail.svg" alt="social links email"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </aside>
-      <small>&copy; <span class="current-year"></span> Andrew Marvin</small>
-    </footer>
-    <script src="./js/home.js"></script>
-    <!-- preload pseudo class images -->
-    <script>
-      const pic = new Image();
-      const pic2 = new Image();
-      pic.src = "./images/copy.svg";
-      pic2.src = "./images/checkmark.svg";
-    </script>
-  </body>
+        </footer>
+        <script src="./js/home.js"></script>
+        <!-- preload pseudo class images -->
+        <script>
+            const pic = new Image();
+            const pic2 = new Image();
+            pic.src = './images/copy.svg';
+            pic2.src = './images/checkmark.svg';
+        </script>
+    </body>
 </html>

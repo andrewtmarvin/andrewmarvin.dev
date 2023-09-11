@@ -121,7 +121,7 @@ const terminalObserver = new IntersectionObserver(
 			audio.play().catch(function (error) {
 				// Throws DOMException if user hasn't interacted with page before sound attempts to play
 			});
-			await typingLetters(terminal.target.querySelector('.typing-letters'), '\u00A0tree\u00A0skills/');
+			await typingLetters(terminal.target.querySelector('.typing-letters'), 'tree\u00A0skills/');
 			audio.pause();
 			setTimeout(executeTerminalCommand, 1000, terminal);
 			terminalObserver.unobserve(terminal.target);
