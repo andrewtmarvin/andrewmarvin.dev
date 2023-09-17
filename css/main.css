@@ -85,7 +85,7 @@
 .rotating-text-lines p {
   line-height: 2.8rem;
   transition: 0.5s opacity linear, 0.75s transform ease-out;
-  animation: rotating-text-lines 12s infinite;
+  animation: rotating-text-lines 16s infinite;
   transform: translateX(100%);
   opacity: 0;
 }
@@ -94,6 +94,9 @@
 }
 .rotating-text-lines p:nth-of-type(3) {
   animation-delay: 8s;
+}
+.rotating-text-lines p:nth-of-type(4) {
+  animation-delay: 12s;
 }
 
 .fade-in-element {
@@ -180,15 +183,15 @@
     opacity: 1;
     transform: translateX(0%);
   }
-  30% {
+  24% {
     opacity: 1;
     transform: translateX(0%);
   }
-  36% {
+  30% {
     opacity: 0;
     transform: translateX(-25%);
   }
-  37% {
+  31% {
     opacity: 0;
     transform: translateX(100vw);
   }
